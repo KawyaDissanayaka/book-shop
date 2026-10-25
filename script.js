@@ -211,10 +211,10 @@ function initQrModal() {
   const heroQrImg = document.getElementById('heroQrImg');
   const modalQrImg = document.getElementById('modalQrImg');
 
-  // Default target URL (local Wi-Fi IP for immediate smartphone scanning)
-  let targetUrl = 'http://192.168.0.103:3000/';
+  // Default target URL (Live public HTTPS URL so ANY customer can scan on phone/4G/5G)
+  let targetUrl = 'https://kawyadissanayaka.github.io/book-shop/';
 
-  // If already hosted on a real domain (not localhost or 127.0.0.1), use that domain by default
+  // If already hosted on a real custom domain (e.g. .lk or .com), use that domain by default
   if (!window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
     targetUrl = window.location.href.split('#')[0];
     if (customQrUrlInput) customQrUrlInput.value = targetUrl;
@@ -230,28 +230,19 @@ function initQrModal() {
   // Initial QR setup
   updateQrDisplay(targetUrl);
 
-  // Preset Buttons
-  if (presetWifiBtn) {
-    presetWifiBtn.addEventListener('click', () => {
+  // Preset Buttons (Dynamic handler for any preset pill)
+  document.querySelectorAll('.qr-preset-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
       document.querySelectorAll('.qr-preset-pill').forEach(b => b.classList.remove('active'));
-      presetWifiBtn.classList.add('active');
-      const url = presetWifiBtn.getAttribute('data-url') || 'http://192.168.0.103:3000/';
-      if (customQrUrlInput) customQrUrlInput.value = url;
-      updateQrDisplay(url);
-      showToast('📶 Wi-Fi Phone Scan URL සක්‍රීය කරන ලදී (192.168.0.103:3000)');
+      pill.classList.add('active');
+      const url = pill.getAttribute('data-url');
+      if (url) {
+        if (customQrUrlInput) customQrUrlInput.value = url;
+        updateQrDisplay(url);
+        showToast(`🌐 QR Link එක යාවත්කාලීන විය: ${url}`);
+      }
     });
-  }
-
-  if (presetLiveBtn) {
-    presetLiveBtn.addEventListener('click', () => {
-      document.querySelectorAll('.qr-preset-pill').forEach(b => b.classList.remove('active'));
-      presetLiveBtn.classList.add('active');
-      const url = presetLiveBtn.getAttribute('data-url') || 'https://nenapahana-books.lk';
-      if (customQrUrlInput) customQrUrlInput.value = url;
-      updateQrDisplay(url);
-      showToast('🌐 Live Website Domain URL සක්‍රීය කරන ලදී');
-    });
-  }
+  });
 
   // Custom URL Input live change
   if (customQrUrlInput) {
