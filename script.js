@@ -176,7 +176,7 @@ function initMenuNavigationAndSearch() {
    -------------------------------------------------------------------------- */
 function initWhatsAppInquiry() {
   const inquireBtns = document.querySelectorAll('.btn-inquire-item');
-  const storePhone = '94779876543';
+  const storePhone = '94774890160';
 
   inquireBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -291,7 +291,7 @@ function initQrModal() {
 
   // WhatsApp Share Trigger
   function triggerWhatsAppShare() {
-    const shareText = `🪔 *නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය - ඩිජිටල් මිල දර්ශකය*\n(Nenapahana Bookshop Digital Store Menu)\n\nඅපගේ පොත්හලේ ඇති සියලුම ලියන පොත්, CR පොත්, පෑන්, පැන්සල්, ළමා කතා, නවකතා, සඟරා හා මුද්‍රණ සේවාවන්හි නවතම මිල ගණන් (Price List) ඔබගේ දුරකථනයෙන්ම පහසුවෙන් බලාගැනීමට මෙම සබැඳියට පිවිසෙන්න:\n\n👉 ${targetUrl}\n\n📞 ක්ෂණික ඇමතුම්: 011 258 4400\n💬 WhatsApp: 077 987 6543\n📍 කොළඹ බම්බලපිටිය • මහනුවර • කුරුණෑගල`;
+    const shareText = `🪔 *නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය - ඩිජිටල් මිල දර්ශකය*\n(Nenapahana Bookshop Digital Store Menu)\n\nඅපගේ පොත්හලේ ඇති සියලුම ලියන පොත්, CR පොත්, පෑන්, පැන්සල්, ළමා කතා, නවකතා, සඟරා හා මුද්‍රණ සේවාවන්හි නවතම මිල ගණන් (Price List) ඔබගේ දුරකථනයෙන්ම පහසුවෙන් බලාගැනීමට මෙම සබැඳියට පිවිසෙන්න:\n\n👉 ${targetUrl}\n\n📞 ක්ෂණික ඇමතුම්: 077 489 0160\n💬 WhatsApp: 077 489 0160\n📍 කොළඹ බම්බලපිටිය • මහනුවර • කුරුණෑගල`;
 
     const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
     window.open(waUrl, '_blank');
@@ -412,7 +412,7 @@ function initBooklistService() {
   const booklistModal = document.getElementById('booklistModal');
   const triggers = document.querySelectorAll('.trigger-booklist-modal');
   const booklistForm = document.getElementById('booklistForm');
-  const storePhone = '94779876543';
+  const storePhone = '94774890160';
 
   triggers.forEach(btn => {
     btn.addEventListener('click', (e) => {
