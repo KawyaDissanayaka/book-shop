@@ -163,52 +163,29 @@
 
         <!-- Digital Menu QR Showcase Card -->
         <div class="digital-menu-qr-card">
+          <span class="pill-badge" style="font-size: 0.72rem; padding: 0.3rem 0.85rem;">
+            📱 Live Scannable QR Code
+          </span>
+
           <div class="qr-code-graphic">
-            <!-- Authentic SVG QR code mockup -->
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="100" height="100" fill="white"/>
-              <!-- Corner Top Left -->
-              <rect x="10" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
-              <rect x="14" y="14" width="16" height="16" rx="2" fill="white"/>
-              <rect x="18" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
-              <!-- Corner Top Right -->
-              <rect x="66" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
-              <rect x="70" y="14" width="16" height="16" rx="2" fill="white"/>
-              <rect x="74" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
-              <!-- Corner Bottom Left -->
-              <rect x="10" y="66" width="24" height="24" rx="3" fill="#0f172a"/>
-              <rect x="14" y="70" width="16" height="16" rx="2" fill="white"/>
-              <rect x="18" y="74" width="8" height="8" rx="1" fill="#0f172a"/>
-              <!-- Data Dots & Patterns -->
-              <rect x="42" y="12" width="6" height="6" fill="#0f172a"/>
-              <rect x="52" y="12" width="6" height="6" fill="#0f172a"/>
-              <rect x="42" y="24" width="6" height="6" fill="#0f172a"/>
-              <rect x="42" y="38" width="6" height="6" fill="#0f172a"/>
-              <rect x="52" y="38" width="6" height="6" fill="#0f172a"/>
-              <rect x="12" y="44" width="6" height="6" fill="#0f172a"/>
-              <rect x="24" y="44" width="6" height="6" fill="#0f172a"/>
-              <rect x="66" y="44" width="6" height="6" fill="#0f172a"/>
-              <rect x="78" y="44" width="6" height="6" fill="#0f172a"/>
-              <rect x="42" y="52" width="6" height="6" fill="#0f172a"/>
-              <rect x="52" y="52" width="6" height="6" fill="#0f172a"/>
-              <rect x="66" y="56" width="6" height="6" fill="#0f172a"/>
-              <rect x="42" y="66" width="6" height="6" fill="#0f172a"/>
-              <rect x="52" y="66" width="6" height="6" fill="#0f172a"/>
-              <rect x="78" y="66" width="6" height="6" fill="#0f172a"/>
-              <rect x="42" y="78" width="6" height="6" fill="#0f172a"/>
-              <rect x="66" y="78" width="6" height="6" fill="#0f172a"/>
-              <rect x="78" y="78" width="6" height="6" fill="#0f172a"/>
-            </svg>
+            <img id="heroQrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=8&data=http%3A%2F%2F192.168.0.103%3A3000%2F" alt="නැණපහන Front Desk QR Menu" style="width: 100%; height: 100%; border-radius: 8px; object-fit: contain;">
           </div>
+
           <div>
-            <div class="qr-card-title">නැණපහන Digital QR Menu</div>
+            <div class="qr-card-title">Front Desk Counter QR මෙනුව</div>
             <p class="qr-card-desc">
-              හෝටල් මෙනුවක් මෙන් ඔබගේ දුරකථනයෙන් QR කේතය ස්කෑන් කර ඕනෑම වේලාවක අපගේ සම්පූර්ණ මිල ලැයිස්තුව ඔබ ළඟ තබාගන්න.
+              කවුන්ටරය මත තැබීමට හෝ පාරිභෝගිකයාට දුරකථනයෙන් ස්කෑන් කර බැලීමට සූදානම් කර ඇත. ඔබගේ Phone Camera එකෙන් දැන්ම Scan කරන්න!
             </p>
           </div>
-          <button class="btn-whatsapp-quick" id="shareMenuBtn" style="font-size: 0.8rem; padding: 0.45rem 1rem;">
-            <span>🔗 මෙනුවේ Link එක Share කරන්න</span>
-          </button>
+
+          <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; width: 100%;">
+            <button class="btn-primary" id="openHeroQrModalBtn" style="font-size: 0.82rem; padding: 0.55rem 1rem;">
+              <span>🖨️ Counter Stand / Share</span>
+            </button>
+            <button class="btn-whatsapp-quick" id="heroShareWhatsappBtn" style="font-size: 0.82rem; padding: 0.55rem 1rem;">
+              <span>💬 WhatsApp Share</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1914,52 +1891,95 @@
   <!-- ======================================================================
        11. INTERACTIVE MODAL: DIGITAL MENU QR CODE MODAL
        ====================================================================== -->
+  <!-- ======================================================================
+       11. INTERACTIVE MODAL: FRONT DESK QR & WHATSAPP SHARE CENTER
+       ====================================================================== -->
   <div class="modal-backdrop" id="qrModal">
-    <div class="modal-dialog" style="text-align: center;">
+    <div class="modal-dialog modal-dialog-lg" style="max-width: 640px; text-align: center;">
       <button class="modal-close-btn" aria-label="Close QR Modal">✕</button>
 
-      <span class="pill-badge" style="font-size: 0.75rem; margin-bottom: 0.5rem;">නැණපහන ඩිජිටල් QR මෙනුව</span>
-      <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">දුරකථනයෙන් ස්කෑන් කරන්න</h3>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-        මෙම QR කේතය ඔබගේ හෝ පාරිභෝගිකයාගේ දුරකථනයෙන් ස්කෑන් කළ විට සම්පූර්ණ භාණ්ඩ නාමාවලිය හා මිල දර්ශකය විවෘත වේ.
-      </p>
+      <div class="no-print">
+        <span class="pill-badge" style="font-size: 0.75rem; margin-bottom: 0.4rem;">
+          🏪 FRONT DESK COUNTER QR & WHATSAPP SHARE
+        </span>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.35rem;">
+          කවුන්ටරය මත තැබීමට QR Code & WhatsApp Share
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+          පාරිභෝගිකයා Front Desk එක අසලට පැමිණි විට දුරකථනයෙන් Scan කිරීමට අවශ්‍ය සැබෑ QR කේතය සහ WhatsApp බෙදාගැනීමේ කවුළුව.
+        </p>
 
-      <div style="width: 200px; height: 200px; margin: 0 auto 1.5rem; background: white; border-radius: 16px; padding: 12px; box-shadow: var(--shadow-md);">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-          <rect width="100" height="100" fill="white"/>
-          <rect x="10" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
-          <rect x="14" y="14" width="16" height="16" rx="2" fill="white"/>
-          <rect x="18" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
-          <rect x="66" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
-          <rect x="70" y="14" width="16" height="16" rx="2" fill="white"/>
-          <rect x="74" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
-          <rect x="10" y="66" width="24" height="24" rx="3" fill="#0f172a"/>
-          <rect x="14" y="70" width="16" height="16" rx="2" fill="white"/>
-          <rect x="18" y="74" width="8" height="8" rx="1" fill="#0f172a"/>
-          <rect x="42" y="12" width="6" height="6" fill="#0f172a"/>
-          <rect x="52" y="12" width="6" height="6" fill="#0f172a"/>
-          <rect x="42" y="24" width="6" height="6" fill="#0f172a"/>
-          <rect x="42" y="38" width="6" height="6" fill="#0f172a"/>
-          <rect x="52" y="38" width="6" height="6" fill="#0f172a"/>
-          <rect x="12" y="44" width="6" height="6" fill="#0f172a"/>
-          <rect x="24" y="44" width="6" height="6" fill="#0f172a"/>
-          <rect x="66" y="44" width="6" height="6" fill="#0f172a"/>
-          <rect x="78" y="44" width="6" height="6" fill="#0f172a"/>
-          <rect x="42" y="52" width="6" height="6" fill="#0f172a"/>
-          <rect x="52" y="52" width="6" height="6" fill="#0f172a"/>
-          <rect x="66" y="56" width="6" height="6" fill="#0f172a"/>
-          <rect x="42" y="66" width="6" height="6" fill="#0f172a"/>
-          <rect x="52" y="66" width="6" height="6" fill="#0f172a"/>
-          <rect x="78" y="66" width="6" height="6" fill="#0f172a"/>
-          <rect x="42" y="78" width="6" height="6" fill="#0f172a"/>
-          <rect x="66" y="78" width="6" height="6" fill="#0f172a"/>
-          <rect x="78" y="78" width="6" height="6" fill="#0f172a"/>
-        </svg>
+        <!-- URL Switcher Toolbar -->
+        <div class="qr-url-toolbar">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.4rem; text-align: left;">
+            QR කේතය සකස් විය යුතු සබැඳිය (Target URL):
+          </div>
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.6rem; flex-wrap: wrap;">
+            <button type="button" class="qr-preset-pill active" id="presetWifiBtn" data-url="http://192.168.0.103:3000/">
+              📶 Wi-Fi Phone Scan (192.168.0.103:3000)
+            </button>
+            <button type="button" class="qr-preset-pill" id="presetLiveBtn" data-url="https://nenapahana-books.lk">
+              🌐 Live Website (nenapahana-books.lk)
+            </button>
+          </div>
+          <input type="text" id="customQrUrlInput" class="form-input-control" value="http://192.168.0.103:3000/" style="font-size: 0.82rem; padding: 0.5rem 0.8rem;" placeholder="ඔබගේ වෙබ් අඩවි Link එක මෙහි යොදන්න...">
+        </div>
       </div>
 
-      <button class="btn-primary" id="copyMenuLinkBtn" style="width: 100%; justify-content: center;">
-        <span>📋 මෙනුවේ Link එක Copy කරගන්න</span>
-      </button>
+      <!-- Printable Front Desk Counter Stand Card -->
+      <div class="printable-counter-stand" id="printableCounterStand">
+        <div class="stand-header">
+          <div class="stand-emblem">🪔</div>
+          <div>
+            <div class="stand-brand-sinhala">නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය</div>
+            <div class="stand-brand-en">NENAPAHANA BOOKSHOP & STATIONERY SUPERSTORE</div>
+          </div>
+        </div>
+
+        <div class="stand-title-banner">
+          📱 ඩිජිටල් නාමාවලිය සහ මිල දර්ශකය • DIGITAL STORE MENU
+        </div>
+
+        <!-- Real Scannable QR Graphic Container -->
+        <div class="stand-qr-box">
+          <img id="modalQrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=8&data=http%3A%2F%2F192.168.0.103%3A3000%2F" alt="නැණපහන QR Menu Scan Code" class="stand-qr-img">
+          <div class="stand-qr-badge">SCAN WITH PHONE CAMERA</div>
+        </div>
+
+        <div class="stand-instructions">
+          <div class="instruction-lead">
+            ඔබගේ ජංගම දුරකථනයේ Camera එකෙන් QR කේතය Scan කර අපගේ සියලුම පොත්පත්, ලිපිද්‍රව්‍ය හා මුද්‍රණ සේවාවල මිල ගණන් ඔබේ දුරකථනයෙන්ම බලාගන්න!
+          </div>
+          <div class="stand-features-row">
+            <span>✓ CR & ලියන පොත් මිල ගණන්</span>
+            <span>✓ පෑන්, පැන්සල් & ලිපිද්‍රව්‍ය</span>
+            <span>✓ ළමා කතා & නවකතා</span>
+            <span>✓ ඡායාපිටපත් & මුද්‍රණ සේවා</span>
+          </div>
+        </div>
+
+        <div class="stand-footer">
+          <div>📞 Hotline: 011 258 4400</div>
+          <div>💬 WhatsApp: 077 987 6543</div>
+          <div>📍 කොළඹ • මහනුවර • කුරුණෑගල</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons Bar -->
+      <div class="no-print" style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
+        <button type="button" class="btn-whatsapp-quick" id="modalShareWhatsappBtn" style="padding: 0.7rem 1.3rem; font-size: 0.9rem;">
+          <span>💬 WhatsApp මගින් Share කරන්න</span>
+        </button>
+        <button type="button" class="btn-primary" id="modalPrintStandBtn" style="padding: 0.7rem 1.3rem; font-size: 0.9rem;">
+          <span>🖨️ Counter Stand එක Print කරන්න (A4)</span>
+        </button>
+        <button type="button" class="btn-secondary-link" id="modalDownloadQrBtn" style="padding: 0.7rem 1.2rem; font-size: 0.85rem;">
+          <span>💾 QR Image (PNG) බාගන්න</span>
+        </button>
+        <button type="button" class="btn-secondary-link" id="copyMenuLinkBtn" style="padding: 0.7rem 1.2rem; font-size: 0.85rem;">
+          <span>📋 Link එක Copy කරන්න</span>
+        </button>
+      </div>
     </div>
   </div>
 

@@ -193,37 +193,147 @@ function initWhatsAppInquiry() {
 }
 
 /* --------------------------------------------------------------------------
-   4. QR CODE SHOWCASE & SHARE MODAL
+   4. FRONT DESK QR CODE SHOWCASE & WHATSAPP SHARE CENTER
    -------------------------------------------------------------------------- */
 function initQrModal() {
-  const openQrBtn = document.getElementById('openQrModalBtn');
-  const shareMenuBtn = document.getElementById('shareMenuBtn');
   const qrModal = document.getElementById('qrModal');
+  const openQrBtn = document.getElementById('openQrModalBtn');
+  const openHeroQrModalBtn = document.getElementById('openHeroQrModalBtn');
   const copyLinkBtn = document.getElementById('copyMenuLinkBtn');
+  const modalPrintStandBtn = document.getElementById('modalPrintStandBtn');
+  const modalDownloadQrBtn = document.getElementById('modalDownloadQrBtn');
+  const modalShareWhatsappBtn = document.getElementById('modalShareWhatsappBtn');
+  const heroShareWhatsappBtn = document.getElementById('heroShareWhatsappBtn');
 
-  if (openQrBtn && qrModal) {
-    openQrBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      qrModal.classList.add('active');
+  const presetWifiBtn = document.getElementById('presetWifiBtn');
+  const presetLiveBtn = document.getElementById('presetLiveBtn');
+  const customQrUrlInput = document.getElementById('customQrUrlInput');
+  const heroQrImg = document.getElementById('heroQrImg');
+  const modalQrImg = document.getElementById('modalQrImg');
+
+  // Default target URL (local Wi-Fi IP for immediate smartphone scanning)
+  let targetUrl = 'http://192.168.0.103:3000/';
+
+  // If already hosted on a real domain (not localhost or 127.0.0.1), use that domain by default
+  if (!window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
+    targetUrl = window.location.href.split('#')[0];
+    if (customQrUrlInput) customQrUrlInput.value = targetUrl;
+  }
+
+  function updateQrDisplay(url) {
+    targetUrl = url;
+    const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=8&data=${encodeURIComponent(url)}`;
+    if (heroQrImg) heroQrImg.src = qrApiUrl;
+    if (modalQrImg) modalQrImg.src = qrApiUrl;
+  }
+
+  // Initial QR setup
+  updateQrDisplay(targetUrl);
+
+  // Preset Buttons
+  if (presetWifiBtn) {
+    presetWifiBtn.addEventListener('click', () => {
+      document.querySelectorAll('.qr-preset-pill').forEach(b => b.classList.remove('active'));
+      presetWifiBtn.classList.add('active');
+      const url = presetWifiBtn.getAttribute('data-url') || 'http://192.168.0.103:3000/';
+      if (customQrUrlInput) customQrUrlInput.value = url;
+      updateQrDisplay(url);
+      showToast('📶 Wi-Fi Phone Scan URL සක්‍රීය කරන ලදී (192.168.0.103:3000)');
     });
   }
 
-  if (shareMenuBtn && qrModal) {
-    shareMenuBtn.addEventListener('click', (e) => {
+  if (presetLiveBtn) {
+    presetLiveBtn.addEventListener('click', () => {
+      document.querySelectorAll('.qr-preset-pill').forEach(b => b.classList.remove('active'));
+      presetLiveBtn.classList.add('active');
+      const url = presetLiveBtn.getAttribute('data-url') || 'https://nenapahana-books.lk';
+      if (customQrUrlInput) customQrUrlInput.value = url;
+      updateQrDisplay(url);
+      showToast('🌐 Live Website Domain URL සක්‍රීය කරන ලදී');
+    });
+  }
+
+  // Custom URL Input live change
+  if (customQrUrlInput) {
+    customQrUrlInput.addEventListener('input', (e) => {
+      const url = e.target.value.trim();
+      if (url) {
+        document.querySelectorAll('.qr-preset-pill').forEach(b => b.classList.remove('active'));
+        updateQrDisplay(url);
+      }
+    });
+  }
+
+  // Open QR Modal
+  const openTriggers = [openQrBtn, openHeroQrModalBtn].filter(Boolean);
+  openTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-      qrModal.classList.add('active');
+      if (qrModal) qrModal.classList.add('active');
+    });
+  });
+
+  // WhatsApp Share Trigger
+  function triggerWhatsAppShare() {
+    const shareText = `🪔 *නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය - ඩිජිටල් මිල දර්ශකය*\n(Nenapahana Bookshop Digital Store Menu)\n\nඅපගේ පොත්හලේ ඇති සියලුම ලියන පොත්, CR පොත්, පෑන්, පැන්සල්, ළමා කතා, නවකතා, සඟරා හා මුද්‍රණ සේවාවන්හි නවතම මිල ගණන් (Price List) ඔබගේ දුරකථනයෙන්ම පහසුවෙන් බලාගැනීමට මෙම සබැඳියට පිවිසෙන්න:\n\n👉 ${targetUrl}\n\n📞 ක්ෂණික ඇමතුම්: 011 258 4400\n💬 WhatsApp: 077 987 6543\n📍 කොළඹ බම්බලපිටිය • මහනුවර • කුරුණෑගල`;
+
+    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+    window.open(waUrl, '_blank');
+  }
+
+  if (modalShareWhatsappBtn) {
+    modalShareWhatsappBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      triggerWhatsAppShare();
+    });
+  }
+
+  if (heroShareWhatsappBtn) {
+    heroShareWhatsappBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      triggerWhatsAppShare();
+    });
+  }
+
+  // Print Counter Stand
+  if (modalPrintStandBtn) {
+    modalPrintStandBtn.addEventListener('click', () => {
+      window.print();
+    });
+  }
+
+  // Download QR Code as PNG
+  if (modalDownloadQrBtn) {
+    modalDownloadQrBtn.addEventListener('click', () => {
+      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=${encodeURIComponent(targetUrl)}`;
+      showToast('⏳ QR Code PNG ගොනුව සකසමින් පවතී...');
+
+      fetch(qrApiUrl)
+        .then(res => res.blob())
+        .then(blob => {
+          const blobUrl = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = blobUrl;
+          a.download = 'nenapahana-digital-menu-qr.png';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(blobUrl);
+          showToast('💾 QR Image (PNG) සාර්ථකව බාගත (Download) විය!');
+        })
+        .catch(() => {
+          window.open(qrApiUrl, '_blank');
+        });
     });
   }
 
   // Copy Menu Link
   if (copyLinkBtn) {
     copyLinkBtn.addEventListener('click', () => {
-      const url = window.location.href.split('#')[0];
-      navigator.clipboard.writeText(url).then(() => {
-        showToast('📋 ඩිජිටල් මෙනුවේ Link එක Copy කරගන්නා ලදී!');
-        if (qrModal) qrModal.classList.remove('active');
+      navigator.clipboard.writeText(targetUrl).then(() => {
+        showToast(`📋 Link එක Copy කරගන්නා ලදී: ${targetUrl}`);
       }).catch(() => {
-        showToast('📋 https://nenapahana-books.lk');
+        showToast(`📋 ${targetUrl}`);
       });
     });
   }

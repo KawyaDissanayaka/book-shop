@@ -1200,7 +1200,221 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   14. RESPONSIVE BREAKPOINTS
+   14. FRONT DESK COUNTER STAND & QR SHARE STYLES
+   -------------------------------------------------------------------------- */
+.qr-url-toolbar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.qr-preset-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.qr-preset-pill:hover,
+.qr-preset-pill.active {
+  background: var(--badge-bg);
+  border-color: var(--border-focus);
+  color: var(--primary-light);
+}
+
+/* Printable Counter Stand Card */
+.printable-counter-stand {
+  background: var(--bg-card);
+  border: 2px solid var(--border-focus);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.1rem;
+  box-shadow: var(--shadow-lg), 0 0 35px var(--primary-glow);
+  position: relative;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.stand-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.stand-emblem {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--maroon), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.stand-brand-sinhala {
+  font-family: var(--font-sinhala-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-light);
+  line-height: 1.2;
+}
+
+.stand-brand-en {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stand-title-banner {
+  background: var(--badge-bg);
+  border: 1px solid var(--border-focus);
+  color: var(--badge-text);
+  padding: 0.45rem 1.2rem;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.stand-qr-box {
+  width: 220px;
+  height: 220px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.stand-qr-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.stand-qr-badge {
+  position: absolute;
+  bottom: -10px;
+  background: #0f172a;
+  color: #38bdf8;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.stand-instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 480px;
+}
+
+.instruction-lead {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.stand-features-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.stand-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.85rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary-light);
+}
+
+/* Print Optimization for Counter Stand */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #printableCounterStand,
+  #printableCounterStand * {
+    visibility: visible !important;
+  }
+  #printableCounterStand {
+    position: fixed !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90% !important;
+    max-width: 580px !important;
+    margin: 0 !important;
+    border: 3px double #80121a !important;
+    border-radius: 14px !important;
+    padding: 2.5rem !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+  }
+  #printableCounterStand .stand-brand-sinhala {
+    color: #80121a !important;
+  }
+  #printableCounterStand .stand-title-banner {
+    background: #80121a !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+  #printableCounterStand .instruction-lead {
+    color: #0f172a !important;
+  }
+  #printableCounterStand .stand-features-row {
+    color: #475569 !important;
+  }
+  #printableCounterStand .stand-footer {
+    border-top: 1px solid #cbd5e1 !important;
+    color: #80121a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   15. RESPONSIVE BREAKPOINTS
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .hero-grid,
