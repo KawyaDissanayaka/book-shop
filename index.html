@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය | Nenapahana Bookshop & Stationery Superstore</title>
-  <meta name="description" content="නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය — ළමා කතා පොත්, අභ්‍යාස පොත්, CR පොත්, පෑන්, පැන්සල්, ලිපිද්‍රව්‍ය, නවකතා, සඟරා හා පුවත්පත් දිවයින පුරා බෙදාහැරීම (Cash on Delivery).">
-  <meta name="keywords" content="Nenapahana Books, bookshop sri lanka, stationery sri lanka, cr books, pens, school booklist upload, kids story books, magazines, cash on delivery">
+  <title>නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය | Nenapahana Bookshop Digital Store Menu</title>
+  <meta name="description" content="නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය ඩිජිටල් නාමාවලිය සහ මිල දර්ශකය — ලියන පොත්, CR පොත්, පෑන්, පැන්සල්, ළමා කතා, චිත්‍ර ද්‍රව්‍ය, නවකතා, සඟරා හා මුද්‍රණ සේවා මිල ගණන් දුරකථනයෙන්ම බලාගන්න.">
+  <meta name="keywords" content="Nenapahana Books, bookshop price list sri lanka, stationery price list, cr books, pens, school booklist, photocopy rates, kids books sri lanka">
   <meta name="author" content="නැණපහන පොත් මැඳුර (Nenapahana Books & Stationery Pvt Ltd)">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය | Nenapahana Bookshop & Stationery">
-  <meta property="og:description" content="පාසල්, උසස් අධ්‍යාපන සහ කාර්යාලීය සියලුම පොත්පත් හා ලිපිද්‍රව්‍ය එකම වහලක් යටින්.">
+  <meta property="og:title" content="නැණපහන පොත් මැඳුර ඩිජිටල් මිල දර්ශකය | Store Menu & Price List">
+  <meta property="og:description" content="අපගේ පොත්හලේ ඇති සියලුම පොත්පත් හා ලිපිද්‍රව්‍යවල මිල ගණන් දුරකථනයෙන්ම පහසුවෙන් පරීක්ෂා කරන්න.">
   <meta property="og:image" content="assets/images/stationery.jpg">
 
-  <!-- Google Fonts: Noto Serif Sinhala, Noto Sans Sinhala, Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700;800;900&family=Noto+Serif+Sinhala:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
     <div class="top-notice-inner">
       <div class="notice-delivery-text">
         <span class="pulse-bullet"></span>
-        <span>🚚 <strong>දිවයින පුරා බෙදාහැරීම (Cash on Delivery)</strong> • රු. 4,000 ට වැඩි ඇණවුම් සඳහා නොමිලේ Delivery! • පාසල් පොත් ලැයිස්තු (Booklists) WhatsApp කරන්න: 077 987 6543</span>
+        <span>📱 <strong>නැණපහන ඩිජිටල් මිල දර්ශකය (Digital Store Menu)</strong> • පොත්හලේ ඇති සියලුම දෑ දුරකථනයෙන්ම බලාගන්න • පාසල් පොත් ලැයිස්තු (Booklists) WhatsApp කරන්න: 077 987 6543</span>
       </div>
 
       <div class="top-hotlines">
@@ -65,19 +65,18 @@
         <!-- Live Search Bar -->
         <div class="nav-search-wrap">
           <span class="nav-search-icon">🔍</span>
-          <input type="text" id="storeSearchInput" class="nav-search-input" placeholder="පොත්, පාසල් ලිපිද්‍රව්‍ය, CR පොත්, පෑන්, සඟරා සොයන්න...">
+          <input type="text" id="storeSearchInput" class="nav-search-input" placeholder="පොත්, පෑන්, CR පොත්, ලිපිද්‍රව්‍ය හෝ සේවා මෙහි සොයන්න...">
         </div>
 
         <!-- Action Buttons -->
         <div class="nav-actions">
+          <button class="qr-menu-chip" id="openQrModalBtn" title="QR කේතය පෙන්වන්න">
+            <span>📱 QR මෙනුව</span>
+          </button>
           <button class="btn-upload-list-nav trigger-booklist-modal" title="පාසල් පොත් ලැයිස්තුව එවන්න">
-            <span>📸 පොත් ලැයිස්තුව එවන්න</span>
+            <span>📸 පොත් ලැයිස්තුව</span>
           </button>
-          <button class="btn-cart-trigger" title="කරත්තය බලන්න">
-            <span>🛒 කරත්තය</span>
-            <span class="cart-count-badge" id="navCartCount">0</span>
-          </button>
-          <a href="https://wa.me/94779876543?text=නැණපහන%20පොත්%20මැඳුර%20වෙතින්%20පොත්%20හා%20ලිපිද්‍රව්‍ය%20ඇණවුම්%20කිරීමට%20අවශ්‍යයි" target="_blank" class="btn-whatsapp-quick">
+          <a href="https://wa.me/94779876543?text=හෙලෝ%20නැණපහන%20පොත්%20මැඳුර,%20මට%20පොත්පත්%20හා%20ලිපිද්‍රව්‍ය%20පිළිබඳ%20විස්තර%20දැනගැනීමට%20අවශ්‍යයි" target="_blank" class="btn-whatsapp-quick">
             <span>💬 WhatsApp</span>
           </a>
         </div>
@@ -86,62 +85,74 @@
   </header>
 
   <!-- ======================================================================
-       3. DEPARTMENT MEGA CATEGORIES BAR
+       3. DEPARTMENT MEGA CATEGORIES BAR (Sticky Menu Navigation)
        ====================================================================== -->
   <div class="departments-bar">
     <div class="container">
       <ul class="departments-list">
-        <li><a href="#catalog" class="department-link active" data-category="all"><span>🏪</span> සියලුම අංශ (All)</a></li>
-        <li><a href="#catalog" class="department-link" data-category="exercise"><span>🎒</span> ලියන පොත් & CR Books</a></li>
-        <li><a href="#catalog" class="department-link" data-category="stationery"><span>✏️</span> පෑන්, පැන්සල් & ලිපිද්‍රව්‍ය</a></li>
-        <li><a href="#catalog" class="department-link" data-category="kids"><span>🧸</span> ළමා කතා & චිත්‍ර පොත්</a></li>
+        <li><a href="#catalog" class="department-link active" data-category="all"><span>🏪</span> සියල්ල (All Items)</a></li>
+        <li><a href="#catalog" class="department-link" data-category="exercise"><span>🎒</span> ලියන පොත් & CR</a></li>
+        <li><a href="#catalog" class="department-link" data-category="pens"><span>✏️</span> පෑන් & ලිපිද්‍රව්‍ය</a></li>
+        <li><a href="#catalog" class="department-link" data-category="office"><span>📎</span> පාසල් & කාර්යාල</a></li>
+        <li><a href="#catalog" class="department-link" data-category="art"><span>🎨</span> චිත්‍ර & කලා</a></li>
+        <li><a href="#catalog" class="department-link" data-category="kids"><span>🧸</span> ළමා කතා & පොත්</a></li>
+        <li><a href="#catalog" class="department-link" data-category="textbooks"><span>📖</span> පෙළපොත් & Past Papers</a></li>
         <li><a href="#catalog" class="department-link" data-category="novels"><span>📚</span> නවකතා & සාහිත්‍ය</a></li>
         <li><a href="#catalog" class="department-link" data-category="periodicals"><span>📰</span> පුවත්පත් & සඟරා</a></li>
-        <li><a href="#catalog" class="department-link" data-category="art"><span>🎨</span> චිත්‍ර & කලා උපකරණ</a></li>
-        <li><a href="#branches" class="department-link"><span>📍</span> අපගේ ශාඛා</a></li>
+        <li><a href="#printServices" class="department-link"><span>🖨️</span> මුද්‍රණ සේවා</a></li>
+        <li><a href="#branches" class="department-link"><span>📍</span> ශාඛා</a></li>
       </ul>
     </div>
   </div>
 
   <!-- ======================================================================
-       4. HERO BANNER: GENERAL BOOKSHOP & STATIONERY SUPERSTORE
+       4. HERO BANNER: DIGITAL STORE MENU & PRICE SHOWCASE
        ====================================================================== -->
   <section class="hero" id="hero">
     <div class="hero-glow-orb hero-glow-1"></div>
-    <div class="hero-glow-orb hero-glow-2"></div>
 
     <div class="container">
       <div class="hero-grid">
         <!-- Content Column -->
         <div class="hero-content">
           <div class="pill-badge">
-            <span>🪔</span>
-            <span>ශ්‍රී ලංකාවේ විශ්වාසනීයම පොත් හා ලිපිද්‍රව්‍ය වෙළඳ සෙවණ</span>
+            <span>📱</span>
+            <span>හෝටල් මෙනුවක් මෙන් ඔබගේ දුරකථනයෙන්ම බලන්න (Digital Store Menu)</span>
           </div>
 
           <h1 class="hero-title-sinhala">
-            පාසල්, උසස් අධ්‍යාපන සහ කාර්යාලීය <br>
-            <span class="gradient-text">සියලුම පොත්පත් හා ලිපිද්‍රව්‍ය</span> එකම තැනකින්!
+            අපගේ පොත් මැඳුරේ ඇති සියලුම දේ <br>
+            <span class="gradient-text">මිල ගණන් සහිත ඩිජිටල් නාමාවලිය</span>
           </h1>
 
           <p class="hero-subtitle">
-            ළමා කතා පොත්, අභ්‍යාස පොත්, CR ලියන පොත්, පෑන්, පැන්සල්, ජ්‍යාමිතික පෙට්ටි, නවකතා, සඟරා හා පුවත්පත් ඇතුළු සියලුම දෑ සාධාරණ මිලට Cash on Delivery මගින් ඔබේ නිවසටම ගෙන්වා ගන්න.
+            පොත්හලට පැමිණ හෝ නිවසේ සිටම ඔබගේ දුරකථනයෙන් නැණපහන පොත් මැඳුරේ ඇති සියලුම ලියන පොත්, CR පොත්, පෑන් පැන්සල්, චිත්‍ර ද්‍රව්‍ය, ළමා කතා, පුවත්පත්, සඟරා හා මුද්‍රණ සේවාවන්හි නවතම මිල ගණන් (Price List) මෙතැනින් පරීක්ෂා කරන්න.
           </p>
 
-          <!-- Category Chips -->
-          <div class="hero-categories-chips">
-            <span class="hero-chip-tag">🎒 Atlas & CR ලියන පොත්</span>
-            <span class="hero-chip-tag">✏️ පෑන්, පැන්සල්, පාට පෙට්ටි</span>
-            <span class="hero-chip-tag">🧸 ළමා සුරංගනා කතා</span>
-            <span class="hero-chip-tag">📰 සතිපතා පුවත්පත් & සඟරා</span>
-            <span class="hero-chip-tag">📐 ජ්‍යාමිතික උපකරණ පෙට්ටි</span>
-            <span class="hero-chip-tag">🖨️ A4 කඩදාසි බණ්ඩල්</span>
+          <!-- Store Stats -->
+          <div class="hero-highlights-row">
+            <div class="highlight-item">
+              <span class="highlight-num">1,500+</span>
+              <span class="highlight-label">පොත්පත් & භාණ්ඩ</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">100%</span>
+              <span class="highlight-label">මුල් සන්නාම (Original)</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">දිනපතා</span>
+              <span class="highlight-label">නැවුම් පුවත්පත් & සඟරා</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">ක්ෂණික</span>
+              <span class="highlight-label">WhatsApp සහය</span>
+            </div>
           </div>
 
           <!-- CTAs -->
           <div class="hero-cta-group">
             <a href="#catalog" class="btn-primary">
-              <span>සාප්පු සවාරිය අරඹන්න (Shop Catalog)</span>
+              <span>🔍 භාණ්ඩ සහ මිල ගණන් බලන්න</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <button class="btn-secondary-link trigger-booklist-modal">
@@ -150,18 +161,54 @@
           </div>
         </div>
 
-        <!-- Hero Visual Showcase -->
-        <div class="hero-visual-card">
-          <img src="assets/images/stationery.jpg" alt="නැණපහන පොත් මැඳුර පාසල් හා කාර්යාලීය ලිපිද්‍රව්‍ය">
-          <div class="hero-overlay-tag">
-            <div>
-              <div style="font-weight: 800; font-size: 0.95rem; color: #ffffff;">නැණපහන පොත් මැඳුර සහ ලිපිද්‍රව්‍ය</div>
-              <div style="font-size: 0.78rem; color: var(--primary-light);">100% Original School & Office Stationery</div>
-            </div>
-            <a href="#catalog" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.8rem;">
-              තෝරාගන්න
-            </a>
+        <!-- Digital Menu QR Showcase Card -->
+        <div class="digital-menu-qr-card">
+          <div class="qr-code-graphic">
+            <!-- Authentic SVG QR code mockup -->
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="white"/>
+              <!-- Corner Top Left -->
+              <rect x="10" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
+              <rect x="14" y="14" width="16" height="16" rx="2" fill="white"/>
+              <rect x="18" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
+              <!-- Corner Top Right -->
+              <rect x="66" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
+              <rect x="70" y="14" width="16" height="16" rx="2" fill="white"/>
+              <rect x="74" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
+              <!-- Corner Bottom Left -->
+              <rect x="10" y="66" width="24" height="24" rx="3" fill="#0f172a"/>
+              <rect x="14" y="70" width="16" height="16" rx="2" fill="white"/>
+              <rect x="18" y="74" width="8" height="8" rx="1" fill="#0f172a"/>
+              <!-- Data Dots & Patterns -->
+              <rect x="42" y="12" width="6" height="6" fill="#0f172a"/>
+              <rect x="52" y="12" width="6" height="6" fill="#0f172a"/>
+              <rect x="42" y="24" width="6" height="6" fill="#0f172a"/>
+              <rect x="42" y="38" width="6" height="6" fill="#0f172a"/>
+              <rect x="52" y="38" width="6" height="6" fill="#0f172a"/>
+              <rect x="12" y="44" width="6" height="6" fill="#0f172a"/>
+              <rect x="24" y="44" width="6" height="6" fill="#0f172a"/>
+              <rect x="66" y="44" width="6" height="6" fill="#0f172a"/>
+              <rect x="78" y="44" width="6" height="6" fill="#0f172a"/>
+              <rect x="42" y="52" width="6" height="6" fill="#0f172a"/>
+              <rect x="52" y="52" width="6" height="6" fill="#0f172a"/>
+              <rect x="66" y="56" width="6" height="6" fill="#0f172a"/>
+              <rect x="42" y="66" width="6" height="6" fill="#0f172a"/>
+              <rect x="52" y="66" width="6" height="6" fill="#0f172a"/>
+              <rect x="78" y="66" width="6" height="6" fill="#0f172a"/>
+              <rect x="42" y="78" width="6" height="6" fill="#0f172a"/>
+              <rect x="66" y="78" width="6" height="6" fill="#0f172a"/>
+              <rect x="78" y="78" width="6" height="6" fill="#0f172a"/>
+            </svg>
           </div>
+          <div>
+            <div class="qr-card-title">නැණපහන Digital QR Menu</div>
+            <p class="qr-card-desc">
+              හෝටල් මෙනුවක් මෙන් ඔබගේ දුරකථනයෙන් QR කේතය ස්කෑන් කර ඕනෑම වේලාවක අපගේ සම්පූර්ණ මිල ලැයිස්තුව ඔබ ළඟ තබාගන්න.
+            </p>
+          </div>
+          <button class="btn-whatsapp-quick" id="shareMenuBtn" style="font-size: 0.8rem; padding: 0.45rem 1rem;">
+            <span>🔗 මෙනුවේ Link එක Share කරන්න</span>
+          </button>
         </div>
       </div>
     </div>
@@ -174,34 +221,34 @@
     <div class="container">
       <div class="trust-pillars-grid">
         <div class="pillar-item">
-          <div class="pillar-icon-box">🚚</div>
+          <div class="pillar-icon-box">🏷️</div>
           <div>
-            <div class="pillar-title">දිවයින පුරා බෙදාහැරීම</div>
-            <div class="pillar-desc">භාණ්ඩ ලැබුණු පසු මුදල් ගෙවන්න (COD)</div>
-          </div>
-        </div>
-
-        <div class="pillar-item">
-          <div class="pillar-icon-box">💳</div>
-          <div>
-            <div class="pillar-title">පහසු ගෙවීම් ක්‍රම</div>
-            <div class="pillar-desc">Visa, Master, Koko & Bank Transfer</div>
+            <div class="pillar-title">සාධාරණ හා නිශ්චිත මිල ගණන්</div>
+            <div class="pillar-desc">රජයේ සහ ප්‍රකාශකයන්ගේ නියමිත මිල ගණන්</div>
           </div>
         </div>
 
         <div class="pillar-item">
           <div class="pillar-icon-box">🛡️</div>
           <div>
-            <div class="pillar-title">100% මුල් මුද්‍රණ හා සන්නාම</div>
+            <div class="pillar-title">100% මුල් සන්නාම</div>
             <div class="pillar-desc">Atlas, Camel, Faber-Castell අව්‍යාජ භාණ්ඩ</div>
           </div>
         </div>
 
         <div class="pillar-item">
-          <div class="pillar-icon-box">📞</div>
+          <div class="pillar-icon-box">📸</div>
           <div>
-            <div class="pillar-title">ක්ෂණික පාරිභෝගික සහය</div>
-            <div class="pillar-desc">011 258 4400 / WhatsApp සේවාව</div>
+            <div class="pillar-title">පාසල් පොත් ලැයිස්තු සේවාව</div>
+            <div class="pillar-desc">ඡායාරූපය WhatsApp එවන්න - අපි ලෑස්ති කරන්නෙමු</div>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon-box">🖨️</div>
+          <div>
+            <div class="pillar-title">කඩිනම් මුද්‍රණ & ඡායාපිටපත්</div>
+            <div class="pillar-desc">Photocopy, Color Printouts & Lamination සේවා</div>
           </div>
         </div>
       </div>
@@ -209,9 +256,1515 @@
   </section>
 
   <!-- ======================================================================
-       6. SPECIAL SERVICE: SCHOOL BOOKLIST PHOTO UPLOAD / WHATSAPP
+       6. COMPREHENSIVE DIGITAL STORE MENU & PRICE CATALOG
        ====================================================================== -->
-  <div class="container">
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ඩිජිටල් නාමාවලිය සහ මිල දර්ශකය</span>
+        <h2 class="section-title">අපගේ පොත් මැඳුරේ ඇති සියලුම දෑ</h2>
+        <p class="section-desc">
+          හෝටල් මෙනුවක් මෙන් වර්ගීකරණය අනුව ඔබට අවශ්‍ය පොත්පත්, ලිපිද්‍රව්‍ය හා මිල ගණන් පහසුවෙන් පරීක්ෂා කරන්න. වැඩිදුර තොරතුරු හෝ ලබාගැනීමට WhatsApp විමසන්න බොත්තම ඔබන්න.
+        </p>
+      </div>
+
+      <!-- Live Search Notice -->
+      <div id="searchResultNotice" style="display: none; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: var(--badge-bg); border: 1px solid var(--border-focus); border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--primary-light);">
+        සොයන ලද්දේ: "<span id="searchKeyword"></span>" (<span id="searchCount">0</span> ප්‍රතිඵල හමුවිය)
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 1: CR & EXERCISE BOOKS
+           ========================================== -->
+      <div class="menu-section" data-menu-category="exercise">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">🎒</div>
+            <div>
+              <h3 class="menu-section-title">ලියන පොත් සහ CR පොත් (CR & Exercise Books)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">පාසල් හා කාර්යාල සඳහා Atlas & Promate උසස් තත්ත්වයේ ලියන පොත්</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">11 වර්ගයක තොග ඇත</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 1 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas CR Book 120 Pages (Single Rule)</div>
+              <div class="menu-item-price">රු. 240/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • තනි රූල් • Hard Cover</div>
+            <div class="menu-item-desc">පිටු 120 ශක්තිමත් බැඳීම, උසස් කඩදාසි ගුණාත්මකභාවය. පාසල් හා විශ්වවිද්‍යාල සටහන් සඳහා සුදුසුයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas CR Book 120 Pages (Single Rule)" data-item-price="රු. 240/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas CR Book 200 Pages (Single Rule)</div>
+              <div class="menu-item-price">රු. 380/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • තනි රූල් • Hard Cover</div>
+            <div class="menu-item-desc">පිටු 200 ඝන කවරය සහිතයි. සම්පූර්ණ විෂය නිර්දේශයේ සටහන් එකම පොතක තබාගැනීමට කදිමයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas CR Book 200 Pages (Single Rule)" data-item-price="රු. 380/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Promate CR Book 160 Pages (Soft Cover)</div>
+              <div class="menu-item-price">රු. 310/=</div>
+            </div>
+            <div class="menu-item-brand">Promate Sri Lanka • තනි රූල් • සැහැල්ලු කවරය</div>
+            <div class="menu-item-desc">බර අඩු, උසස් නිමාවෙන් යුතු CR ලියන පොත. කාර්යාලීය ලිපිලේඛන සටහන් සඳහා පහසුයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Promate CR Book 160 Pages" data-item-price="රු. 310/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Exercise Book 80 Pages (Single Rule)</div>
+              <div class="menu-item-price">රු. 110/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • පාසල් අභ්‍යාස පොත</div>
+            <div class="menu-item-desc">1 සිට 11 ශ්‍රේණි දක්වා දෛනික පාසල් පැවරුම් සහ නිබන්ධන සඳහා නියමිත ප්‍රමිතියෙන් යුතුයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Exercise Book 80 Pages" data-item-price="රු. 110/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Exercise Book 120 Pages (Single Rule)</div>
+              <div class="menu-item-price">රු. 150/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • තනි රූල් පිටු 120</div>
+            <div class="menu-item-desc">පාසල් විෂය සටහන් සඳහා වැඩි පිටු ගණනක් සහිත කල්පවත්නා අභ්‍යාස පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Exercise Book 120 Pages" data-item-price="රු. 150/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Square Rule Book (කොටු රූල් පොත) - 80 Pages</div>
+              <div class="menu-item-price">රු. 115/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • කොටු රූල් (ගණිතය සඳහා)</div>
+            <div class="menu-item-desc">ප්‍රාථමික හා ද්විතීයික ශ්‍රේණිවල ගණිත අභ්‍යාස හා ජ්‍යාමිතික සටහන් සඳහා විශේෂිතයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Square Rule Book 80 Pages" data-item-price="රු. 115/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Double Rule Book (ද්විත්ව රූල්) - 80 Pages</div>
+              <div class="menu-item-price">රු. 115/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • අත් අකුරු හුරු කිරීම</div>
+            <div class="menu-item-desc">කුඩා දරුවන්ගේ සිංහල හා ඉංග්‍රීසි අත් අකුරු හැඩගැස්වීම සඳහා නිර්දේශිත ද්විත්ව රූල් පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Double Rule Book 80 Pages" data-item-price="රු. 115/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Botany Practical Book (උද්භිද විද්‍යා ප්‍රායෝගික පොත)</div>
+              <div class="menu-item-price">රු. 260/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • රූල් සහ බ්ලෑන්ක් පිටු</div>
+            <div class="menu-item-desc">එක් පැත්තක් රූල් සහ අනෙක් පැත්ත චිත්‍ර සඳහා හිස් පිටු සහිත විද්‍යා ප්‍රායෝගික සටහන් පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Botany Practical Book" data-item-price="රු. 260/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Science Practical Record Book (විද්‍යා ප්‍රායෝගික පොත)</div>
+              <div class="menu-item-price">රු. 320/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas / Promate • A/L & O/L Science</div>
+            <div class="menu-item-desc">සාමාන්‍ය පෙළ සහ උසස් පෙළ විද්‍යා අංශයේ පරීක්ෂණ සටහන් හා රූපසටහන් ඇඳීමට සම්මත ප්‍රමිතිය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Science Practical Record Book" data-item-price="රු. 320/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Spiral Drawing Book (චිත්‍ර පොත) - 40 Pages</div>
+              <div class="menu-item-price">රු. 220/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • Spiral Bound Art Book</div>
+            <div class="menu-item-desc">පැස්ටල්, වතුර සායම් හා පාට පැන්සල් සඳහා සුදුසු ඝනකම් කඩදාසි සහිත සර්පිලාකාර චිත්‍ර පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Spiral Drawing Book 40 Pages" data-item-price="රු. 220/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="menu-item-card" data-category="exercise">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Accounts Ledger Book (ගිණුම් ලෙජර් පොත)</div>
+              <div class="menu-item-price">රු. 490/=</div>
+            </div>
+            <div class="menu-item-brand">Commercial Grade • 200 Pages Hard Cover</div>
+            <div class="menu-item-desc">ව්‍යාපාරික හා කාර්යාලීය ආදායම්-වියදම්, ගිණුම් ලේඛන පවත්වාගෙන යාමට විශේෂිත ලෙජර් පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Accounts Ledger Book" data-item-price="රු. 490/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 2: PENS, PENCILS & STATIONERY
+           ========================================== -->
+      <div class="menu-section" data-menu-category="pens">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">✏️</div>
+            <div>
+              <h3 class="menu-section-title">පෑන්, පැන්සල් සහ ලිපිද්‍රව්‍ය (Pens, Pencils & Stationery)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">දිනපතා ලිවීමට අවශ්‍ය සියලුම වර්ගවල පෑන්, පැන්සල් හා මකන</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">14 වර්ගයක තොග ඇත</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 12 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Chooty Ballpoint Pen Pack (පෑන් 5ක්)</div>
+              <div class="menu-item-price">රු. 150/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • නිල් තීන්ත (Blue Ink)</div>
+            <div class="menu-item-desc">ශ්‍රී ලංකාවේ ජනප්‍රියතම සිනිඳු ලිවීමේ අත්දැකීමක් ලබාදෙන Atlas Chooty පෑන් 5ක පැක් එක.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Chooty Pen Pack (5 Pens)" data-item-price="රු. 150/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 13 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Cello Gripper Ballpoint Pen (තනි පෑන)</div>
+              <div class="menu-item-price">රු. 45/=</div>
+            </div>
+            <div class="menu-item-brand">Cello India • රබර් ග්‍රිප් එක සහිතයි</div>
+            <div class="menu-item-desc">ඇඟිලි රිදීමකින් තොරව විභාග හා දීර්ඝ ලිවීම් සඳහා විශේෂයෙන් නිමවූ රබර් ග්‍රිප් බෝල්පොයින්ට් පෑන.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Cello Gripper Pen" data-item-price="රු. 45/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 14 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Doms Neon / Pastel Gel Pens (පැක් එක)</div>
+              <div class="menu-item-price">රු. 280/=</div>
+            </div>
+            <div class="menu-item-brand">Doms Stationery • Smooth Gel Flow</div>
+            <div class="menu-item-desc">සටහන් ආකර්ෂණීය කරගැනීමට හා විෂය මාතෘකා ලිවීමට කදිම විචිත්‍ර ජෙල් පෑන් කට්ටලය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Doms Pastel Gel Pens Pack" data-item-price="රු. 280/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 15 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Nataraj 2B Graphite Pencils (පැන්සල් 10 පෙට්ටිය)</div>
+              <div class="menu-item-price">රු. 220/=</div>
+            </div>
+            <div class="menu-item-brand">Nataraj • 2B Dark Lead with Sharpener & Eraser</div>
+            <div class="menu-item-desc">නොකැඩෙන ශක්තිමත් තුඩ, පැහැදිලි තද අකුරු ලිවීම. නොමිලේ උල්කටුවක් හා මකනයක් සහිතයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Nataraj 2B Pencils (10 Pack)" data-item-price="රු. 220/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 16 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Faber-Castell Dust-Free Eraser (මකන)</div>
+              <div class="menu-item-price">රු. 40/=</div>
+            </div>
+            <div class="menu-item-brand">Faber-Castell Germany • Dust-Free Non-Toxic</div>
+            <div class="menu-item-desc">කඩදාසියට හානි නොවී පිරිසිදුව පැන්සල් සලකුණු මකා දමන උසස් ප්‍රමිතියේ ජර්මන් මකනය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Faber-Castell Dust-Free Eraser" data-item-price="රු. 40/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 17 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Maped Metal Pencil Sharpener (උල් කටුව)</div>
+              <div class="menu-item-price">රු. 50/=</div>
+            </div>
+            <div class="menu-item-brand">Maped France • Heavy Duty Metal Body</div>
+            <div class="menu-item-desc">දීර්ඝ කාලයක් මුවහත නොනැසෙන වානේ තලයක් සහිත ලෝහ උල්කටුව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Maped Metal Sharpener" data-item-price="රු. 50/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 18 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Plastic Foot Ruler (12 Inch / 30cm අඩිකෝදුව)</div>
+              <div class="menu-item-price">රු. 45/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • Clear Transparent 30cm</div>
+            <div class="menu-item-desc">පැහැදිලි මිලිමීටර් සහ අඟල් සලකුණු සහිත නම්‍යශීලී ප්ලාස්ටික් අඩිකෝදුව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Plastic Ruler 30cm" data-item-price="රු. 45/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 19 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Stainless Steel Metal Ruler (30cm වානේ අඩිකෝදුව)</div>
+              <div class="menu-item-price">රු. 140/=</div>
+            </div>
+            <div class="menu-item-brand">Precision Tools • නොනැමෙන වානේ</div>
+            <div class="menu-item-desc">කඩදාසි කැපීමට හා කාර්මික/චිත්‍ර ඇඳීම් සඳහා සම්මත මලනොකන වානේ අඩිකෝදුව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Steel Metal Ruler 30cm" data-item-price="රු. 140/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 20 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Atlas Tin Mathematical Instrument Set (ජ්‍යාමිතික පෙට්ටිය)</div>
+              <div class="menu-item-price">රු. 550/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas Sri Lanka • සම්පූර්ණ උපකරණ පෙට්ටිය</div>
+            <div class="menu-item-desc">කවකටුව, කෝණමානය, සෙට්ස්කුවෙයාර්, අඩිකෝදුව, පැන්සල හා මකනය ඇතුළත් ටින් ජ්‍යාමිතික පෙට්ටිය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Atlas Mathematical Set" data-item-price="රු. 550/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 21 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Pastel Highlighter Pen Set (හයිලයිටර් 4ක්)</div>
+              <div class="menu-item-price">රු. 360/=</div>
+            </div>
+            <div class="menu-item-brand">Fluo Pastel • ඇසට සුවදායි මෘදු වර්ණ</div>
+            <div class="menu-item-desc">කහ, රෝස, කොළ, නිල් පැස්ටල් වර්ණ 4ක්. සටහන් පොත්වල වැදගත් කරුණු ලකුණු කරගැනීමට.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Pastel Highlighters 4-Pack" data-item-price="රු. 360/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 22 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Whiteboard Marker Pen (Snowman / Camel)</div>
+              <div class="menu-item-price">රු. 120/=</div>
+            </div>
+            <div class="menu-item-brand">Refillable Dry Wipe • Blue / Black</div>
+            <div class="menu-item-desc">සුදු ලෑලි මත පහසුවෙන් ලිවිය හැකි හා පහසුවෙන් මැකෙන උසස් තත්ත්වයේ වයිට්බෝඩ් මාකර් පෑන.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Whiteboard Marker Pen" data-item-price="රු. 120/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 23 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Permanent Marker Pen (කළු / නිල්)</div>
+              <div class="menu-item-price">රු. 110/=</div>
+            </div>
+            <div class="menu-item-brand">Waterproof Indelible Ink • Snowman / Atlas</div>
+            <div class="menu-item-desc">ප්ලාස්ටික්, ලී, වීදුරු සහ පෙට්ටි මත නොමැකෙන ලෙස ලිවීමට සුදුසු පර්මනන්ට් මාකර් පෑන.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Permanent Marker Pen" data-item-price="රු. 110/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 24 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Correction Tape Roller (රෝලර් ටේප්)</div>
+              <div class="menu-item-price">රු. 190/=</div>
+            </div>
+            <div class="menu-item-brand">Dry White-out Tape • 8 Meters</div>
+            <div class="menu-item-desc">වේලෙන තුරු නොසිට ක්ෂණිකවම උඩින් ලිවිය හැකි පිරිසිදු කරෙක්ෂන් රෝලර් ටේප් එක.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Correction Tape Roller" data-item-price="රු. 190/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 25 -->
+          <div class="menu-item-card" data-category="pens">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Tipp-Ex / Correction Fluid Pen (දියර පෑන)</div>
+              <div class="menu-item-price">රු. 160/=</div>
+            </div>
+            <div class="menu-item-brand">Fine Metal Tip • Quick Dry Fluid</div>
+            <div class="menu-item-desc">පොඩි වැරදි නිවැරදි කිරීම සඳහා සියුම් ලෝහ තුඩක් සහිත ඉක්මනින් වේලෙන වයිට්-අවුට් පෑන.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Correction Fluid Pen" data-item-price="රු. 160/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 3: SCHOOL & OFFICE SUPPLIES
+           ========================================== -->
+      <div class="menu-section" data-menu-category="office">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">📎</div>
+            <div>
+              <h3 class="menu-section-title">පාසල් සහ කාර්යාලීය උපකරණ (School & Office Supplies)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">ගොනුකිරීම්, A4 කඩදාසි, ස්ටැප්ලර්, ගම් සහ කවර</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">14 වර්ගයක තොග ඇත</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 26 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Double A - A4 Copier Paper Bundle (පිටු 500)</div>
+              <div class="menu-item-price">රු. 1,450/=</div>
+            </div>
+            <div class="menu-item-brand">Double A • 80 GSM High Quality White</div>
+            <div class="menu-item-desc">මුද්‍රණ යන්ත්‍රවල සිරනොවන, උසස් ඡායාපිටපත් හා මුද්‍රණ සඳහා ලොව පිළිගත් Double A කඩදාසි බණ්ඩලය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Double A Copier Paper (500 Sheets)" data-item-price="රු. 1,450/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 27 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Kangaro No. 10 Stapler + Staple Pins Box</div>
+              <div class="menu-item-price">රු. 480/=</div>
+            </div>
+            <div class="menu-item-brand">Kangaro India • Heavy Duty Compact</div>
+            <div class="menu-item-desc">පාසල් හා කාර්යාල ලිපි ලේඛන අමුණා තැබීමට කල්පවත්නා ස්ටැප්ලරය සහ නොමිලේ පින් පෙට්ටිය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Kangaro No 10 Stapler + Pins" data-item-price="රු. 480/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 28 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Two-Hole Paper Puncher (සිදුරු විදින උපකරණය)</div>
+              <div class="menu-item-price">රු. 520/=</div>
+            </div>
+            <div class="menu-item-brand">Kangaro / Deli • Guide Scale Included</div>
+            <div class="menu-item-desc">ලිපිගොනු සඳහා නියමිත ප්‍රමිතියට කඩදාසි සිදුරු විදින මිලිමීටර් ගයිඩ් සහිත පන්චරය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Two-Hole Paper Puncher" data-item-price="රු. 520/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 29 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">UHU All Purpose Glue Stick (40g විශාල)</div>
+              <div class="menu-item-price">රු. 240/=</div>
+            </div>
+            <div class="menu-item-brand">UHU Germany • Non-Toxic Washable</div>
+            <div class="menu-item-desc">කඩදාසි නොරැළි වන පරිදි ඉක්මනින් හා පිරිසිදුව ඇලවෙන උසස් ජර්මන් ගම් කූර.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="UHU Glue Stick 40g" data-item-price="රු. 240/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 30 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Camel / Fevicol White Craft Glue (100ml)</div>
+              <div class="menu-item-price">රු. 160/=</div>
+            </div>
+            <div class="menu-item-brand">Strong Adhesive • පාසල් නිර්මාණ සඳහා</div>
+            <div class="menu-item-desc">කාඩ්බෝඩ්, දැව හා අත්කම් නිර්මාණ ඇලවීමට ශක්තිමත් සුදු පැහැති මැලියම් බෝතලය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Camel White Craft Glue 100ml" data-item-price="රු. 160/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 31 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Plastic Clear Sheet Protectors (Clear Bags 100 Pack)</div>
+              <div class="menu-item-price">රු. 450/=</div>
+            </div>
+            <div class="menu-item-brand">A4 Size • 11 Hole Universal Punch</div>
+            <div class="menu-item-desc">සහතිකපත් හා වටිනා ලිපි ලේඛන අපිරිසිදු නොවී ෆයිල් කර තැබීමට විනිවිද පෙනෙන කවර 100 පැක් එක.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Clear Sheet Protectors (100 Pack)" data-item-price="රු. 450/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 32 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Lever Arch Box File (ලිපිගොනු පෙට්ටිය)</div>
+              <div class="menu-item-price">රු. 420/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas / Deli • Heavy Duty Metal Clip</div>
+            <div class="menu-item-desc">කාර්යාලීය ලිපිගොනු සහ පාසල් ප්‍රශ්න පත්‍ර පිළිවෙළට තැන්පත් කර තැබිය හැකි බොක්ස් ෆයිල් එක.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Lever Arch Box File" data-item-price="රු. 420/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 33 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Ring Binder 2-Ring Presentation File</div>
+              <div class="menu-item-price">රු. 320/=</div>
+            </div>
+            <div class="menu-item-brand">A4 Presentation Folder • Pastel Colours</div>
+            <div class="menu-item-desc">පැවරුම් (Assignments) සහ වාර්තා ඉදිරිපත් කිරීමට සුදුසු රිං ෆයිල් ෆෝල්ඩරය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Ring Binder Presentation File" data-item-price="රු. 320/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 34 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Clear Book Plastic Covers Roll (පොත් කවර රෝලය - මීටර් 10)</div>
+              <div class="menu-item-price">රු. 280/=</div>
+            </div>
+            <div class="menu-item-brand">100% Transparent PVC Book Covering Film</div>
+            <div class="menu-item-desc">පාසල් පෙළපොත් හා CR පොත් වසර පුරා පිරිසිදුව තබාගැනීමට ලැමිනේට් ප්ලාස්ටික් කවර රෝලය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Clear Book Covers Roll (10m)" data-item-price="රු. 280/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 35 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Brown Paper Roll (දුඹුරු කඩදාසි රෝලය - 5 Sheets)</div>
+              <div class="menu-item-price">රු. 150/=</div>
+            </div>
+            <div class="menu-item-brand">High Strength Kraft Paper Sheets</div>
+            <div class="menu-item-desc">පාසල් පොත් කවර දැමීමට සම්මත තද දුඹුරු පාට ක්‍රාෆ්ට් කඩදාසි 5ක රෝලය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Brown Paper Roll (5 Sheets)" data-item-price="රු. 150/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 36 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Self-Adhesive School Book Labels Sheet (ලේබල් කොළ 5ක්)</div>
+              <div class="menu-item-price">රු. 80/=</div>
+            </div>
+            <div class="menu-item-brand">Disney / Cartoon & Standard School Labels</div>
+            <div class="menu-item-desc">නම, ශ්‍රේණිය හා විෂය ලිවිය හැකි ඇලවෙන පාසල් පොත් ලේබල් කොළ 5ක් (ලේබල් 40ක් පමණ).</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Book Labels Sheet (5 Sheets)" data-item-price="රු. 80/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 37 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Casio FX-991ES Plus 2nd Gen Scientific Calculator</div>
+              <div class="menu-item-price">රු. 5,850/=</div>
+            </div>
+            <div class="menu-item-brand">Casio Japan • 100% Genuine with Warranty</div>
+            <div class="menu-item-desc">උසස් පෙළ (A/L) සහ විශ්වවිද්‍යාල ගණිතය/ඉංජිනේරු විභාග සඳහා අනුමත ඔරිජිනල් කැසියෝ කැල්කියුලේටරය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Casio FX-991ES Plus Calculator" data-item-price="රු. 5,850/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 38 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Basic Desktop Calculator 12-Digit (මේස කැල්කියුලේටරය)</div>
+              <div class="menu-item-price">රු. 1,250/=</div>
+            </div>
+            <div class="menu-item-brand">Solar & Battery Dual Power • Big Display</div>
+            <div class="menu-item-desc">වෙළඳසැල් හා කාර්යාල මේස සඳහා විශාල අංක සහිත පැහැදිලි ඩෙස්ක්ටොප් කැල්කියුලේටරය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Desktop Calculator 12-Digit" data-item-price="රු. 1,250/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 39 -->
+          <div class="menu-item-card" data-category="office">
+            <div class="menu-item-top">
+              <div class="menu-item-name">School Pencil Case / Pouch (පැන්සල් පෙට්ටිය / බෑගය)</div>
+              <div class="menu-item-price">රු. 450/=</div>
+            </div>
+            <div class="menu-item-brand">Multi-Compartment Zip Pouch • කල්පවත්නා</div>
+            <div class="menu-item-desc">පෑන්, පැන්සල්, පාට කූරු හා ජ්‍යාමිතික උපකරණ දැමිය හැකි සිපර් සහිත ශක්තිමත් පැන්සල් කේස් එක.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="School Pencil Case" data-item-price="රු. 450/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 4: ART & CRAFT SUPPLIES
+           ========================================== -->
+      <div class="menu-section" data-menu-category="art">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">🎨</div>
+            <div>
+              <h3 class="menu-section-title">චිත්‍ර සහ කලා නිර්මාණ ද්‍රව්‍ය (Art & Craft Supplies)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">පාසල් චිත්‍ර විෂය හා කලා නිර්මාණ සඳහා Camel & Faber-Castell වර්ණ</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">11 වර්ගයක තොග ඇත</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 40 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Camel 12 Oil Pastels Box (තෙල් පැස්ටල් පාට 12)</div>
+              <div class="menu-item-price">රු. 380/=</div>
+            </div>
+            <div class="menu-item-brand">Camel Art India • Vibrant Rich Shades</div>
+            <div class="menu-item-desc">ප්‍රාථමික ශ්‍රේණිවල දරුවන්ගේ චිත්‍ර පාඩම් සඳහා නිර්දේශිත සිනිඳු තෙල් පැස්ටල් පාට 12 පෙට්ටිය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Camel 12 Oil Pastels Box" data-item-price="රු. 380/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 41 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Camel 24 Oil Pastels Box (තෙල් පැස්ටල් පාට 24)</div>
+              <div class="menu-item-price">රු. 690/=</div>
+            </div>
+            <div class="menu-item-brand">Camel Art India • 24 Shades + Scraping Tool</div>
+            <div class="menu-item-desc">විවිධ වර්ණ සංකලන හා උසස් චිත්‍ර නිර්මාණ සඳහා අමතර සූරන කටුවක් සහිත පැස්ටල් 24 පෙට්ටිය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Camel 24 Oil Pastels Box" data-item-price="රු. 690/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 42 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Faber-Castell 24 Classic Colour Pencils (පාට පෙට්ටිය)</div>
+              <div class="menu-item-price">රු. 680/=</div>
+            </div>
+            <div class="menu-item-brand">Faber-Castell Germany • නොකැඩෙන SV Lead</div>
+            <div class="menu-item-desc">ලොව හොඳම පාට පැන්සල් සන්නාමය. සියුම් රූප වර්ණ ගැන්වීමට හා සිතුවම් ඇඳීමට අසමසමයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Faber-Castell 24 Colour Pencils" data-item-price="රු. 680/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 43 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Camel Student Water Colours Set (වතුර සායම් පෙට්ටිය)</div>
+              <div class="menu-item-price">රු. 450/=</div>
+            </div>
+            <div class="menu-item-brand">Camel Art • 12 Cakes with Free Brush</div>
+            <div class="menu-item-desc">පාසල් චිත්‍ර විභාග සඳහා සම්මත ජල සායම් පෙට්ටිය. බුරුසුවක් හා මිශ්‍රණ තැටියක් සහිතයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Camel Student Water Colours Set" data-item-price="රු. 450/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 44 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Acrylic Paint Tubes Set (ඇක්‍රිලික් පාට 12)</div>
+              <div class="menu-item-price">රු. 950/=</div>
+            </div>
+            <div class="menu-item-brand">Artist Studio Quality • 12 Vibrant Tubes</div>
+            <div class="menu-item-desc">කැන්වස්, මැටි, දැව හා කඩදාසි මත සදාකාලික දීප්තිමත් සිතුවම් මැවීමට ඇක්‍රිලික් වර්ණ කට්ටලය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Acrylic Paint Tubes Set 12" data-item-price="රු. 950/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 45 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Camel Artist Paint Brushes Set (බුරුසු 6 පැක් එක)</div>
+              <div class="menu-item-price">රු. 420/=</div>
+            </div>
+            <div class="menu-item-brand">Round & Flat Brushes • මෘදු කෙඳි සහිත</div>
+            <div class="menu-item-desc">අංක 2, 4, 6, 8, 10 සහ 12 ප්‍රමාණවල වතුර සායම් හා ඇක්‍රිලික් සඳහා සුදුසු කලා බුරුසු කට්ටලය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Camel Paint Brushes (Set of 6)" data-item-price="රු. 420/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 46 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Doms Modelling Clay / Plasticine (ප්ලාස්ටිසීන් පාට 12)</div>
+              <div class="menu-item-price">රු. 260/=</div>
+            </div>
+            <div class="menu-item-brand">Doms Non-Toxic Clay • මෘදු අච්චු සහිතයි</div>
+            <div class="menu-item-desc">කුඩා දරුවන්ගේ නිර්මාණශීලී හැකියා වර්ධනය කරන අතේ නොඇලෙන විෂ නොවන ප්ලාස්ටිසීන් පාට 12.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Doms Modelling Clay 12 Shades" data-item-price="රු. 260/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 47 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">A3 Size Drawing Book (විශාල චිත්‍ර පොත)</div>
+              <div class="menu-item-price">රු. 380/=</div>
+            </div>
+            <div class="menu-item-brand">Atlas / Promate • 120 GSM Thick Paper</div>
+            <div class="menu-item-desc">සාමාන්‍ය පෙළ චිත්‍ර විෂය ප්‍රායෝගික වැඩ සඳහා සම්මත විශාල A3 ප්‍රමාණයේ චිත්‍ර පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="A3 Drawing Book" data-item-price="රු. 380/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 48 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Bristol Board Sheets (විවිධ වර්ණ - 1 Sheet)</div>
+              <div class="menu-item-price">රු. 55/=</div>
+            </div>
+            <div class="menu-item-brand">Standard Full Sheet • විවිධ පාට 15ක්</div>
+            <div class="menu-item-desc">පාසල් බිත්ති පුවත්පත්, පෝස්ටර් හා ප්‍රදර්ශන නිර්මාණ සඳහා සුදුසු ඝනකම් බ්‍රිස්ටල් බෝඩ් කොළ.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Bristol Board Sheet" data-item-price="රු. 55/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 49 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Glitter Foam Sheets Pack (දිලිසෙන කොළ 10ක්)</div>
+              <div class="menu-item-price">රු. 320/=</div>
+            </div>
+            <div class="menu-item-brand">A4 Self-Adhesive Glitter Sheets</div>
+            <div class="menu-item-desc">පාසල් සැරසිලි, සුබපැතුම්පත් හා අත්කම් නිර්මාණ සඳහා පිටුපස ඇලවුම් සහිත ග්ලිටර් ෆෝම් ෂීට්ස්.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Glitter Foam Sheets (10 Pack)" data-item-price="රු. 320/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 50 -->
+          <div class="menu-item-card" data-category="art">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Origami Craft Paper Pack (වර්ණ කඩදාසි 100ක්)</div>
+              <div class="menu-item-price">රු. 220/=</div>
+            </div>
+            <div class="menu-item-brand">Square Folding Paper • පාට 10ක්</div>
+            <div class="menu-item-desc">ජපන් කඩදාසි නමන කලාව හා ළමා නිර්මාණ සඳහා සමචතුරස්‍ර වර්ණ කඩදාසි 100ක ඇසුරුම.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Origami Craft Paper Pack" data-item-price="රු. 220/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 5: KIDS' STORIES & PRESCHOOL
+           ========================================== -->
+      <div class="menu-section" data-menu-category="kids">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">🧸</div>
+            <div>
+              <h3 class="menu-section-title">ළමා කතා සහ මොන්ටිසෝරි ක්‍රියාකාරකම් (Kids' Stories & Activities)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">සුරංගනා කතා, ජනකතා, රූප පාට කරන පොත් සහ අකුරු හුරු පොත්</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">8 වර්ගයක තොග ඇත</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 51 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">ළමා සුරංගනා කතා පෙළ - සිංහ රාජධානිය</div>
+              <div class="menu-item-price">රු. 450/=</div>
+            </div>
+            <div class="menu-item-brand">නැණපහන ළමා ප්‍රකාශන • පූර්ණ වර්ණවත් මුද්‍රණය</div>
+            <div class="menu-item-desc">දරුවන්ගේ කියවීමේ ආශාව හා පරිකල්පනය වර්ධනය කරන ආකර්ෂණීය විශාල පින්තූර සහිත සුරංගනා කතාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="ළමා සුරංගනා කතා පෙළ - සිංහ රාජධානිය" data-item-price="රු. 450/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 52 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">හාවා සහ ඉබ්බා ඇතුළු සම්භාව්‍ය ජනකතා</div>
+              <div class="menu-item-price">රු. 320/=</div>
+            </div>
+            <div class="menu-item-brand">ගුණසේන ප්‍රකාශන • සරල සිංහල බසින්</div>
+            <div class="menu-item-desc">යහපත් ආදර්ශ හා සදාචාරාත්මක ගුණධර්ම කියාදෙන ලාංකීය ජනකතා සහ උපමා කතා එකතුව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="හාවා සහ ඉබ්බා ජනකතා පොත" data-item-price="රු. 320/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 53 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">පෙර පාසල් අක්ෂර හා ඉලක්කම් ලියන පොත (ABC & 123)</div>
+              <div class="menu-item-price">රු. 350/=</div>
+            </div>
+            <div class="menu-item-brand">මොන්ටිසෝරි අධ්‍යාපනික පෙළ • Activity Book</div>
+            <div class="menu-item-desc">තිත් ඉරි යා කර අකුරු සහ ඉලක්කම් ලිවීම පුරුදු කරන පෙර පාසල් දරුවන් සඳහාම වූ ප්‍රායෝගික පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="පෙර පාසල් අක්ෂර ලියන පොත" data-item-price="රු. 350/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 54 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">විනෝදජනක රූප පාට කරන පොත (Coloring Fun Book)</div>
+              <div class="menu-item-price">රු. 250/=</div>
+            </div>
+            <div class="menu-item-brand">නැණපහන ප්‍රකාශන • සත්තු සහ වාහන රූප</div>
+            <div class="menu-item-desc">පැස්ටල් සහ පාට පැන්සල්වලින් පාට කිරීමට විශාල දළ සටහන් සහිත විනෝදාත්මක චිත්‍ර පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="විනෝදජනක රූප පාට කරන පොත" data-item-price="රු. 250/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 55 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">5 ශ්‍රේණිය ශිෂ්‍යත්ව ප්‍රශ්න පත්‍ර එකතුව (විවරණ සහිත)</div>
+              <div class="menu-item-price">රු. 650/=</div>
+            </div>
+            <div class="menu-item-brand">විභාග දෙපාර්තමේන්තු ආදර්ශ • පසුගිය ප්‍රශ්න</div>
+            <div class="menu-item-desc">පසුගිය වසර 10 ක ශිෂ්‍යත්ව විභාග ප්‍රශ්න පත්‍ර සහ ලකුණු දීමේ පටිපාටිය සහිත පරිපූර්ණ අත්වැල.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="5 ශ්‍රේණිය ශිෂ්‍යත්ව ප්‍රශ්න පත්‍ර පොත" data-item-price="රු. 650/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 56 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Ladybird Level 1 English First Reader</div>
+              <div class="menu-item-price">රු. 480/=</div>
+            </div>
+            <div class="menu-item-brand">Ladybird UK Edition • Phonics & Sight Words</div>
+            <div class="menu-item-desc">ඉංග්‍රීසි මුල් පියවර තබන දරුවන්ට සරල වාක්‍ය හා උච්චාරණ හුරු කරවන ප්‍රමුඛතම කියවීම් පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Ladybird Level 1 Reader" data-item-price="රු. 480/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 57 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">ළමා විද්‍යා විශ්වකෝෂය (පින්තූර සහිත සම්පූර්ණ කෘතිය)</div>
+              <div class="menu-item-price">රු. 850/=</div>
+            </div>
+            <div class="menu-item-brand">නැණපහන දැනුම සාගරය • Hardcover</div>
+            <div class="menu-item-desc">සෞරග්‍රහ මණ්ඩලය, මිනිස් සිරුර, සතුන් හා පරිසරය පිළිබඳ සරලව විස්තර කෙරෙන දැනුම පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="ළමා විද්‍යා විශ්වකෝෂය" data-item-price="රු. 850/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 58 -->
+          <div class="menu-item-card" data-category="kids">
+            <div class="menu-item-top">
+              <div class="menu-item-name">ගණිත මොළ සෙල්ලම් සහ ප්‍රහේලිකා පොත (Math Puzzles)</div>
+              <div class="menu-item-price">රු. 390/=</div>
+            </div>
+            <div class="menu-item-brand">Brain Teasers • තර්කන ශක්තිය වර්ධනය</div>
+            <div class="menu-item-desc">දරුවන්ගේ බුද්ධි වර්ධනය සහ තාර්කික චින්තනය ඔප්නංවන විනෝදජනක ප්‍රහේලිකා එකතුව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="ගණිත මොළ සෙල්ලම් ප්‍රහේලිකා පොත" data-item-price="රු. 390/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 6: TEXTBOOKS & PAST PAPERS
+           ========================================== -->
+      <div class="menu-section" data-menu-category="textbooks">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">📖</div>
+            <div>
+              <h3 class="menu-section-title">පාසල් පෙළපොත් සහ විභාග අත්වැල් (Textbooks & Past Papers)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">රජයේ පෙළපොත්, සාමාන්‍ය පෙළ (O/L) හා උසස් පෙළ (A/L) විවරණ</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">6 වර්ගයක තොග ඇත</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 59 -->
+          <div class="menu-item-card" data-category="textbooks">
+            <div class="menu-item-top">
+              <div class="menu-item-name">රජයේ පාසල් පෙළපොත් (Government Textbooks - 1 to 13)</div>
+              <div class="menu-item-price">නොමිලේ / සහන මිල</div>
+            </div>
+            <div class="menu-item-brand">අධ්‍යාපන ප්‍රකාශන දෙපාර්තමේන්තුව</div>
+            <div class="menu-item-desc">1 ශ්‍රේණියේ සිට 13 ශ්‍රේණිය දක්වා සියලුම විෂයයන්ට අදාළ නිල රජයේ පාසල් පෙළපොත් අප සතුව ඇත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="රජයේ පාසල් පෙළපොත්" data-item-price="සහන මිල">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 60 -->
+          <div class="menu-item-card" data-category="textbooks">
+            <div class="menu-item-top">
+              <div class="menu-item-name">සාමාන්‍ය පෙළ O/L ගණිතය පසුගිය විභාග ප්‍රශ්න හා විවරණ</div>
+              <div class="menu-item-price">රු. 580/=</div>
+            </div>
+            <div class="menu-item-brand">ගුරු උපදේශක මණ්ඩලය • පියවරෙන් පියවර විසඳුම්</div>
+            <div class="menu-item-desc">පසුගිය වසර 12 ක O/L ගණිතය I සහ II ප්‍රශ්න පත්‍ර සම්පූර්ණ ලකුණු ලැබෙන ක්‍රමවේදය සහිතව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="සාමාන්‍ය පෙළ O/L ගණිතය Past Papers" data-item-price="රු. 580/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 61 -->
+          <div class="menu-item-card" data-category="textbooks">
+            <div class="menu-item-top">
+              <div class="menu-item-name">සාමාන්‍ය පෙළ O/L විද්‍යාව විභාග අත්වැල සහ කෙටි සටහන්</div>
+              <div class="menu-item-price">රු. 580/=</div>
+            </div>
+            <div class="menu-item-brand">විද්‍යා පීඨ සම්පාදිත • MCQ & රචනා ප්‍රශ්න</div>
+            <div class="menu-item-desc">භෞතික, රසායනික හා ජීව විද්‍යා කොටස් සියල්ල ආවරණය වන ප්‍රශ්නෝත්තර හා මතක තබාගැනීමේ සටහන්.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="සාමාන්‍ය පෙළ O/L විද්‍යාව අත්වැල" data-item-price="රු. 580/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 62 -->
+          <div class="menu-item-card" data-category="textbooks">
+            <div class="menu-item-top">
+              <div class="menu-item-name">සාමාන්‍ය පෙළ සිංහල සාහිත්‍ය විචාර සහ ආදර්ශ ප්‍රශ්න</div>
+              <div class="menu-item-price">රු. 520/=</div>
+            </div>
+            <div class="menu-item-brand">සම්භාව්‍ය හා නූතන පද්‍ය-ගද්‍ය විචාර</div>
+            <div class="menu-item-desc">කාව්‍යශේඛරය, ගුත්තිලය ඇතුළු නිර්දේශිත සියලුම සාහිත්‍ය කොටස්වල A සාමාර්ථ ඉලක්ක කරගත් විචාර.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="සාමාන්‍ය පෙළ සිංහල සාහිත්‍ය විචාර" data-item-price="රු. 520/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 63 -->
+          <div class="menu-item-card" data-category="textbooks">
+            <div class="menu-item-top">
+              <div class="menu-item-name">උසස් පෙළ A/L ජීව විද්‍යාව සම්පත් පොත (Biology Resource Book)</div>
+              <div class="menu-item-price">රු. 950/=</div>
+            </div>
+            <div class="menu-item-brand">ජාතික අධ්‍යාපන ආයතනය (NIE) නිල මුද්‍රණය</div>
+            <div class="menu-item-desc">විභාග ප්‍රශ්න පත්‍ර සම්පාදනය සඳහා පාදක වන නව විෂය නිර්දේශයේ නිල සම්පත් පොත් මාලාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="A/L Biology Resource Book" data-item-price="රු. 950/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 64 -->
+          <div class="menu-item-card" data-category="textbooks">
+            <div class="menu-item-top">
+              <div class="menu-item-name">උසස් පෙළ A/L සංයුක්ත ගණිතය පසුගිය විභාග ප්‍රශ්නාවලිය</div>
+              <div class="menu-item-price">රු. 920/=</div>
+            </div>
+            <div class="menu-item-brand">Combined Maths Past Papers with Marking Schemes</div>
+            <div class="menu-item-desc">ශුද්ධ ගණිතය සහ ව්‍යවහාරික ගණිතය කොටස් දෙකෙහිම පූර්ණ විවරණ සහිත ග්‍රන්ථය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="A/L Combined Maths Past Papers" data-item-price="රු. 920/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 7: NOVELS & LITERATURE
+           ========================================== -->
+      <div class="menu-section" data-menu-category="novels">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">📚</div>
+            <div>
+              <h3 class="menu-section-title">නවකතා සහ පරිවර්තන සාහිත්‍ය (Novels & Literature)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">සම්භාව්‍ය ලාංකීය කෘති, ජනප්‍රිය නවකතා සහ ලෝක ප්‍රකට පරිවර්තන</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">6 වර්ගයක තොග ඇත</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 65 -->
+          <div class="menu-item-card" data-category="novels">
+            <div class="menu-item-top">
+              <div class="menu-item-name">විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)</div>
+              <div class="menu-item-price">රු. 2,650/=</div>
+            </div>
+            <div class="menu-item-brand">ආචාර්ය ජූලියන් වැන්ස් • සිංහල පරිවර්තනය</div>
+            <div class="menu-item-desc">කෘත්‍රිම බුද්ධිය සහ මිනිස් මනසේ අනාගතය පිළිබඳ ලොව පුරා කතාබහට ලක්වූ විද්‍යා ප්‍රබන්ධ නවකතාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="විශ්වීය ඇල්ගොරිතමය Hardcover" data-item-price="රු. 2,650/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 66 -->
+          <div class="menu-item-card" data-category="novels">
+            <div class="menu-item-top">
+              <div class="menu-item-name">ගම්පෙරළිය - මාර්ටින් වික්‍රමසිංහ</div>
+              <div class="menu-item-price">රු. 750/=</div>
+            </div>
+            <div class="menu-item-brand">මාර්ටින් වික්‍රමසිංහ භාරය • සම්භාව්‍ය කෘතිය</div>
+            <div class="menu-item-desc">සිංහල නවකතා කලාවේ මුදුන්මල්කඩ බඳු, කොග්ගල ග්‍රාමීය සමාජ පරිවර්තනය නිරූපණය කරන අමරණීය කෘතිය.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="ගම්පෙරළිය - මාර්ටින් වික්‍රමසිංහ" data-item-price="රු. 750/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 67 -->
+          <div class="menu-item-card" data-category="novels">
+            <div class="menu-item-top">
+              <div class="menu-item-name">මඩොල් දූව - මාර්ටින් වික්‍රමසිංහ</div>
+              <div class="menu-item-price">රු. 450/=</div>
+            </div>
+            <div class="menu-item-brand">පාසල් සාහිත්‍ය නිර්දේශය • තරුණ වික්‍රමාන්විත</div>
+            <div class="menu-item-desc">උපාලි සහ ජින්නාගේ වික්‍රමාන්විත කතාන්දරය. සෑම දරුවකුම කියවිය යුතු විශිෂ්ටතම ළමා හා යොවුන් නවකතාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="මඩොල් දූව - මාර්ටින් වික්‍රමසිංහ" data-item-price="රු. 450/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 68 -->
+          <div class="menu-item-card" data-category="novels">
+            <div class="menu-item-top">
+              <div class="menu-item-name">ෂර්ලොක් හෝම්ස් වික්‍රම (චන්දන මෙන්ඩිස් පරිවර්තන)</div>
+              <div class="menu-item-price">රු. 650/=</div>
+            </div>
+            <div class="menu-item-brand">ශ්‍රීමත් ආතර් කොනන් ඩොයිල් • අපරාධ පරීක්ෂණ</div>
+            <div class="menu-item-desc">කුතුහලය දනවන අභිරහස් සහ අපරාධ විසඳන ලොව අංක එකේ රහස් පරීක්ෂකයාගේ ත්‍රාසජනක සිද්ධි මාලාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="ෂර්ලොක් හෝම්ස් වික්‍රම" data-item-price="රු. 650/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 69 -->
+          <div class="menu-item-card" data-category="novels">
+            <div class="menu-item-top">
+              <div class="menu-item-name">කුරුළු හදවත - සම්මානනීය නවකතාව</div>
+              <div class="menu-item-price">රු. 680/=</div>
+            </div>
+            <div class="menu-item-brand">ස්වර්ණ පුස්තක නිර්දේශිත • සමකාලීන සාහිත්‍ය</div>
+            <div class="menu-item-desc">මිනිස් සබඳතා සහ ආදරය පිළිබඳ ගැඹුරු මනෝවිද්‍යාත්මක හා සංවේදී විවරණයක් රැගත් ජනප්‍රිය නවකතාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="කුරුළු හදවත නවකතාව" data-item-price="රු. 680/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 70 -->
+          <div class="menu-item-card" data-category="novels">
+            <div class="menu-item-top">
+              <div class="menu-item-name">ජීවිතය ජයගන්නා මනෝවිද්‍යාත්මක රහස් (Self-Help)</div>
+              <div class="menu-item-price">රු. 590/=</div>
+            </div>
+            <div class="menu-item-brand">ස්වයං සංවර්ධන කෘති • ධනාත්මක චින්තනය</div>
+            <div class="menu-item-desc">ආතතිය පාලනය, කාල කළමනාකරණය හා සාර්ථකත්වයට මඟ පෙන්වන ප්‍රායෝගික උපදෙස් රැගත් අත්පොත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ තොග ඇත (In Stock)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="ජීවිතය ජයගන්නා රහස් Self-Help" data-item-price="රු. 590/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CATEGORY 8: DAILY NEWSPAPERS & PERIODICALS
+           ========================================== -->
+      <div class="menu-section" data-menu-category="periodicals">
+        <div class="menu-section-header">
+          <div class="menu-section-title-wrap">
+            <div class="menu-category-icon">📰</div>
+            <div>
+              <h3 class="menu-section-title">දෛනික පුවත්පත් සහ සඟරා (Daily Newspapers & Periodicals)</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">සෑම උදෑසනකම නිකුත් වන ජාතික පුවත්පත් සහ සතිපතා සඟරා</div>
+            </div>
+          </div>
+          <span class="pill-badge" style="font-size: 0.75rem;">දිනපතා උදෑසන 6.00 ට ලැබේ</span>
+        </div>
+
+        <div class="menu-items-grid">
+          <!-- Item 71 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">ලංකාදීප / දිනමිණ / දිවයින (දෛනික පුවත්පත්)</div>
+              <div class="menu-item-price">රු. 50/=</div>
+            </div>
+            <div class="menu-item-brand">සඳුදා සිට සෙනසුරාදා දක්වා • දිනපතා</div>
+            <div class="menu-item-desc">දේශීය හා ජාත්‍යන්තර නවතම පුවත්, ව්‍යාපාරික හා ක්‍රීඩා තොරතුරු රැගත් ප්‍රමුඛ පෙළේ ජාතික පුවත්පත්.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ දිනපතා ලැබේ (Daily Fresh)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="දෛනික පුවත්පත් (ලංකාදීප/දිනමිණ)" data-item-price="රු. 50/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 72 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">සිළුමිණ / ඉරිදා ලංකාදීප / දිවයින සංග්‍රහය</div>
+              <div class="menu-item-price">රු. 100/=</div>
+            </div>
+            <div class="menu-item-brand">සෑම ඉරිදා දිනකම • විශේෂ අතිරේක සහිතයි</div>
+            <div class="menu-item-desc">රසඳුන, තරුණ, සාහිත්‍ය හා ආර්ථික විග්‍රහ අතිරේක රැසක් සමගින් නිකුත් වන ඉරිදා ජාතික පුවත්පත්.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ දිනපතා ලැබේ (Sunday)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="ඉරිදා පුවත්පත් (සිළුමිණ/ලංකාදීප)" data-item-price="රු. 100/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 73 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">Daily Mirror / The Sunday Times (English)</div>
+              <div class="menu-item-price">රු. 120/=</div>
+            </div>
+            <div class="menu-item-brand">Wijeya Newspapers • National English Daily</div>
+            <div class="menu-item-desc">ශ්‍රී ලංකාවේ ප්‍රමුඛතම ඉංග්‍රීසි ජාතික පුවත්පත. විශ්ලේෂණාත්මක වාර්තා හා විශේෂාංග සහිතයි.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ දිනපතා ලැබේ (Daily)</span>
+              <a href="#" class="btn-inquire-item" data-item-name="Daily Mirror / Sunday Times" data-item-price="රු. 120/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 74 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">විදුසර විද්‍යා සඟරාව (Vidusara Weekly)</div>
+              <div class="menu-item-price">රු. 100/=</div>
+            </div>
+            <div class="menu-item-brand">උපාලි පුවත්පත් • සෑම බදාදා දිනකම</div>
+            <div class="menu-item-desc">නවීන තාක්ෂණය, අභ්‍යවකාශය, සෞඛ්‍ය හා විද්‍යා පර්යේෂණ ගැන දැනුම සපයන ප්‍රමුඛතම සතිපතා සඟරාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ සතිපතා බදාදා ලැබේ</span>
+              <a href="#" class="btn-inquire-item" data-item-name="විදුසර විද්‍යා සඟරාව" data-item-price="රු. 100/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 75 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">මිහිර ළමා පුවත්පත (Mihira Children's Weekly)</div>
+              <div class="menu-item-price">රු. 80/=</div>
+            </div>
+            <div class="menu-item-brand">ලේක්හවුස් ප්‍රකාශන • සෑම සිකුරාදා දිනකම</div>
+            <div class="menu-item-desc">ශ්‍රී ලංකාවේ පරම්පරා ගණනාවක් ආදරය කළ ළමා කතා, චිත්‍ර කතා, ප්‍රහේලිකා හා දැනුම බෙදන ළමා පුවත්පත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ සතිපතා සිකුරාදා ලැබේ</span>
+              <a href="#" class="btn-inquire-item" data-item-name="මිහිර ළමා පුවත්පත" data-item-price="රු. 80/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 76 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">විජය ශිෂ්‍යත්ව පුවත්පත (Wijeya Weekly)</div>
+              <div class="menu-item-price">රු. 80/=</div>
+            </div>
+            <div class="menu-item-brand">විජය පුවත්පත් • සෑම අඟහරුවාදා දිනකම</div>
+            <div class="menu-item-desc">5 ශ්‍රේණිය ශිෂ්‍යත්ව සිසුන් සඳහාම විශේෂිත ආදර්ශ ප්‍රශ්න පත්‍ර සහ විවරණ සහිත සතිපතා අධ්‍යාපනික පුවත්පත.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ සතිපතා අඟහරුවාදා ලැබේ</span>
+              <a href="#" class="btn-inquire-item" data-item-name="විජය ශිෂ්‍යත්ව පුවත්පත" data-item-price="රු. 80/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 77 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">තරුණි කාන්තා සඟරාව (Tharuni Weekly)</div>
+              <div class="menu-item-price">රු. 90/=</div>
+            </div>
+            <div class="menu-item-brand">ලේක්හවුස් ප්‍රකාශන • කාන්තා සහ පවුලේ සඟරාව</div>
+            <div class="menu-item-desc">මෝස්තර නිර්මාණ, අත්කම්, සූපවේදය හා පවුල් සෞඛ්‍ය පිළිබඳ විශේෂාංග රැගත් ජනප්‍රිය සඟරාව.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ සතිපතා ලැබේ</span>
+              <a href="#" class="btn-inquire-item" data-item-name="තරුණි කාන්තා සඟරාව" data-item-price="රු. 90/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 78 -->
+          <div class="menu-item-card" data-category="periodicals">
+            <div class="menu-item-top">
+              <div class="menu-item-name">මනහර / රසවාහිනී මාසික සඟරා</div>
+              <div class="menu-item-price">රු. 150/=</div>
+            </div>
+            <div class="menu-item-brand">මාසික සංස්කෘතික හා සාහිත්‍ය ප්‍රකාශන</div>
+            <div class="menu-item-desc">සාහිත්‍ය කලා රසවින්දනය, කවි, කෙටිකතා හා සමාජ විමර්ශන ලිපි ඇතුළත් මාසික සඟරා.</div>
+            <div class="menu-item-bottom">
+              <span class="stock-tag">✓ මාසිකව ලැබේ</span>
+              <a href="#" class="btn-inquire-item" data-item-name="මනහර මාසික සඟරාව" data-item-price="රු. 150/=">
+                <span>💬 WhatsApp විමසන්න</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       7. IN-STORE PRINT, COPY & TYPING SERVICES RATE CARD
+       ====================================================================== -->
+  <section class="section" id="printServices" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">පොත්හලේ මුද්‍රණ හා ඡායාපිටපත් සේවා</span>
+        <h2 class="section-title">ඡායාපිටපත්, මුද්‍රණ සහ පරිගණක සේවා මිල ලැයිස්තුව</h2>
+        <p class="section-desc">
+          ඔබගේ පැවරුම් (Assignments), සහතිකපත්, කාර්යාලීය ලිපිලේඛන ක්ෂණිකව උසස් තත්ත්වයෙන් මුද්‍රණය කරගැනීමට හා ලැමිනේට් කරගැනීමට නැණපහන සේවා කවුළුව වෙත පිවිසෙන්න.
+        </p>
+      </div>
+
+      <div class="services-card-wrap">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem;">
+          <div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-light);">🖨️ සම්මත සේවා ගාස්තු (Standard Service Rates)</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Canon & Konica Minolta අධිවේගී ඩිජිටල් යන්ත්‍ර මගින් මුද්‍රණය කෙරේ</span>
+          </div>
+          <a href="https://wa.me/94779876543?text=ලේඛනයක්%20Print%20කරගැනීමට%20WhatsApp%20එවන්නෙමි" target="_blank" class="btn-whatsapp-quick">
+            <span>💬 ලේඛන WhatsApp මගින් Print කරන්න</span>
+          </a>
+        </div>
+
+        <div class="services-table-grid">
+          <!-- Service 1 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">📄</span>
+            <div class="service-box-title">A4 කළු-සුදු ඡායාපිටපත් (B/W Photocopy)</div>
+            <div class="service-box-price">රු. 10/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ පිටුවකට</span></div>
+            <div class="service-box-sub">Double-side පිටුවක් රු. 18/=. තොග පිටපත් (50+) සඳහා විශේෂ සහන.</div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">🌈</span>
+            <div class="service-box-title">A4 වර්ණ මුද්‍රණය (Colour Printout)</div>
+            <div class="service-box-price">රු. 35/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ පිටුවකට</span></div>
+            <div class="service-box-sub">80 GSM දීප්තිමත් සුදු කඩදාසි මත Laser Quality වර්ණ මුද්‍රණය.</div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">🛡️</span>
+            <div class="service-box-title">ලැමිනේටින් - A4 (Lamination)</div>
+            <div class="service-box-price">රු. 100/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ කොළයකට</span></div>
+            <div class="service-box-sub">සහතිකපත් හා වටිනා ලියකියවිලි ජලයෙන් හා දූවිල්ලෙන් ආරක්ෂා කරයි.</div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">🪪</span>
+            <div class="service-box-title">හැඳුනුම්පත් ලැමිනේටින් (ID Lamination)</div>
+            <div class="service-box-price">රු. 50/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ කාඩ්පතකට</span></div>
+            <div class="service-box-sub">ජාතික හැඳුනුම්පත්, රියදුරු බලපත්‍ර හා කාර්යාලීය හැඳුනුම්පත් සඳහා.</div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">🌀</span>
+            <div class="service-box-title">සර්පිලාකාර බන්ධනය (Spiral Binding)</div>
+            <div class="service-box-price">රු. 250/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ පොතකට</span></div>
+            <div class="service-box-sub">විනිවිද පෙනෙන Sheet Covers සහ Plastic Spiral සහිත පූර්ණ නිමාව.</div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">⌨️</span>
+            <div class="service-box-title">ටයිප් කිරීම (Sinhala & English Typing)</div>
+            <div class="service-box-price">රු. 150/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ පිටුවකට</span></div>
+            <div class="service-box-sub">අත් අකුරින් ලියූ සටහන්, නීතිමය ලියකියවිලි හා ලිපි පරිගණකගත කිරීම.</div>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">📱</span>
+            <div class="service-box-title">WhatsApp / Email Direct Print</div>
+            <div class="service-box-price">රු. 15/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">සිට</span></div>
+            <div class="service-box-sub">ඔබගේ ජංගම දුරකථනයෙන් PDF, Word හෝ Photo එවූ සැණින් මුද්‍රණය ලබාගත හැක.</div>
+          </div>
+
+          <!-- Service 8 -->
+          <div class="service-box">
+            <span style="font-size: 1.5rem;">📨</span>
+            <div class="service-box-title">Scan කර Email යැවීම (Document Scan)</div>
+            <div class="service-box-price">රු. 40/= <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ පිටුවකට</span></div>
+            <div class="service-box-sub">High Resolution Color Scan කර PDF ආකාරයෙන් Email හෝ WhatsApp වෙත යැවීම.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. SPECIAL SERVICE: SCHOOL BOOKLIST PHOTO UPLOAD / WHATSAPP
+       ====================================================================== -->
+  <div class="container" style="margin: 3.5rem auto;">
     <div class="booklist-service-banner">
       <div>
         <span class="pill-badge" style="font-size: 0.72rem; margin-bottom: 0.5rem; background: rgba(37,99,235,0.15); color: #60a5fa; border-color: rgba(37,99,235,0.35);">
@@ -221,12 +1774,12 @@
           පාසල් පොත් ලැයිස්තුව (School Booklist) අප වෙත එවන්න!
         </h2>
         <p class="booklist-service-desc">
-          පාසල් වාරය ඇරඹෙද්දී කඩවල් ගානේ පෝලිම්වල රස්තියාදු වෙන්න එපා! ඔබගේ පාසල් පොත් ලැයිස්තුවේ ඡායාරූපයක් (Photo) අපගේ WhatsApp අංකයට එවන්න. නියමිත ප්‍රමිතියේ CR පොත්, අභ්‍යාස පොත්, කවර, ලේබල් සහ සියලුම ලිපිද්‍රව්‍ය අපගේ කාර්ය මණ්ඩලය පිළිවෙළට සකසා ඔබගේ නිවසටම කූරියර් මගින් එවනු ඇත.
+          පාසල් වාරය ඇරඹෙද්දී කඩවල් ගානේ පෝලිම්වල රස්තියාදු වෙන්න එපා! ඔබගේ පාසල් පොත් ලැයිස්තුවේ ඡායාරූපයක් (Photo) අපගේ WhatsApp අංකයට එවන්න. නියමිත ප්‍රමිතියේ CR පොත්, අභ්‍යාස පොත්, කවර, ලේබල් සහ සියලුම ලිපිද්‍රව්‍ය අපගේ කාර්ය මණ්ඩලය පිළිවෙළට සකසා ඔබ වෙත ලබාදෙනු ඇත.
         </p>
         <div class="booklist-features-pills">
-          <span class="booklist-pill">✓ අවශ්‍ය පොත් ප්‍රමාණය පමණක් ඇණවුම් කිරීමේ හැකියාව</span>
-          <span class="booklist-pill">✓ නොමිලේ පොත් කවර සහ ලේබල් පැක්</span>
-          <span class="booklist-pill">✓ Cash on Delivery (භාණ්ඩ ලැබුණු පසු මුදල් ගෙවන්න)</span>
+          <span class="booklist-pill">✓ අවශ්‍ය පොත් ප්‍රමාණය පමණක් තෝරා ගැනීමේ හැකියාව</span>
+          <span class="booklist-pill">✓ නොමිලේ පොත් කවර සහ ලේබල් පැක් එකක්</span>
+          <span class="booklist-pill">✓ සාධාරණ මිල ගණන් සහ ක්ෂණික සහය</span>
         </div>
       </div>
 
@@ -244,312 +1797,7 @@
   </div>
 
   <!-- ======================================================================
-       7. COMPREHENSIVE STORE CATALOG WITH DEPARTMENT TABS
-       ====================================================================== -->
-  <section class="section" id="catalog">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">නැණපහන භාණ්ඩ නාමාවලිය</span>
-        <h2 class="section-title">අපගේ පොත් සහ ලිපිද්‍රව්‍ය එකතුව</h2>
-        <p class="section-desc">
-          ළමා කතා පොත්, ලියන පොත්, පෑන් පැන්සල්, සඟරා හා නවකතා ඇතුළු ඕනෑම භාණ්ඩයක් පහසුවෙන්ම කරත්තයට එක් කරගන්න.
-        </p>
-      </div>
-
-      <!-- Department Tabs -->
-      <div class="catalog-tabs-bar">
-        <button class="tab-btn active" data-category="all">සියල්ල (All Items)</button>
-        <button class="tab-btn" data-category="exercise">ලියන පොත් & CR Books</button>
-        <button class="tab-btn" data-category="stationery">පෑන්, පැන්සල් & ලිපිද්‍රව්‍ය</button>
-        <button class="tab-btn" data-category="kids">ළමා කතා & චිත්‍ර පොත්</button>
-        <button class="tab-btn" data-category="novels">නවකතා & සාහිත්‍ය</button>
-        <button class="tab-btn" data-category="periodicals">පුවත්පත් & සඟරා</button>
-        <button class="tab-btn" data-category="art">චිත්‍ර & කලා උපකරණ</button>
-      </div>
-
-      <!-- Products Grid -->
-      <div class="products-grid">
-        <!-- Item 1: CR Book -->
-        <div class="product-card" data-category="exercise">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">ලියන පොත්</span>
-            <img src="assets/images/stationery.jpg" alt="Atlas CR Book 120 Pages Single Rule">
-          </div>
-          <h3 class="product-title">Atlas CR Book 120 Pages Single Rule</h3>
-          <span class="product-brand">Atlas Sri Lanka • තනි රූල්</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 240/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="Atlas CR Book 120 Pages Single Rule" data-product-price="240" data-product-img="assets/images/stationery.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 2: Kids Book -->
-        <div class="product-card" data-category="kids">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">ළමා කතා</span>
-            <img src="assets/images/kids-books.jpg" alt="ළමා සුරංගනා කතා පෙළ - සිංහ රාජධානිය">
-          </div>
-          <h3 class="product-title">ළමා සුරංගනා කතා පෙළ - සිංහ රාජධානිය</h3>
-          <span class="product-brand">නැණපහන ළමා ප්‍රකාශන • වර්ණවත්</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 450/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="ළමා සුරංගනා කතා පෙළ - සිංහ රාජධානිය" data-product-price="450" data-product-img="assets/images/kids-books.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 3: Pens Pack -->
-        <div class="product-card" data-category="stationery">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">ලිපිද්‍රව්‍ය</span>
-            <img src="assets/images/stationery.jpg" alt="Atlas Chooty Ballpoint Pen Pack (5 Pens)">
-          </div>
-          <h3 class="product-title">Atlas Chooty Ballpoint Pen Pack (පෑන් 5ක්)</h3>
-          <span class="product-brand">Atlas Sri Lanka • නිල් තීන්ත</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 150/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="Atlas Chooty Pen Pack (5 Pens)" data-product-price="150" data-product-img="assets/images/stationery.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 4: Pastels Box -->
-        <div class="product-card" data-category="art">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">කලා උපකරණ</span>
-            <img src="assets/images/stationery.jpg" alt="Camel 12 Oil Pastels Box">
-          </div>
-          <h3 class="product-title">Camel 12 Oil Pastels Box (පැස්ටල් පෙට්ටිය)</h3>
-          <span class="product-brand">Camel Art Supplies • පාට 12</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 380/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="Camel 12 Oil Pastels Box" data-product-price="380" data-product-img="assets/images/stationery.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 5: Mathematical Instrument Set -->
-        <div class="product-card" data-category="stationery">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">ලිපිද්‍රව්‍ය</span>
-            <img src="assets/images/stationery.jpg" alt="ජ්‍යාමිතික උපකරණ පෙට්ටිය (Mathematical Set)">
-          </div>
-          <h3 class="product-title">ජ්‍යාමිතික උපකරණ පෙට්ටිය (Tin Mathematical Set)</h3>
-          <span class="product-brand">Atlas / Helix Instruments</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 550/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="ජ්‍යාමිතික උපකරණ පෙට්ටිය" data-product-price="550" data-product-img="assets/images/stationery.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 6: Magazine -->
-        <div class="product-card" data-category="periodicals">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">සඟරා</span>
-            <img src="assets/images/reading-lifestyle.jpg" alt="විදුසර විද්‍යා සඟරාව (Vidusara Weekly)">
-          </div>
-          <h3 class="product-title">විදුසර විද්‍යා සඟරාව (Vidusara Science Weekly)</h3>
-          <span class="product-brand">උපාලි ප්‍රකාශන • සතිපතා</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 100/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="විදුසර විද්‍යා සඟරාව" data-product-price="100" data-product-img="assets/images/reading-lifestyle.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 7: Kids Newspaper -->
-        <div class="product-card" data-category="periodicals">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">පුවත්පත්</span>
-            <img src="assets/images/kids-books.jpg" alt="මිහිර ළමා පුවත්පත (Mihira Weekly)">
-          </div>
-          <h3 class="product-title">මිහිර ළමා පුවත්පත (Mihira Children's Weekly)</h3>
-          <span class="product-brand">ලේක්හවුස් ප්‍රකාශන • සතිපතා</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 80/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="මිහිර ළමා පුවත්පත" data-product-price="80" data-product-img="assets/images/kids-books.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 8: Novel / Hardcover -->
-        <div class="product-card" data-category="novels">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">නවකතා</span>
-            <img src="assets/images/book-cover.jpg" alt="විශ්වීය ඇල්ගොරිතමය Hardcover">
-          </div>
-          <h3 class="product-title">විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)</h3>
-          <span class="product-brand">ආචාර්ය ජූලියන් වැන්ස් • පරිවර්තන</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 2,650/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Hardcover)" data-product-price="2650" data-product-img="assets/images/book-cover.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 9: Colour Pencils -->
-        <div class="product-card" data-category="art">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">කලා උපකරණ</span>
-            <img src="assets/images/stationery.jpg" alt="Faber-Castell 24 Colour Pencils Box">
-          </div>
-          <h3 class="product-title">Faber-Castell 24 Colour Pencils (පාට පෙට්ටිය)</h3>
-          <span class="product-brand">Faber-Castell Germany • පාට 24</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 680/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="Faber-Castell 24 Colour Pencils" data-product-price="680" data-product-img="assets/images/stationery.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 10: A4 Paper -->
-        <div class="product-card" data-category="stationery">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">ලිපිද්‍රව්‍ය</span>
-            <img src="assets/images/stationery.jpg" alt="Double A - A4 Paper Bundle (500 Sheets)">
-          </div>
-          <h3 class="product-title">Double A - A4 Copier Paper (පිටු 500 බණ්ඩලය)</h3>
-          <span class="product-brand">Double A • 80 GSM High Quality</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 1,450/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="Double A - A4 Paper Bundle" data-product-price="1450" data-product-img="assets/images/stationery.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 11: Drawing Book -->
-        <div class="product-card" data-category="exercise">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">ලියන පොත්</span>
-            <img src="assets/images/stationery.jpg" alt="Atlas Drawing Book 40 Pages Spiralled">
-          </div>
-          <h3 class="product-title">Atlas Drawing Book 40 Pages (චිත්‍ර පොත)</h3>
-          <span class="product-brand">Atlas Sri Lanka • Spiral Bound</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 220/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="Atlas Drawing Book 40 Pages" data-product-price="220" data-product-img="assets/images/stationery.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-
-        <!-- Item 12: Preschool Activity Book -->
-        <div class="product-card" data-category="kids">
-          <div class="product-img-wrap">
-            <span class="product-category-badge">ළමා කතා</span>
-            <img src="assets/images/kids-books.jpg" alt="පෙර පාසල් අක්ෂර හා ක්‍රියාකාරකම් පොත">
-          </div>
-          <h3 class="product-title">පෙර පාසල් අක්ෂර හා ක්‍රියාකාරකම් පොත (ABC & 123)</h3>
-          <span class="product-brand">නැණපහන මොන්ටිසෝරි පෙළ • Activity</span>
-          <div class="product-price-row">
-            <span class="product-lkr-price">රු. 350/=</span>
-            <button class="btn-add-cart-product trigger-add-cart-btn" data-product-title="පෙර පාසල් ක්‍රියාකාරකම් පොත" data-product-price="350" data-product-img="assets/images/kids-books.jpg">
-              + කරත්තයට
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       8. SPOTLIGHT: KIDS READING CORNER (ළමා ලෝකය)
-       ====================================================================== -->
-  <section class="section" style="background: var(--bg-surface);">
-    <div class="container">
-      <div class="feature-split-grid">
-        <div class="feature-media-wrap">
-          <img src="assets/images/kids-books.jpg" alt="ළමා කතා පොත් හා චිත්‍ර කතා අංශය">
-        </div>
-
-        <div class="feature-content">
-          <span class="section-tag">ළමා ලෝකය හා කියවීම</span>
-          <h2 class="section-title">කුඩා දරුවන්ගේ සිතුවිලි පෝෂණය කරන ළමා කතා එකතුව</h2>
-          <p class="section-desc">
-            වයස අවුරුදු 2 සිට 12 දක්වා දරුවන් සඳහා විශේෂයෙන් නිර්මාණය වූ වර්ණවත් රූප සහිත සුරංගනා කතා, ජාතක කතා, විද්‍යා ප්‍රබන්ධ හා ශිෂ්‍යත්ව අත්වැල් පොත් සිය ගණනක් අප සතුව ඇත.
-          </p>
-
-          <ul class="feature-checklist">
-            <li class="feature-check-item">
-              <span class="feature-check-icon">✓</span>
-              <span><strong>සුරංගනා කතා හා සත්තු වත්ත කතා පෙළ:</strong> දරුවන්ගේ කියවීමේ ආශාව වඩවන ආකර්ෂණීය සිතුවම් සහිත මුද්‍රණ.</span>
-            </li>
-            <li class="feature-check-item">
-              <span class="feature-check-icon">✓</span>
-              <span><strong>5 ශ්‍රේණිය ශිෂ්‍යත්ව විභාග ප්‍රශ්න පත්‍ර:</strong> පසුගිය විභාග ප්‍රශ්න හා පිළිතුරු සහිත අත්වැල් පොත්.</span>
-            </li>
-            <li class="feature-check-item">
-              <span class="feature-check-icon">✓</span>
-              <span><strong>මොන්ටිසෝරි හා චිත්‍ර ඇඳීමේ පොත්:</strong> අත් අකුරු හුරුකිරීමේ සහ වර්ණ ගැන්වීමේ අභ්‍යාස පොත්.</span>
-            </li>
-          </ul>
-
-          <div>
-            <button class="btn-primary tab-trigger-filter" onclick="document.querySelector('[data-category=kids]').click(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-              <span>ළමා පොත් සියල්ල බලන්න</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       9. SPOTLIGHT: NEWSPAPERS & MAGAZINES SUBSCRIPTION
-       ====================================================================== -->
-  <section class="section">
-    <div class="container">
-      <div class="periodicals-banner">
-        <div>
-          <span class="section-tag">පුවත්පත් හා වාර ප්‍රකාශන</span>
-          <h2 class="section-title">සතිපතා පුවත්පත් හා සඟරා නිවසටම ගෙන්වා ගන්න</h2>
-          <p class="section-desc">
-            ඔබ කැමති සතිපතා හෝ මාසික පුවත්පත්/සඟරා මාසික දායකත්ව ක්‍රමයට කිසිදු අමතර බෙදාහැරීමේ ගාස්තුවකින් තොරව ඔබේ නිවසටම හෝ කාර්යාලයටම ලබාගැනීමේ පහසුකම නැණපහන වෙතින් සලසා ඇත.
-          </p>
-          <div style="margin-top: 1.5rem;">
-            <a href="https://wa.me/94779876543?text=පුවත්පත්%20සහ%20සඟරා%20මාසිකව%20නිවසට%20ගෙන්වා%20ගැනීමට%20අවශ්‍යයි" target="_blank" class="btn-whatsapp-quick">
-              <span>💬 පුවත්පත් දායකත්වය සඳහා WhatsApp කරන්න</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="periodical-card-grid">
-          <div class="periodical-mini-item">
-            <span style="font-weight: 800; color: var(--primary-light);">📰 විදුසර විද්‍යා සඟරාව</span>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">සෑම බදාදා දිනකම නිකුත් වේ</span>
-          </div>
-          <div class="periodical-mini-item">
-            <span style="font-weight: 800; color: var(--primary-light);">🧸 මිහිර ළමා පුවත්පත</span>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">සෑම සිකුරාදා දිනකම නිකුත් වේ</span>
-          </div>
-          <div class="periodical-mini-item">
-            <span style="font-weight: 800; color: var(--primary-light);">🎓 විජය ශිෂ්‍යත්ව පුවත්පත</span>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">පාසල් සිසුන් සඳහා සතිපතා</span>
-          </div>
-          <div class="periodical-mini-item">
-            <span style="font-weight: 800; color: var(--primary-light);">🌐 Sunday Observer & සිළුමිණ</span>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">ඉරිදා ජාතික පුවත්පත්</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       10. PHYSICAL BRANCHES
+       9. PHYSICAL BRANCHES & CONTACT
        ====================================================================== -->
   <section class="section" id="branches" style="background: var(--bg-surface);">
     <div class="container">
@@ -568,7 +1816,7 @@
           <p class="branch-detail">
             නො. 142, ගාලු පාර, බම්බලපිටිය, කොළඹ 04.<br>
             දුරකථන: 011 258 4400 / 077 987 6543<br>
-            විවෘත වේලාවන්: සඳුදා - සෙනසුරාදා (පෙ.ව. 8.30 - ප.ව. 7.30)
+            විවෘත වේලාවන්: සඳුදා - සෙනසුරාදා (පෙ.ව. 8.00 - ප.ව. 8.00)
           </p>
         </div>
 
@@ -578,7 +1826,7 @@
           <p class="branch-detail">
             නො. 28, දළදා වීදිය, මහනුවර (Queens හෝටලය ඉදිරිපිට).<br>
             දුරකථන: 081 223 9988<br>
-            විවෘත වේලාවන්: සඳුදා - ඉරිදා (පෙ.ව. 9.00 - ප.ව. 7.00)
+            විවෘත වේලාවන්: සඳුදා - ඉරිදා (පෙ.ව. 8.30 - ප.ව. 7.30)
           </p>
         </div>
 
@@ -588,7 +1836,7 @@
           <p class="branch-detail">
             නො. 15, මීගමු පාර, කුරුණෑගල.<br>
             දුරකථන: 037 222 4110<br>
-            විවෘත වේලාවන්: සඳුදා - සෙනසුරාදා (පෙ.ව. 8.30 - ප.ව. 6.30)
+            විවෘත වේලාවන්: සඳුදා - සෙනසුරාදා (පෙ.ව. 8.00 - ප.ව. 7.00)
           </p>
         </div>
       </div>
@@ -596,7 +1844,7 @@
   </section>
 
   <!-- ======================================================================
-       11. STORE FOOTER
+       10. STORE FOOTER
        ====================================================================== -->
   <footer class="site-footer">
     <div class="container">
@@ -611,7 +1859,7 @@
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.8rem;">
-            පාසල්, උසස් අධ්‍යාපන හා කාර්යාලීය සියලුම පොත්පත්, ලිපිද්‍රව්‍ය හා උපකරණ දිවයින පුරා විශ්වාසනීයව බෙදාහරින ප්‍රමුඛතම ආයතනය.
+            පාසල්, උසස් අධ්‍යාපන හා කාර්යාලීය සියලුම පොත්පත්, ලිපිද්‍රව්‍ය හා මුද්‍රණ සේවා එකම වහලක් යටින් සාධාරණ මිලට සපයන ප්‍රමුඛතම ආයතනය.
           </p>
           <div style="font-size: 0.8rem; color: var(--text-subtle);">
             සමාගම් ලියාපදිංචි අංකය: PV 00248911 • කොළඹ 04
@@ -622,23 +1870,23 @@
         <div>
           <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">පොත් සහ ලිපිද්‍රව්‍ය අංශ</h4>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.88rem; color: var(--text-muted);">
-            <li><a href="#catalog">ළමා කතා හා චිත්‍ර පොත්</a></li>
-            <li><a href="#catalog">CR පොත් හා අභ්‍යාස පොත්</a></li>
-            <li><a href="#catalog">පෑන්, පැන්සල් හා ලිපිද්‍රව්‍ය</a></li>
-            <li><a href="#catalog">නවකතා, පරිවර්තන හා කෙටිකතා</a></li>
-            <li><a href="#catalog">පුවත්පත් හා සතිපතා සඟරා</a></li>
-            <li><a href="#catalog">චිත්‍ර හා කලා උපකරණ</a></li>
+            <li><a href="#catalog" class="department-link" data-category="exercise">CR පොත් හා අභ්‍යාස පොත්</a></li>
+            <li><a href="#catalog" class="department-link" data-category="pens">පෑන්, පැන්සල් හා ලිපිද්‍රව්‍ය</a></li>
+            <li><a href="#catalog" class="department-link" data-category="office">පාසල් හා කාර්යාල උපකරණ</a></li>
+            <li><a href="#catalog" class="department-link" data-category="art">චිත්‍ර හා කලා ද්‍රව්‍ය</a></li>
+            <li><a href="#catalog" class="department-link" data-category="kids">ළමා කතා හා චිත්‍ර පොත්</a></li>
+            <li><a href="#printServices">ඡායාපිටපත් හා මුද්‍රණ සේවා</a></li>
           </ul>
         </div>
 
         <!-- Col 3 -->
         <div>
-          <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">පාරිභෝගික සේවා</h4>
+          <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">පාරිභෝගික සහය</h4>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.88rem; color: var(--text-muted);">
-            <li><a href="#" class="trigger-booklist-modal">පාසල් පොත් ලැයිස්තු ඇණවුම් (Booklists)</a></li>
-            <li><a href="#branches">දිවයින පුරා බෙදාහැරීම් තොරතුරු</a></li>
-            <li><a href="#branches">Cash on Delivery (COD) පහසුකම්</a></li>
-            <li><a href="https://wa.me/94779876543">WhatsApp සහය (077 987 6543)</a></li>
+            <li><a href="#" class="trigger-booklist-modal">පාසල් පොත් ලැයිස්තු WhatsApp එවන්න</a></li>
+            <li><a href="#printServices">මුද්‍රණ හා ඡායාපිටපත් මිල ගණන්</a></li>
+            <li><a href="#branches">අපගේ ශාඛා සහ විවෘත වේලාවන්</a></li>
+            <li><a href="https://wa.me/94779876543">WhatsApp ක්ෂණික සහය (077 987 6543)</a></li>
           </ul>
         </div>
 
@@ -647,7 +1895,7 @@
           <div class="footer-developer-card">
             <span style="font-size: 0.82rem; font-weight: 800; color: var(--primary-light);">🚀 Developed by SL Developer</span>
             <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4;">
-              ශ්‍රී ලංකාවේ පොත්හල්, සුපිරි වෙළඳසැල් හා ව්‍යාපාර සඳහා ලෝක මට්ටමේ Modern Websites & eCommerce Systems නිර්මාණය කරගැනීමට අමතන්න.
+              ශ්‍රී ලංකාවේ පොත්හල්, හෝටල්, සුපිරි වෙළඳසැල් හා ව්‍යාපාර සඳහා ලෝක මට්ටමේ Modern Websites & Digital QR Menu Systems නිර්මාණය කරගැනීමට අමතන්න.
             </p>
             <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-main);">
               Hotline: +94 77 123 4567
@@ -658,87 +1906,65 @@
 
       <div class="footer-bottom">
         <div>© 2026 නැණපහන පොත් මැඳුර (Nenapahana Books & Stationery Pvt Ltd). සියලුම හිමිකම් ඇවිරිණි.</div>
-        <div>ආරක්ෂිත ගෙවීම්: Visa • MasterCard • Koko • Mintpay • PromptX Delivery</div>
+        <div>ඩිජිටල් මිල දර්ශකය සහ නාමාවලිය • SL Developer Solutions</div>
       </div>
     </div>
   </footer>
 
   <!-- ======================================================================
-       12. INTERACTIVE MODAL: MULTI-ITEM CART & CHECKOUT
+       11. INTERACTIVE MODAL: DIGITAL MENU QR CODE MODAL
        ====================================================================== -->
-  <div class="modal-backdrop" id="checkoutModal">
-    <div class="modal-dialog">
-      <button class="modal-close-btn" aria-label="Close Checkout">✕</button>
+  <div class="modal-backdrop" id="qrModal">
+    <div class="modal-dialog" style="text-align: center;">
+      <button class="modal-close-btn" aria-label="Close QR Modal">✕</button>
 
-      <div style="margin-bottom: 1.25rem;">
-        <span class="pill-badge" style="font-size: 0.72rem; margin-bottom: 0.4rem;">නැණපහන සාප්පු සවාරි කරත්තය</span>
-        <h3 style="font-size: 1.35rem; font-weight: 800;">ඇණවුම තහවුරු කිරීම (Checkout)</h3>
+      <span class="pill-badge" style="font-size: 0.75rem; margin-bottom: 0.5rem;">නැණපහන ඩිජිටල් QR මෙනුව</span>
+      <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">දුරකථනයෙන් ස්කෑන් කරන්න</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        මෙම QR කේතය ඔබගේ හෝ පාරිභෝගිකයාගේ දුරකථනයෙන් ස්කෑන් කළ විට සම්පූර්ණ භාණ්ඩ නාමාවලිය හා මිල දර්ශකය විවෘත වේ.
+      </p>
+
+      <div style="width: 200px; height: 200px; margin: 0 auto 1.5rem; background: white; border-radius: 16px; padding: 12px; box-shadow: var(--shadow-md);">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+          <rect width="100" height="100" fill="white"/>
+          <rect x="10" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
+          <rect x="14" y="14" width="16" height="16" rx="2" fill="white"/>
+          <rect x="18" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
+          <rect x="66" y="10" width="24" height="24" rx="3" fill="#0f172a"/>
+          <rect x="70" y="14" width="16" height="16" rx="2" fill="white"/>
+          <rect x="74" y="18" width="8" height="8" rx="1" fill="#0f172a"/>
+          <rect x="10" y="66" width="24" height="24" rx="3" fill="#0f172a"/>
+          <rect x="14" y="70" width="16" height="16" rx="2" fill="white"/>
+          <rect x="18" y="74" width="8" height="8" rx="1" fill="#0f172a"/>
+          <rect x="42" y="12" width="6" height="6" fill="#0f172a"/>
+          <rect x="52" y="12" width="6" height="6" fill="#0f172a"/>
+          <rect x="42" y="24" width="6" height="6" fill="#0f172a"/>
+          <rect x="42" y="38" width="6" height="6" fill="#0f172a"/>
+          <rect x="52" y="38" width="6" height="6" fill="#0f172a"/>
+          <rect x="12" y="44" width="6" height="6" fill="#0f172a"/>
+          <rect x="24" y="44" width="6" height="6" fill="#0f172a"/>
+          <rect x="66" y="44" width="6" height="6" fill="#0f172a"/>
+          <rect x="78" y="44" width="6" height="6" fill="#0f172a"/>
+          <rect x="42" y="52" width="6" height="6" fill="#0f172a"/>
+          <rect x="52" y="52" width="6" height="6" fill="#0f172a"/>
+          <rect x="66" y="56" width="6" height="6" fill="#0f172a"/>
+          <rect x="42" y="66" width="6" height="6" fill="#0f172a"/>
+          <rect x="52" y="66" width="6" height="6" fill="#0f172a"/>
+          <rect x="78" y="66" width="6" height="6" fill="#0f172a"/>
+          <rect x="42" y="78" width="6" height="6" fill="#0f172a"/>
+          <rect x="66" y="78" width="6" height="6" fill="#0f172a"/>
+          <rect x="78" y="78" width="6" height="6" fill="#0f172a"/>
+        </svg>
       </div>
 
-      <!-- Items List in Cart -->
-      <div id="checkoutItemsList" style="max-height: 180px; overflow-y: auto; margin-bottom: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 0.5rem;">
-        <!-- Dynamically injected items -->
-      </div>
-
-      <form id="checkoutForm" style="display: flex; flex-direction: column; gap: 0.9rem;">
-        <div>
-          <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.2rem;">ඔබගේ නම (Full Name) *</label>
-          <input type="text" id="custName" required placeholder="උදා: කසුන් බණ්ඩාර" class="form-input-control">
-        </div>
-
-        <div>
-          <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.2rem;">දුරකථන අංකය (Phone / WhatsApp) *</label>
-          <input type="tel" id="custPhone" required placeholder="උදා: 077 123 4567" class="form-input-control">
-        </div>
-
-        <div>
-          <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.2rem;">භාණ්ඩ එවීමට අවශ්‍ය ලිපිනය (Delivery Address) *</label>
-          <input type="text" id="custAddress" required placeholder="නො. 12, විහාර මාවත, නගරය..." class="form-input-control">
-        </div>
-
-        <div>
-          <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.2rem;">දිස්ත්‍රික්කය (District) *</label>
-          <select id="customerDistrict" class="form-select-control">
-            <option value="Colombo">කොළඹ (Colombo - Delivery රු. 250)</option>
-            <option value="Gampaha">ගම්පහ (Gampaha - Delivery රු. 250)</option>
-            <option value="Kalutara">කළුතර (Kalutara - Delivery රු. 350)</option>
-            <option value="Kandy">මහනුවර (Kandy - Delivery රු. 350)</option>
-            <option value="Galle">ගාල්ල (Galle - Delivery රු. 350)</option>
-            <option value="Matara">මාතර (Matara - Delivery රු. 350)</option>
-            <option value="Kurunegala">කුරුණෑගල (Kurunegala - Delivery රු. 350)</option>
-            <option value="Other">අනෙකුත් ඕනෑම දිස්ත්‍රික්කයක් (Delivery රු. 350)</option>
-          </select>
-        </div>
-
-        <!-- Calculations -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.8rem 1rem; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.25rem;">
-          <div style="display: flex; justify-content: space-between; color: var(--text-muted);">
-            <span>භාණ්ඩ එකතුව (Subtotal):</span>
-            <span id="checkoutSubtotal">රු. 930/=</span>
-          </div>
-          <div style="display: flex; justify-content: space-between; color: var(--text-muted);">
-            <span>බෙදාහැරීමේ ගාස්තුව (Delivery Fee):</span>
-            <span id="checkoutDeliveryFee">රු. 250/=</span>
-          </div>
-          <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.15rem; color: var(--primary-light); padding-top: 0.4rem; border-top: 1px solid var(--border-subtle);">
-            <span>මුළු මුදල (Grand Total):</span>
-            <span id="checkoutGrandTotal">රු. 1,180/=</span>
-          </div>
-        </div>
-
-        <button type="submit" class="btn-primary" style="padding: 0.85rem; width: 100%; font-size: 1rem;">
-          ඇණවුම තහවුරු කරන්න (Confirm Order)
-        </button>
-
-        <button type="button" id="directWhatsAppOrderBtn" class="btn-whatsapp-quick" style="width: 100%; justify-content: center; padding: 0.75rem;">
-          💬 WhatsApp මගින් මෙම ඇණවුම එවන්න
-        </button>
-      </form>
+      <button class="btn-primary" id="copyMenuLinkBtn" style="width: 100%; justify-content: center;">
+        <span>📋 මෙනුවේ Link එක Copy කරගන්න</span>
+      </button>
     </div>
   </div>
 
   <!-- ======================================================================
-       13. INTERACTIVE MODAL: SCHOOL BOOKLIST UPLOAD SERVICE
+       12. INTERACTIVE MODAL: SCHOOL BOOKLIST UPLOAD SERVICE
        ====================================================================== -->
   <div class="modal-backdrop" id="booklistModal">
     <div class="modal-dialog">
@@ -748,7 +1974,7 @@
         <span class="pill-badge" style="font-size: 0.75rem;">පාසල් පොත් ලැයිස්තු සේවාව</span>
         <h3 style="font-size: 1.35rem; font-weight: 800; margin-top: 0.4rem;">ඔබගේ පොත් ලැයිස්තුව එවන්න</h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
-          අවශ්‍ය සියලුම පොත්, කවර සහ ලිපිද්‍රව්‍ය ලෑස්ති කර ඔබගේ නිවසටම කූරියර් මගින් එවන්නෙමු.
+          අවශ්‍ය සියලුම පොත්, කවර සහ ලිපිද්‍රව්‍ය ලෑස්ති කර ඔබ වෙත ලබාදෙන්නෙමු.
         </p>
       </div>
 
@@ -779,7 +2005,7 @@
 
         <div>
           <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.2rem;">විශේෂ අවශ්‍යතා හෝ සටහන් (Notes)</label>
-          <textarea id="booklistNotes" rows="3" placeholder="උදා: Atlas පොත් පමණක් එවන්න, පාට පෙට්ටියක් සහ කවර රෝලක්ද අවශ්‍යයි..." class="form-input-control"></textarea>
+          <textarea id="booklistNotes" rows="3" placeholder="උදා: Atlas පොත් පමණක් අවශ්‍යයි, පාට පෙට්ටියක් සහ කවර රෝලක්ද ලැයිස්තුවට එක්කරන්න..." class="form-input-control"></textarea>
         </div>
 
         <button type="submit" class="btn-whatsapp-quick" style="padding: 0.85rem; justify-content: center; font-size: 0.95rem;">
@@ -789,15 +2015,12 @@
     </div>
   </div>
 
-  <!-- ======================================================================
-       14. LIVE PURCHASE NOTIFICATION TOAST
-       ====================================================================== -->
-  <div class="live-toast-alert" id="livePurchaseToast">
-    <img src="assets/images/stationery.jpg" alt="Product Thumb" class="toast-img">
+  <!-- Toast Notification Alert -->
+  <div class="live-toast-alert" id="generalToast" style="display: none;">
+    <div style="font-size: 1.5rem;">📋</div>
     <div>
-      <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main);" id="toastBuyer">සුපුන් කෞෂල්‍ය - කිරිබත්ගොඩ</div>
-      <div style="font-size: 0.75rem; color: var(--primary-light);" id="toastEdition">Atlas CR Books 5ක් & Chooty Pens පැක් 2ක් ඇණවුම් කළා</div>
-      <div style="font-size: 0.68rem; color: var(--text-subtle);" id="toastTime">මීට මොහොතකට පෙර</div>
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main);" id="toastMessage">පණිවිඩය මෙහි දිස්වේ</div>
+      <div style="font-size: 0.72rem; color: var(--primary-light);">නැණපහන ඩිජිටල් නාමාවලිය</div>
     </div>
   </div>
 
