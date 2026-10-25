@@ -158,6 +158,17 @@ function initMenuNavigationAndSearch() {
       }
     });
   }
+
+  // Smooth mousewheel horizontal scroll for departments bar
+  const deptBar = document.querySelector('.departments-bar');
+  if (deptBar) {
+    deptBar.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        deptBar.scrollLeft += e.deltaY * 0.8;
+      }
+    }, { passive: false });
+  }
 }
 
 /* --------------------------------------------------------------------------
