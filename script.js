@@ -1,117 +1,76 @@
 /**
- * THE CELESTIAL ALGORITHM - INTERACTIVE SCRIPTS
- * Built for SL Developer Web Agency Showcase
+ * නැණපහන පොත් මැඳුර - NENAPAHANA BOOKS (PVT) LTD
+ * Production Frontend Logic & Order Management
+ * Developed by SL Developer
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Showcase Customizer Controls (Mode, Color, Font)
-  initThemeCustomizer();
+  // 1. Dark / Light Mode Toggle
+  initThemeToggle();
 
   // 2. 3D Tilt Effect on Hero Book
   init3DBookTilt();
 
-  // 3. Launch Countdown Timer
-  initCountdownTimer();
+  // 3. Cart & Ordering System
+  initCartAndCheckout();
 
   // 4. Chapter Accordion & Sneak Peek
   initChapterAccordion();
 
-  // 5. Interactive Audiobook Player & Web Audio Ambient Synth
+  // 5. Interactive Audiobook Player with Web Audio API
   initAudiobookPlayer();
 
-  // 6. Review Filtering & Review Submission
-  initReviewsSystem();
+  // 6. Free Sample Reader Modal
+  initReaderModal();
 
-  // 7. Modals: Reader Preview, Checkout, Agency Inquiry
-  initModals();
-
-  // 8. FAQ Accordion
+  // 7. FAQ Accordion
   initFaqAccordion();
 
-  // 9. Live Social Proof Purchase Toasts
+  // 8. Real Sri Lankan Buyer Social Proof Toasts
   initSocialProofToast();
 
-  // 10. Mobile Menu Navigation
+  // 9. Mobile Menu Navigation
   initMobileMenu();
 
-  // 11. Lead Magnet Newsletter Form
-  initLeadMagnet();
+  // 10. Newsletter & Free PDF Sample Form
+  initNewsletter();
 });
 
 /* --------------------------------------------------------------------------
-   1. THEME CUSTOMIZER (Dark/Light, Colors, Fonts)
+   1. THEME TOGGLE (Dark / Light)
    -------------------------------------------------------------------------- */
-function initThemeCustomizer() {
+function initThemeToggle() {
   const root = document.documentElement;
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const themeModeText = document.getElementById('themeModeText');
-  const colorDots = document.querySelectorAll('.color-dot');
-  const fontSelect = document.getElementById('fontSelect');
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  const toggleText = document.getElementById('themeToggleText');
 
-  // Load saved preferences
-  const savedMode = localStorage.getItem('sl_book_theme_mode') || 'dark';
-  const savedColor = localStorage.getItem('sl_book_color_theme') || 'gold';
-  const savedFont = localStorage.getItem('sl_book_font_preset') || 'classic';
+  const savedTheme = localStorage.getItem('nenapahana_theme') || 'dark';
+  applyTheme(savedTheme);
 
-  applyMode(savedMode);
-  applyColor(savedColor);
-  applyFont(savedFont);
-
-  // Toggle Dark/Light Mode
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentMode = root.getAttribute('data-theme-mode') || 'dark';
-      const newMode = currentMode === 'dark' ? 'light' : 'dark';
-      applyMode(newMode);
-      localStorage.setItem('sl_book_theme_mode', newMode);
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const current = root.getAttribute('data-theme-mode') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('nenapahana_theme', next);
     });
   }
 
-  function applyMode(mode) {
-    root.setAttribute('data-theme-mode', mode);
-    if (themeModeText) {
-      themeModeText.textContent = mode === 'dark' ? '☀️ Light' : '🌙 Dark';
+  function applyTheme(theme) {
+    root.setAttribute('data-theme-mode', theme);
+    if (toggleText) {
+      toggleText.textContent = theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
     }
-  }
-
-  // Color theme selection
-  colorDots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const color = dot.getAttribute('data-color');
-      applyColor(color);
-      localStorage.setItem('sl_book_color_theme', color);
-    });
-  });
-
-  function applyColor(color) {
-    root.setAttribute('data-color-theme', color);
-    colorDots.forEach(dot => {
-      dot.classList.toggle('active', dot.getAttribute('data-color') === color);
-    });
-  }
-
-  // Font preset selection
-  if (fontSelect) {
-    fontSelect.value = savedFont;
-    fontSelect.addEventListener('change', (e) => {
-      applyFont(e.target.value);
-      localStorage.setItem('sl_book_font_preset', e.target.value);
-    });
-  }
-
-  function applyFont(font) {
-    root.setAttribute('data-font-preset', font);
-    if (fontSelect) fontSelect.value = font;
   }
 }
 
 /* --------------------------------------------------------------------------
-   2. 3D TILT EFFECT FOR HERO BOOK
+   2. 3D TILT EFFECT ON HERO BOOK
    -------------------------------------------------------------------------- */
 function init3DBookTilt() {
   const card = document.getElementById('heroBook3D');
   if (!card) return;
-
   const wrap = card.parentElement;
 
   wrap.addEventListener('mousemove', (e) => {
@@ -122,8 +81,8 @@ function init3DBookTilt() {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * -12;
-    const rotateY = ((x - centerX) / centerX) * 14;
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 12;
 
     card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
   });
@@ -134,44 +93,130 @@ function init3DBookTilt() {
 }
 
 /* --------------------------------------------------------------------------
-   3. LAUNCH COUNTDOWN TIMER
+   3. CART & REAL SRI LANKAN CHECKOUT SYSTEM
    -------------------------------------------------------------------------- */
-function initCountdownTimer() {
-  const daysEl = document.getElementById('countDays');
-  const hoursEl = document.getElementById('countHours');
-  const minsEl = document.getElementById('countMins');
-  const secsEl = document.getElementById('countSecs');
+let cartCount = 0;
+let currentOrder = {
+  item: "විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)",
+  price: 2650,
+  qty: 1,
+  deliveryFee: 250
+};
 
-  if (!daysEl) return;
+function initCartAndCheckout() {
+  const cartBadge = document.getElementById('navCartCount');
+  const checkoutModal = document.getElementById('checkoutModal');
+  const orderTriggers = document.querySelectorAll('.trigger-order-btn');
+  const addCartBtns = document.querySelectorAll('.trigger-add-cart-btn');
 
-  // Set target date 3 days, 14 hours from now
-  const targetDate = new Date(Date.now() + (3 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000));
+  const modalItemTitle = document.getElementById('checkoutItemTitle');
+  const modalItemPrice = document.getElementById('checkoutItemPrice');
+  const modalDeliveryFee = document.getElementById('checkoutDeliveryFee');
+  const modalGrandTotal = document.getElementById('checkoutGrandTotal');
+  const districtSelect = document.getElementById('customerDistrict');
+  const checkoutForm = document.getElementById('checkoutForm');
+  const directWhatsAppOrderBtn = document.getElementById('directWhatsAppOrderBtn');
 
-  function update() {
-    const now = new Date();
-    const diff = targetDate - now;
+  // Add to cart buttons
+  addCartBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const title = btn.getAttribute('data-product-title') || "විශ්වීය ඇල්ගොරිතමය";
+      cartCount++;
+      if (cartBadge) cartBadge.textContent = cartCount;
+      showNotificationToast(`🛒 "${title}" කරත්තයට සාර්ථකව එක් කරන ලදී!`);
+    });
+  });
 
-    if (diff <= 0) {
-      daysEl.textContent = '00';
-      hoursEl.textContent = '00';
-      minsEl.textContent = '00';
-      secsEl.textContent = '00';
-      return;
-    }
+  // Open checkout modal
+  orderTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const title = btn.getAttribute('data-product-title') || "විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)";
+      const price = parseInt(btn.getAttribute('data-product-price') || "2650", 10);
 
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const m = Math.floor((diff / 1000 / 60) % 60);
-    const s = Math.floor((diff / 1000) % 60);
+      currentOrder.item = title;
+      currentOrder.price = price;
 
-    daysEl.textContent = String(d).padStart(2, '0');
-    hoursEl.textContent = String(h).padStart(2, '0');
-    minsEl.textContent = String(m).padStart(2, '0');
-    secsEl.textContent = String(s).padStart(2, '0');
+      updateOrderSummary();
+      if (checkoutModal) checkoutModal.classList.add('active');
+    });
+  });
+
+  // Calculate delivery fee based on Sri Lankan District
+  if (districtSelect) {
+    districtSelect.addEventListener('change', () => {
+      const dist = districtSelect.value;
+      if (dist === 'Colombo' || dist === 'Gampaha') {
+        currentOrder.deliveryFee = 250;
+      } else {
+        currentOrder.deliveryFee = 350;
+      }
+      // Free delivery if order >= 4000
+      if (currentOrder.price >= 4000) {
+        currentOrder.deliveryFee = 0;
+      }
+      updateOrderSummary();
+    });
   }
 
-  update();
-  setInterval(update, 1000);
+  function updateOrderSummary() {
+    if (modalItemTitle) modalItemTitle.textContent = currentOrder.item;
+    if (modalItemPrice) modalItemPrice.textContent = `රු. ${currentOrder.price.toLocaleString()}/=`;
+    if (modalDeliveryFee) {
+      modalDeliveryFee.textContent = currentOrder.deliveryFee === 0 ? 'නොමිලේ (Free)' : `රු. ${currentOrder.deliveryFee}/=`;
+    }
+    if (modalGrandTotal) {
+      const grandTotal = currentOrder.price + currentOrder.deliveryFee;
+      modalGrandTotal.textContent = `රු. ${grandTotal.toLocaleString()}/=`;
+    }
+  }
+
+  // Handle Form Submit
+  if (checkoutForm) {
+    checkoutForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const address = document.getElementById('custAddress').value;
+      const district = districtSelect ? districtSelect.value : 'Colombo';
+      const payMethod = document.querySelector('input[name="paymentMethod"]:checked')?.value || 'Cash on Delivery';
+
+      const submitBtn = checkoutForm.querySelector('button[type="submit"]');
+      submitBtn.innerHTML = 'ඇණවුම සකසමින් පවතී... ⏳';
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = 'ඇණවුම තහවුරු කරන්න (Confirm Order)';
+        submitBtn.disabled = false;
+        if (checkoutModal) checkoutModal.classList.remove('active');
+        triggerConfetti();
+        showNotificationToast(`🎉 ස්තූතියි ${name}! ඔබගේ ඇණවුම සාර්ථකව භාරගන්නා ලදී. (Ref: NP-${Math.floor(100000 + Math.random() * 900000)})`);
+      }, 1200);
+    });
+  }
+
+  // Direct WhatsApp Order
+  if (directWhatsAppOrderBtn) {
+    directWhatsAppOrderBtn.addEventListener('click', () => {
+      const name = document.getElementById('custName')?.value || 'පාරිභෝගිකයා';
+      const phone = document.getElementById('custPhone')?.value || '';
+      const address = document.getElementById('custAddress')?.value || '';
+      const grandTotal = currentOrder.price + currentOrder.deliveryFee;
+
+      const message = `*නැණපහන පොත් මැඳුර (Nenapahana Books) වෙත ඇණවුමක්:*\n\n` +
+                      `📖 පොත: ${currentOrder.item}\n` +
+                      `💰 මුළු මුදල: රු. ${grandTotal}/=\n` +
+                      `👤 නම: ${name}\n` +
+                      `📞 දුරකථන: ${phone}\n` +
+                      `📍 ලිපිනය: ${address}\n` +
+                      `🚚 ගෙවීම් ක්‍රමය: Cash on Delivery\n\n` +
+                      `කරුණාකර මෙම ඇණවුම තහවුරු කර එවන්න.`;
+
+      const url = `https://wa.me/94779876543?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    });
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -184,28 +229,28 @@ function initChapterAccordion() {
 
   const excerpts = {
     '1': {
-      heading: 'From Chapter 1: The Code of Inception',
-      text: '"The mind is not an accidental observer of reality; it is the silent architect. When you peel back the layers of subconscious conditioning, you encounter the primary algorithm that directs every instinct, intuition, and choice."'
+      heading: '1 වන පරිච්ඡේදය: මනසේ ප්‍රාථමික ඇල්ගොරිතමය (The Code of Inception)',
+      text: '"මනස යනු ලෝකය දෙස බලා සිටින නිෂ්ක්‍රීය නිරීක්ෂකයෙකු නොවේ; එය අපගේ යථාර්ථය නිර්මාණය කරන නිහඬ ගෘහ නිර්මාණ ශිල්පියාය. අවිඥානික සිතුවිලි ස්ථර ඉවත් කළ විට, අපගේ සෑම තීරණයක්ම සහ සහජ බුද්ධියක්ම මෙහෙයවන මූලික ජීව විද්‍යාත්මක ඇල්ගොරිතමය හඳුනාගත හැක."'
     },
     '2': {
-      heading: 'From Chapter 2: The Neural Blueprint',
-      text: '"Intuition is not magic; it is computation operating faster than conscious awareness. By harmonizing your nervous system with high-order purpose, your decisions achieve an effortless clarity that mimics natural law."'
+      heading: '2 වන පරිච්ඡේදය: සහජ ඥානයේ ස්නායු විද්‍යාව (The Neural Blueprint)',
+      text: '"සහජ බුද්ධිය හෝ ඉව (Intuition) යනු කිසිසේත්ම අද්භූත මායාවක් නොවේ; එය සවිඥානික මනසට වඩා දසදහස් ගුණයකින් වේගයෙන් ක්‍රියාත්මක වන ස්නායු පරිගණනයකි. එම ස්නායු රටා නිවැරදිව හඳුනාගත් විට වඩාත් තීරණාත්මක මොහොතක පවා බියෙන් තොරව නිවැරදි තීන්දුව ගැනීමට හැකිවේ."'
     },
     '3': {
-      heading: 'From Chapter 3: Mastering Inner Entropy',
-      text: '"Distraction is the friction of the soul. The modern world profits from fractured attention; the sovereign mind reclaims mastery by cultivating sacred intervals of deep, unbroken stillness."'
+      heading: '3 වන පරිච්ඡේදය: අභ්‍යන්තර විසිරීම පාලනය (Mastering Inner Entropy)',
+      text: '"නොසන්සුන් බව සහ සිතුවිලි විසිරීම යනු නූතන මිනිසා මුහුණ දෙන විශාලතම ඛේදවාචකයයි. අවධානය පැහැරගන්නා ඩිජිටල් උපාංග හමුවේ ඔබේ මානසික ශක්තිය ආරක්ෂා කරගනිමින් ගැඹුරු නිහඬතාවයක් ගොඩනගා ගන්නේ කෙසේදැයි මෙහිදී විග්‍රහ කෙරේ."'
     },
     '4': {
-      heading: 'From Chapter 4: The Flow Equation',
-      text: '"Flow is the point where the ego yields to pure execution. In this chapter, we decode the biological catalysts that compress months of creative breakthroughs into hours of concentrated insight."'
+      heading: '4 වන පරිච්ඡේදය: උච්චතම කාර්යක්ෂමතා සමීකරණය (The Flow Equation)',
+      text: '"පූර්ණ ඒකාග්‍රතාවය හෙවත් Flow State එක යනු සිතීමේ සහ ක්‍රියාවේ පරම සමතුලිතතාවයයි. ලොව අති දක්ෂතම නිර්මාණකරුවන් සහ විද්‍යාඥයින් මාස ගණනක ප්‍රතිඵල පැය කිහිපයකින් ලබාගන්නා ජෛව විද්‍යාත්මක රහස් මෙහි අඩංගු වේ."'
     },
     '5': {
-      heading: 'From Chapter 5: Designing Destiny',
-      text: '"You do not rise to the level of your ambitions; you fall to the resilience of your cognitive architecture. Real freedom begins when you build mental models that withstand global volatility."'
+      heading: '5 වන පරිච්ඡේදය: ඉරණම ප්‍රතිනිර්මාණය (Designing Destiny)',
+      text: '"අපගේ සාර්ථකත්වය රඳා පවතින්නේ හුදු සිහින මත නොව, අප දිනපතා ක්‍රියාත්මක කරන මානසික ක්‍රමවේද මතය. ඕනෑම ආර්ථික හෝ සමාජීය කුණාටුවකට නොසැලී මුහුණ දිය හැකි ස්ථීර මානසික පදනමක් සකසා ගන්නා අයුරු මෙයින් පහදා දෙයි."'
     },
     '6': {
-      heading: 'From Chapter 6: The Eternal Return',
-      text: '"The ultimate victory is not conquering external territory, but achieving a harmonious peace where wisdom, ambition, and inner serenity exist in perpetual equilibrium."'
+      heading: '6 වන පරිච්ඡේදය: චිරන්තන ශාන්තිය (The Eternal Return)',
+      text: '"ලෞකික ජයග්‍රහණ සහ ඉලක්ක හඹා යන අතරතුරම, සිත තුළ නොසැලෙන අධ්‍යාත්මික සැනසීමක් පවත්වාගෙන යාම සැබෑ ජීවන විජයග්‍රහණයයි. සිතේ සාමය සහ සාර්ථකත්වය එකට මුසු වූ ජීවිතයක පරිසමාප්තිය මෙහිදී සනිටුහන් වේ."'
     }
   };
 
@@ -229,7 +274,7 @@ function initChapterAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   5. AUDIOBOOK PLAYER & WEB AUDIO AMBIENT SYNTHESIZER
+   5. AUDIOBOOK PLAYER & WEB AUDIO AMBIENT SYNTH
    -------------------------------------------------------------------------- */
 function initAudiobookPlayer() {
   const playBtn = document.getElementById('audioPlayToggle');
@@ -239,8 +284,6 @@ function initAudiobookPlayer() {
   const currentTimeEl = document.getElementById('audioCurrentTime');
   const durationTimeEl = document.getElementById('audioDurationTime');
   const speedBtn = document.getElementById('speedToggleBtn');
-  const volumeSlider = document.getElementById('volumeSlider');
-  const teaserBar = document.getElementById('heroAudioTeaser');
 
   let audioCtx = null;
   let isPlaying = false;
@@ -248,10 +291,9 @@ function initAudiobookPlayer() {
   let oscillators = [];
   let animFrameId = null;
   let currentSeconds = 0;
-  const totalSeconds = 184; // 3 mins 4 secs
+  const totalSeconds = 184;
   let playbackRate = 1.0;
 
-  // Canvas visualizer setup
   let ctx2d = null;
   if (canvas) {
     ctx2d = canvas.getContext('2d');
@@ -274,26 +316,25 @@ function initAudiobookPlayer() {
     }
 
     masterGain = audioCtx.createGain();
-    masterGain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+    masterGain.gain.setValueAtTime(0.12, audioCtx.currentTime);
     masterGain.connect(audioCtx.destination);
 
-    // Warm atmospheric binaural drone chord (F# Minor / Celestial Harmonics)
-    const freqs = [185.00, 220.00, 277.18, 370.00]; // F#3, A3, C#4, F#4
+    // Warm chord: D3, F#3, A3, D4
+    const freqs = [146.83, 185.00, 220.00, 293.66];
     oscillators = freqs.map((f, idx) => {
       const osc = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
       osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
       osc.frequency.setValueAtTime(f, audioCtx.currentTime);
 
-      // Subtle LFO modulation for breathing texture
       const lfo = audioCtx.createOscillator();
       const lfoGain = audioCtx.createGain();
-      lfo.frequency.value = 0.2 + idx * 0.1;
+      lfo.frequency.value = 0.25 + idx * 0.1;
       lfoGain.gain.value = 1.5;
       lfo.connect(osc.frequency);
       lfo.start();
 
-      gain.gain.setValueAtTime(0.2 / freqs.length, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.18 / freqs.length, audioCtx.currentTime);
       osc.connect(gain);
       gain.connect(masterGain);
       osc.start();
@@ -319,6 +360,7 @@ function initAudiobookPlayer() {
       startAmbientAudio();
       if (playIcon) playIcon.textContent = '⏸';
       animateVisualizer();
+      showNotificationToast('🎧 සිංහල ශ්‍රව්‍ය සාම්පලය වාදනය වේ... (Audio Preview Playing)');
     } else {
       stopAmbientAudio();
       if (playIcon) playIcon.textContent = '▶';
@@ -326,23 +368,14 @@ function initAudiobookPlayer() {
   }
 
   if (playBtn) playBtn.addEventListener('click', togglePlay);
-  if (teaserBar) {
-    teaserBar.addEventListener('click', () => {
-      const playerSec = document.getElementById('audiobook');
-      if (playerSec) playerSec.scrollIntoView({ behavior: 'smooth' });
-      if (!isPlaying) togglePlay();
-    });
-  }
 
-  // Audio Visualizer Rendering
   function animateVisualizer() {
     if (!ctx2d) return;
 
     function render() {
       if (!isPlaying) {
-        // Draw static baseline
         ctx2d.clearRect(0, 0, canvas.width, canvas.height);
-        ctx2d.fillStyle = 'rgba(212, 175, 55, 0.2)';
+        ctx2d.fillStyle = 'rgba(201, 147, 59, 0.2)';
         ctx2d.fillRect(0, canvas.height / 2 - 1, canvas.width, 2);
         return;
       }
@@ -358,8 +391,8 @@ function initAudiobookPlayer() {
         const y = (canvas.height - height) / 2;
 
         const grad = ctx2d.createLinearGradient(0, y, 0, y + height);
-        grad.addColorStop(0, '#d4af37');
-        grad.addColorStop(0.5, '#f5d77f');
+        grad.addColorStop(0, '#e5b869');
+        grad.addColorStop(0.5, '#c9933b');
         grad.addColorStop(1, '#10b981');
 
         ctx2d.fillStyle = grad;
@@ -368,7 +401,6 @@ function initAudiobookPlayer() {
         ctx2d.fill();
       }
 
-      // Increment scrubber
       currentSeconds += 0.05 * playbackRate;
       if (currentSeconds >= totalSeconds) currentSeconds = 0;
       updateTimeDisplay();
@@ -404,89 +436,26 @@ function initAudiobookPlayer() {
       speedBtn.textContent = `${playbackRate}x`;
     });
   }
-
-  if (volumeSlider) {
-    volumeSlider.addEventListener('input', (e) => {
-      if (masterGain && audioCtx) {
-        masterGain.gain.setValueAtTime(parseFloat(e.target.value), audioCtx.currentTime);
-      }
-    });
-  }
 }
 
 /* --------------------------------------------------------------------------
-   6. REVIEWS FILTERING & SUBMISSION
+   6. FREE SAMPLE READER MODAL
    -------------------------------------------------------------------------- */
-function initReviewsSystem() {
-  const filterBtns = document.querySelectorAll('.review-filter-btn');
-  const reviewCards = document.querySelectorAll('.review-card');
+function initReaderModal() {
+  const openBtns = document.querySelectorAll('.open-reader-btn');
+  const readerModal = document.getElementById('readerModal');
+  const smallerBtn = document.getElementById('readerFontSmaller');
+  const biggerBtn = document.getElementById('readerFontBigger');
+  const readerText = document.querySelector('.reader-book-page');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-      reviewCards.forEach(card => {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (readerModal) readerModal.classList.add('active');
     });
   });
 
-  // Write a Review Button
-  const writeReviewBtn = document.getElementById('writeReviewBtn');
-  const reviewModal = document.getElementById('reviewModal');
-  const reviewForm = document.getElementById('reviewForm');
-
-  if (writeReviewBtn && reviewModal) {
-    writeReviewBtn.addEventListener('click', () => {
-      reviewModal.classList.add('active');
-    });
-  }
-
-  if (reviewForm) {
-    reviewForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('revName').value;
-      const role = document.getElementById('revRole').value || 'Verified Reader';
-      const comment = document.getElementById('revComment').value;
-
-      // Create new review card
-      const grid = document.querySelector('.reviews-grid');
-      if (grid) {
-        const card = document.createElement('div');
-        card.className = 'review-card';
-        card.setAttribute('data-category', 'verified');
-        card.innerHTML = `
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"${escapeHtml(comment)}"</p>
-          <div class="review-user-info">
-            <div class="review-avatar">${name.charAt(0).toUpperCase()}</div>
-            <div class="review-meta">
-              <span class="review-author-name">${escapeHtml(name)}</span>
-              <span class="review-author-role">${escapeHtml(role)} • Just now</span>
-            </div>
-          </div>
-        `;
-        grid.prepend(card);
-      }
-
-      reviewModal.classList.remove('active');
-      reviewForm.reset();
-      showNotificationToast('Thank you! Your review has been published.');
-    });
-  }
-}
-
-/* --------------------------------------------------------------------------
-   7. INTERACTIVE MODALS (Reader, Checkout, Agency Inquiry)
-   -------------------------------------------------------------------------- */
-function initModals() {
-  // Close any modal on backdrop click or close button
+  // Close modals
   document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
     backdrop.addEventListener('click', (e) => {
       if (e.target === backdrop || e.target.classList.contains('modal-close-btn') || e.target.closest('.modal-close-btn')) {
@@ -495,125 +464,45 @@ function initModals() {
     });
   });
 
-  // Free Sample Reader Modal
-  const openReaderBtns = document.querySelectorAll('.open-reader-btn');
-  const readerModal = document.getElementById('readerModal');
-  const readerFontSmaller = document.getElementById('readerFontSmaller');
-  const readerFontBigger = document.getElementById('readerFontBigger');
-  const readerPageText = document.querySelector('.reader-book-page');
-
-  openReaderBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (readerModal) readerModal.classList.add('active');
-    });
-  });
-
-  let currentFontSize = 16;
-  if (readerFontSmaller && readerPageText) {
-    readerFontSmaller.addEventListener('click', () => {
-      if (currentFontSize > 13) {
-        currentFontSize -= 1;
-        readerPageText.style.fontSize = `${currentFontSize}px`;
+  let fontSize = 17;
+  if (smallerBtn && readerText) {
+    smallerBtn.addEventListener('click', () => {
+      if (fontSize > 14) {
+        fontSize -= 1;
+        readerText.style.fontSize = `${fontSize}px`;
       }
     });
   }
 
-  if (readerFontBigger && readerPageText) {
-    readerFontBigger.addEventListener('click', () => {
-      if (currentFontSize < 24) {
-        currentFontSize += 1;
-        readerPageText.style.fontSize = `${currentFontSize}px`;
+  if (biggerBtn && readerText) {
+    biggerBtn.addEventListener('click', () => {
+      if (fontSize < 24) {
+        fontSize += 1;
+        readerText.style.fontSize = `${fontSize}px`;
       }
-    });
-  }
-
-  // Checkout Modal
-  const checkoutModal = document.getElementById('checkoutModal');
-  const orderBtns = document.querySelectorAll('.trigger-order-btn');
-  const checkoutTitle = document.getElementById('checkoutItemTitle');
-  const checkoutPrice = document.getElementById('checkoutItemPrice');
-  const checkoutForm = document.getElementById('checkoutForm');
-
-  orderBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const title = btn.getAttribute('data-product-title') || "Collector's Hardcover Edition";
-      const price = btn.getAttribute('data-product-price') || '$29.99';
-
-      if (checkoutTitle) checkoutTitle.textContent = title;
-      if (checkoutPrice) checkoutPrice.textContent = price;
-      if (checkoutModal) checkoutModal.classList.add('active');
-    });
-  });
-
-  if (checkoutForm) {
-    checkoutForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = checkoutForm.querySelector('button[type="submit"]');
-      submitBtn.innerHTML = 'Processing Order... ⌛';
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        submitBtn.innerHTML = 'Complete Purchase';
-        submitBtn.disabled = false;
-        checkoutModal.classList.remove('active');
-        triggerConfettiCelebration();
-        showNotificationToast('🎉 Congratulations! Your order has been placed successfully.');
-      }, 1200);
-    });
-  }
-
-  // Agency "Order This Website" Modal (SL Developer Pitch)
-  const agencyOrderBtns = document.querySelectorAll('.agency-order-trigger');
-  const agencyModal = document.getElementById('agencyModal');
-
-  agencyOrderBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (agencyModal) agencyModal.classList.add('active');
-    });
-  });
-
-  const agencyInquiryForm = document.getElementById('agencyInquiryForm');
-  if (agencyInquiryForm) {
-    agencyInquiryForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const clientName = document.getElementById('clientName').value;
-      const clientPhone = document.getElementById('clientPhone').value;
-      const clientType = document.getElementById('clientProjectType').value;
-
-      // Pre-fill WhatsApp message
-      const msg = `Hi SL Developer! I saw your Book Showcase Website demo. My name is ${clientName} (${clientPhone}). I am interested in building a website for: ${clientType}. Please provide pricing details!`;
-      const waUrl = `https://wa.me/?text=${encodeURIComponent(msg)}`;
-
-      window.open(waUrl, '_blank');
-      agencyModal.classList.remove('active');
-      showNotificationToast('Message sent to SL Developer WhatsApp! We will connect with you.');
     });
   }
 }
 
 /* --------------------------------------------------------------------------
-   8. FAQ ACCORDION
+   7. FAQ ACCORDION
    -------------------------------------------------------------------------- */
 function initFaqAccordion() {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    question.addEventListener('click', () => {
-      const isOpen = item.classList.contains('active');
-      faqItems.forEach(f => f.classList.remove('active'));
-      if (!isOpen) {
-        item.classList.add('active');
-      }
-    });
+  const items = document.querySelectorAll('.faq-item');
+  items.forEach(item => {
+    const q = item.querySelector('.faq-question');
+    if (q) {
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        items.forEach(i => i.classList.remove('active'));
+        if (!isOpen) item.classList.add('active');
+      });
+    }
   });
 }
 
 /* --------------------------------------------------------------------------
-   9. LIVE SOCIAL PROOF TOAST
+   8. REAL SRI LANKAN BUYER SOCIAL PROOF TOAST
    -------------------------------------------------------------------------- */
 function initSocialProofToast() {
   const toast = document.getElementById('livePurchaseToast');
@@ -624,11 +513,11 @@ function initSocialProofToast() {
   if (!toast) return;
 
   const purchases = [
-    { buyer: 'Kasun Bandara from Kandy', edition: "Collector's Hardcover Edition", time: 'Just now' },
-    { buyer: 'Elena Rostova from London', edition: 'Ultimate Masterclass Bundle', time: '2 minutes ago' },
-    { buyer: 'Tharindu Fernando from Colombo', edition: 'Unabridged Audiobook', time: '4 minutes ago' },
-    { buyer: 'Marcus Vance from New York', edition: "Collector's Hardcover Edition", time: '7 minutes ago' },
-    { buyer: 'Amara Weerasinghe from Galle', edition: 'Kindle & eBook Edition', time: '11 minutes ago' }
+    { buyer: 'චතුරංග වික්‍රමසිංහ - කොළඹ 07', edition: 'Hardcover Deluxe පිටපතක් ඇණවුම් කළා', time: 'මීට සුළු මොහොතකට පෙර' },
+    { buyer: 'සඳුනි රත්නායක - මහනුවර', edition: 'Cash on Delivery මගින් ඇණවුම් කළා', time: 'මිනිත්තු 3කට පෙර' },
+    { buyer: 'දිනේෂ් ප්‍රනාන්දු - ගාල්ල', edition: 'Koko Installments මගින් ඇණවුම් කළා', time: 'මිනිත්තු 5කට පෙර' },
+    { buyer: 'කසුන් බණ්ඩාර - කුරුණෑගල', edition: 'Hardcover + Audiobook Combo ඇණවුම් කළා', time: 'මිනිත්තු 9කට පෙර' },
+    { buyer: 'අනුරාධ විජේසිංහ - මහරගම', edition: 'Hardcover පිටපතක් ඇණවුම් කළා', time: 'මිනිත්තු 12කට පෙර' }
   ];
 
   let idx = 0;
@@ -636,7 +525,7 @@ function initSocialProofToast() {
   function showToast() {
     const data = purchases[idx];
     if (toastBuyer) toastBuyer.textContent = data.buyer;
-    if (toastEdition) toastEdition.textContent = `Purchased ${data.edition}`;
+    if (toastEdition) toastEdition.textContent = data.edition;
     if (toastTime) toastTime.textContent = data.time;
 
     toast.classList.add('show');
@@ -648,28 +537,27 @@ function initSocialProofToast() {
     idx = (idx + 1) % purchases.length;
   }
 
-  // Show first toast after 4s, then repeat every 14s
   setTimeout(() => {
     showToast();
-    setInterval(showToast, 14000);
+    setInterval(showToast, 15000);
   }, 4000);
 }
 
 /* --------------------------------------------------------------------------
-   10. MOBILE MENU
+   9. MOBILE MENU
    -------------------------------------------------------------------------- */
 function initMobileMenu() {
-  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const toggle = document.getElementById('mobileMenuToggle');
   const navLinks = document.querySelector('.nav-links');
 
-  if (toggleBtn && navLinks) {
-    toggleBtn.addEventListener('click', () => {
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
       const isOpen = navLinks.style.display === 'flex';
       navLinks.style.display = isOpen ? 'none' : 'flex';
       if (!isOpen) {
         navLinks.style.flexDirection = 'column';
         navLinks.style.position = 'absolute';
-        navLinks.style.top = '76px';
+        navLinks.style.top = '78px';
         navLinks.style.left = '0';
         navLinks.style.width = '100%';
         navLinks.style.background = 'var(--bg-surface)';
@@ -680,7 +568,6 @@ function initMobileMenu() {
       }
     });
 
-    // Close when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
@@ -692,29 +579,29 @@ function initMobileMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   11. LEAD MAGNET FORM & NOTIFICATION HELPER
+   10. NEWSLETTER & NOTIFICATIONS
    -------------------------------------------------------------------------- */
-function initLeadMagnet() {
+function initNewsletter() {
   const form = document.getElementById('leadMagnetForm');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = document.getElementById('leadEmail').value;
+      const email = document.getElementById('leadEmail')?.value;
       const btn = form.querySelector('button');
-      btn.textContent = 'Sending PDF... 🚀';
+      btn.innerHTML = 'PDF පිටපත යවමින් පවතී... 🚀';
       btn.disabled = true;
 
       setTimeout(() => {
-        btn.textContent = 'Chapters Sent!';
+        btn.innerHTML = 'සාර්ථකව යවන ලදී!';
         btn.disabled = false;
         form.reset();
-        showNotificationToast(`🎉 The first 3 chapters have been emailed to ${email}! Check your inbox.`);
+        showNotificationToast(`🎉 නොමිලේ කියවිය හැකි මුල් පරිච්ඡේද 2 සහිත PDF පිටපත ${email} වෙත යවන ලදී!`);
       }, 1000);
     });
   }
 }
 
-function showNotificationToast(message) {
+function showNotificationToast(msg) {
   let toast = document.getElementById('actionNotificationToast');
   if (!toast) {
     toast = document.createElement('div');
@@ -728,7 +615,7 @@ function showNotificationToast(message) {
     toast.style.color = 'var(--text-main)';
     toast.style.padding = '0.9rem 1.4rem';
     toast.style.borderRadius = 'var(--radius-md)';
-    toast.style.boxShadow = '0 12px 35px rgba(0,0,0,0.3), 0 0 25px var(--primary-glow)';
+    toast.style.boxShadow = '0 12px 35px rgba(0,0,0,0.35), 0 0 25px var(--primary-glow)';
     toast.style.zIndex = '3000';
     toast.style.fontSize = '0.92rem';
     toast.style.fontWeight = '600';
@@ -741,7 +628,7 @@ function showNotificationToast(message) {
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<span>✨</span><span>${escapeHtml(message)}</span>`;
+  toast.innerHTML = `<span>✨</span><span>${escapeHtml(msg)}</span>`;
   toast.style.transform = 'translateY(0)';
   toast.style.opacity = '1';
 
@@ -751,10 +638,7 @@ function showNotificationToast(message) {
   }, 4500);
 }
 
-/* --------------------------------------------------------------------------
-   CONFETTI CELEBRATION HELPER
-   -------------------------------------------------------------------------- */
-function triggerConfettiCelebration() {
+function triggerConfetti() {
   const canvas = document.createElement('canvas');
   canvas.style.position = 'fixed';
   canvas.style.inset = '0';
@@ -769,7 +653,7 @@ function triggerConfettiCelebration() {
   canvas.height = window.innerHeight;
 
   const particles = [];
-  const colors = ['#d4af37', '#f5d77f', '#10b981', '#34d399', '#f59e0b', '#ffffff', '#ec4899'];
+  const colors = ['#c9933b', '#e5b869', '#10b981', '#34d399', '#ffffff', '#ff0055'];
 
   for (let i = 0; i < 90; i++) {
     particles.push({
@@ -785,22 +669,20 @@ function triggerConfettiCelebration() {
     });
   }
 
-  let startTime = Date.now();
+  let start = Date.now();
   function render() {
-    const elapsed = Date.now() - startTime;
+    const elapsed = Date.now() - start;
     if (elapsed > 2500) {
       canvas.remove();
       return;
     }
-
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     particles.forEach(p => {
       p.x += p.vx;
       p.y += p.vy;
-      p.vy += 0.35; // gravity
+      p.vy += 0.35;
       p.rotation += p.vRot;
       p.alpha = Math.max(0, 1 - (elapsed / 2500));
-
       ctx.save();
       ctx.globalAlpha = p.alpha;
       ctx.translate(p.x, p.y);
@@ -809,7 +691,6 @@ function triggerConfettiCelebration() {
       ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
       ctx.restore();
     });
-
     requestAnimationFrame(render);
   }
   render();

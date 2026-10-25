@@ -1,108 +1,90 @@
 <!DOCTYPE html>
-<html lang="en" data-theme-mode="dark" data-color-theme="gold" data-font-preset="classic">
+<html lang="si" data-theme-mode="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Celestial Algorithm | Master Your Mind, Decode the Future — Dr. Julian Vance</title>
-  <meta name="description" content="Official website for the #1 International Bestseller 'The Celestial Algorithm' by Dr. Julian Vance. Explore free chapter previews, audiobook edition, reader reviews, and order the collector's edition today.">
-  <meta name="keywords" content="The Celestial Algorithm, Dr. Julian Vance, bestseller book, personal mastery, philosophy, neuroscience, audiobook, book landing page, SL Developer">
-  <meta name="author" content="Dr. Julian Vance & SL Developer">
+  <title>නැණපහන පොත් මැඳුර | Nenapahana Books Sri Lanka — දිවයින පුරා පොත් බෙදාහැරීම</title>
+  <meta name="description" content="නැණපහන පොත් මැඳුර — ශ්‍රී ලංකාවේ ප්‍රමුඛතම ඔන්ලයින් පොත්හල. 'විශ්වීය ඇල්ගොරිතමය' (The Celestial Algorithm) සම්මානනීය කෘතිය Cash on Delivery මගින් ඔබේ නිවසටම ගෙන්වා ගන්න.">
+  <meta name="keywords" content="Nenapahana Books, නැණපහන පොත් මැඳුර, පොත් සාප්පුව, bookshop sri lanka, books online sri lanka, cash on delivery books, The Celestial Algorithm sinhala">
+  <meta name="author" content="නැණපහන පොත් මැඳුර (Nenapahana Books Pvt Ltd)">
 
-  <!-- Open Graph / Social Meta -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Celestial Algorithm — Dr. Julian Vance">
-  <meta property="og:description" content="Unlock the 7 celestial laws that rewrite human capability. #1 International Bestseller.">
+  <meta property="og:title" content="නැණපහන පොත් මැඳුර | Nenapahana Books Sri Lanka">
+  <meta property="og:description" content="ශ්‍රී ලංකාවේ ප්‍රමුඛතම ඔන්ලයින් පොත්හල. දිවයින පුරා බෙදාහැරීම (Cash on Delivery).">
   <meta property="og:image" content="assets/images/book-cover.jpg">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Noto Serif Sinhala, Noto Sans Sinhala, Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700;800;900&family=Noto+Serif+Sinhala:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ======================================================================
-       1. AGENCY SHOWCASE TOP BAR (Crafted for SL Developer)
+       1. TOP NOTICE & HOTLINE BAR (Real Sri Lankan Delivery Notice)
        ====================================================================== -->
-  <div class="agency-bar" id="agencyShowcaseBar">
-    <div class="agency-bar-inner">
-      <div class="agency-branding">
-        <span class="agency-badge">SL Developer Showcase</span>
-        <span>Premium Book Website Demo</span>
+  <div class="top-notice-bar">
+    <div class="top-notice-inner">
+      <div class="notice-delivery-text">
+        <span class="pulse-bullet"></span>
+        <span>🚚 <strong>දිවයින පුරා බෙදාහැරීම (Cash on Delivery)</strong> • රු. 4,000 ට වැඩි ඇණවුම් සඳහා නොමිලේ Delivery!</span>
       </div>
 
-      <div class="agency-controls">
-        <!-- Dark/Light Mode -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" title="Switch Dark / Light Mode">
-          <span id="themeModeText">☀️ Light</span>
-        </button>
-
-        <!-- Color Palette Switcher -->
-        <div class="control-group">
-          <span class="control-label">Theme:</span>
-          <div class="color-dots">
-            <span class="color-dot gold active" data-color="gold" title="Royal Gold"></span>
-            <span class="color-dot violet" data-color="violet" title="Cyber Violet"></span>
-            <span class="color-dot emerald" data-color="emerald" title="Emerald Luxe"></span>
-            <span class="color-dot sapphire" data-color="sapphire" title="Sapphire Blue"></span>
-            <span class="color-dot crimson" data-color="crimson" title="Crimson Velvet"></span>
-          </div>
-        </div>
-
-        <!-- Typography Switcher -->
-        <div class="control-group">
-          <span class="control-label">Font:</span>
-          <select class="select-control" id="fontSelect" title="Select Font Mood">
-            <option value="classic">Literary Serif</option>
-            <option value="modern">Modern Tech</option>
-            <option value="cinematic">Cinematic Display</option>
-          </select>
-        </div>
-
-        <!-- Agency Action Button -->
-        <button class="btn-agency-order agency-order-trigger">
-          <span>🚀 Order This Website</span>
+      <div class="top-hotlines">
+        <a href="tel:+94112584400" class="hotline-link">
+          <span>📞 011 258 4400</span>
+        </a>
+        <a href="https://wa.me/94779876543" target="_blank" class="hotline-link" style="color: #4ade80;">
+          <span>💬 WhatsApp: 077 987 6543</span>
+        </a>
+        <button class="mode-toggle-link" id="themeToggleBtn" title="Dark / Light Mode මාරු කරන්න">
+          <span id="themeToggleText">☀️ Light Mode</span>
         </button>
       </div>
     </div>
   </div>
 
   <!-- ======================================================================
-       2. MAIN NAVIGATION HEADER
+       2. MAIN BOOKSTORE HEADER
        ====================================================================== -->
   <header class="site-header" id="siteHeader">
     <div class="container">
       <nav class="site-nav">
-        <!-- Logo -->
-        <a href="#hero" class="brand-logo" id="brandLogo">
-          <div class="logo-symbol">Ω</div>
-          <div class="logo-text-wrap">
-            <span class="logo-title">THE CELESTIAL ALGORITHM</span>
-            <span class="logo-subtitle">BY DR. JULIAN VANCE</span>
+        <!-- Bookstore Brand Identity -->
+        <a href="#hero" class="brand-identity">
+          <div class="brand-emblem">🪔</div>
+          <div class="brand-titles">
+            <span class="brand-name-sinhala">නැණපහන පොත් මැඳුර</span>
+            <span class="brand-name-en">NENAPAHANA BOOKS • EST. 2014</span>
           </div>
         </a>
 
         <!-- Navigation Links -->
         <ul class="nav-links">
-          <li><a href="#hero" class="nav-link active">Overview</a></li>
-          <li><a href="#discoveries" class="nav-link">The 6 Laws</a></li>
-          <li><a href="#sneakpeek" class="nav-link">Look Inside</a></li>
-          <li><a href="#craftsmanship" class="nav-link">Craftsmanship</a></li>
-          <li><a href="#audiobook" class="nav-link">Audiobook</a></li>
-          <li><a href="#pricing" class="nav-link">Editions</a></li>
-          <li><a href="#author" class="nav-link">Author</a></li>
-          <li><a href="#reviews" class="nav-link">Reviews</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#hero" class="nav-link active">මුල් පිටුව</a></li>
+          <li><a href="#featured" class="nav-link">විශේෂ කෘතිය</a></li>
+          <li><a href="#catalog" class="nav-link">වැඩිපුරම අලෙවි වූ පොත්</a></li>
+          <li><a href="#sneakpeek" class="nav-link">පොත පෙරළා බලන්න</a></li>
+          <li><a href="#audiobook" class="nav-link">ශ්‍රව්‍ය පොත්</a></li>
+          <li><a href="#pricing" class="nav-link">මිල ගණන්</a></li>
+          <li><a href="#author" class="nav-link">කර්තෘ විස්තර</a></li>
+          <li><a href="#reviews" class="nav-link">පාඨක අදහස්</a></li>
+          <li><a href="#branches" class="nav-link">ශාඛා</a></li>
         </ul>
 
         <!-- Action Buttons -->
         <div class="nav-actions">
-          <button class="btn-outline open-reader-btn" id="navReadSampleBtn">Read Sample</button>
-          <a href="#pricing" class="btn-primary" id="navOrderBtn">Order Now</a>
-          <button class="menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          <button class="btn-cart-trigger trigger-order-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)" data-product-price="2650">
+            <span>🛒 කරත්තය</span>
+            <span class="cart-count-badge" id="navCartCount">1</span>
+          </button>
+          <a href="https://wa.me/94779876543?text=නැණපහන%20පොත්%20මැඳුර%20වෙතින්%20පොත්%20ඇණවුම්%20කිරීමට%20අවශ්‍යයි" target="_blank" class="btn-whatsapp-quick">
+            <span>💬 ඇණවුම් කරන්න</span>
+          </a>
+          <button class="menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -113,7 +95,7 @@
   </header>
 
   <!-- ======================================================================
-       3. HERO SECTION
+       3. HERO SECTION: EXCLUSIVE BESTSELLER SPOTLIGHT
        ====================================================================== -->
   <section class="hero" id="hero">
     <div class="hero-glow-orb hero-glow-1"></div>
@@ -121,112 +103,78 @@
 
     <div class="container">
       <div class="hero-grid">
-        <!-- Left Content -->
+        <!-- Content Column -->
         <div class="hero-content">
           <div class="pill-badge">
-            <span class="pill-star">★</span>
-            <span>#1 International & New York Times Bestseller</span>
+            <span>⭐</span>
+            <span>2026 වසරේ වැඩිම අලෙවියක් වාර්තා කළ සම්මානනීය කෘතිය</span>
           </div>
 
-          <h1 class="hero-title">
-            Unlock The Code To Your <span class="gradient-text">Infinite Potential.</span>
+          <h1 class="hero-title-sinhala">
+            විශ්වීය ඇල්ගොරිතමය <br>
+            <span class="gradient-text">The Celestial Algorithm</span>
           </h1>
 
           <p class="hero-subtitle">
-            A masterwork of neuro-philosophy, quantum intuition, and deliberate stillness by <strong>Dr. Julian Vance</strong>. Discover the hidden algorithm that shapes high-order thinking and timeless achievement.
+            මනසේ සැඟවුණු අසීමිත හැකියාව අවදි කර, ගැඹුරු ඒකාග්‍රතාවයකින් යුතුව අනාගතය ජයගැනීමේ මනෝවිද්‍යාත්මක හා දාර්ශනික මගපෙන්වීම. <br>
+            <strong>ආචාර්ය ජූලියන් වැන්ස් (Dr. Julian Vance)</strong> | <em>සිංහල පරිවර්තනය: ආචාර්ය චන්දන ගුණසේකර</em>
           </p>
 
-          <!-- Launch Countdown Card -->
-          <div class="countdown-card">
-            <div class="countdown-info">
-              <span class="countdown-tag">Limited Launch Promotion</span>
-              <span class="countdown-label">40% Discount Ends In:</span>
+          <!-- Sri Lankan Pricing Box with Koko -->
+          <div class="price-display-card">
+            <div class="price-main-row">
+              <span class="lkr-price-current">රු. 2,650.00</span>
+              <span class="lkr-price-marked">රු. 3,500.00</span>
+              <span class="lkr-save-tag">25% ක විශේෂ වට්ටමක්</span>
             </div>
-            <div class="countdown-timer">
-              <div class="timer-unit">
-                <div class="timer-num" id="countDays">03</div>
-                <div class="timer-sub">Days</div>
-              </div>
-              <div class="timer-unit">
-                <div class="timer-num" id="countHours">14</div>
-                <div class="timer-sub">Hours</div>
-              </div>
-              <div class="timer-unit">
-                <div class="timer-num" id="countMins">28</div>
-                <div class="timer-sub">Mins</div>
-              </div>
-              <div class="timer-unit">
-                <div class="timer-num" id="countSecs">45</div>
-                <div class="timer-sub">Secs</div>
-              </div>
+            <div class="koko-installment-info">
+              <span class="koko-chip">koko</span>
+              <span>හෝ මාසිකව <strong>රු. 883.33</strong> බැගින් කොටස් 3 කින් ගෙවන්න (පොලී රහිතව).</span>
             </div>
           </div>
 
-          <!-- Hero CTAs -->
+          <!-- CTAs -->
           <div class="hero-cta-group">
-            <a href="#pricing" class="btn-primary trigger-order-btn" data-product-title="Collector's Hardcover Edition" data-product-price="$29.99">
-              <span>Claim Your Copy — $29.99</span>
+            <button class="btn-primary trigger-order-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)" data-product-price="2650">
+              <span>දැන්ම ඇණවුම් කරන්න (Cash on Delivery)</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
             <button class="btn-secondary-link open-reader-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              <span>Read Free Preview</span>
+              <span>මුල් පරිච්ඡේදය නොමිලේ කියවන්න</span>
             </button>
           </div>
 
-          <!-- Social Proof Avatars -->
-          <div class="hero-social-proof">
-            <div class="avatar-stack">
-              <div class="avatar-stack-item">AK</div>
-              <div class="avatar-stack-item">MR</div>
-              <div class="avatar-stack-item">SL</div>
-              <div class="avatar-stack-item">JD</div>
-              <div class="avatar-stack-item">+5k</div>
-            </div>
-            <div class="social-proof-text">
-              <strong>250,000+ Copies Sold</strong> across 40+ countries.<br>
-              Rated <strong>4.9 / 5.0</strong> by 18,400+ readers and critics.
+          <!-- Fast Delivery Reassurance -->
+          <div class="delivery-reassurance-box">
+            <span class="delivery-truck-icon">⚡</span>
+            <div>
+              <strong>ක්ෂණික බෙදාහැරීම:</strong> කොළඹ දිස්ත්‍රික්කයට පැය 24-48 න්, දිවයිනේ අනෙකුත් සියලුම ප්‍රදේශවලට දින 2-3 න් ඔබගේ නිවසටම කූරියර් මගින් සුරක්ෂිතව ගෙන්වා ගන්න.
             </div>
           </div>
         </div>
 
-        <!-- Right 3D Book Showcase -->
+        <!-- 3D Book Cover Column -->
         <div class="hero-book-wrap">
           <div class="book-card-3d" id="heroBook3D">
             <div class="book-img-container">
-              <img src="assets/images/book-cover.jpg" alt="The Celestial Algorithm Book 3D Hardcover Cover" id="heroBookImg">
+              <img src="assets/images/book-cover.jpg" alt="විශ්වීය ඇල්ගොරිතමය (The Celestial Algorithm) මුද්‍රිත පොත">
             </div>
 
             <!-- Floating Badges -->
             <div class="floating-badge floating-badge-top">
               <div class="badge-icon-box">🏆</div>
               <div class="badge-text-group">
-                <span class="badge-val">#1 Bestseller</span>
-                <span class="badge-sub">In 14 Countries</span>
+                <span class="badge-val">ස්වර්ණ නිර්දේශිත</span>
+                <span class="badge-sub">පිටපත් 250,000+ අලෙවියක්</span>
               </div>
             </div>
 
             <div class="floating-badge floating-badge-bottom">
               <div class="badge-icon-box">⭐</div>
               <div class="badge-text-group">
-                <span class="badge-val">4.9 / 5.0</span>
-                <span class="badge-sub">18,400+ Reviews</span>
-              </div>
-            </div>
-
-            <!-- Audio Teaser Pill -->
-            <div class="audio-teaser-bar" id="heroAudioTeaser" title="Click to listen to sample audio">
-              <div class="audio-play-circle">▶</div>
-              <div class="audio-teaser-info">
-                <span class="audio-teaser-title">Audio Prologue Preview</span>
-                <span class="audio-teaser-dur">Narrated by Dr. Vance • 3:04</span>
-              </div>
-              <div class="mini-waveform">
-                <div class="mini-bar"></div>
-                <div class="mini-bar"></div>
-                <div class="mini-bar"></div>
-                <div class="mini-bar"></div>
-                <div class="mini-bar"></div>
+                <span class="badge-val">4.9 / 5.0 තරු</span>
+                <span class="badge-sub">පාඨක ඇගයීම් 18,400+</span>
               </div>
             </div>
           </div>
@@ -236,306 +184,294 @@
   </section>
 
   <!-- ======================================================================
-       4. PRESS & MEDIA ACCLAIM MARQUEE
+       4. SRI LANKAN TRUST PILLARS BAR
        ====================================================================== -->
-  <section class="press-section" id="press">
+  <section class="trust-pillars-section">
     <div class="container">
-      <div class="press-heading-text">Globally Acclaimed Across Major Publications</div>
-    </div>
-    <div class="marquee-container">
-      <div class="marquee-track">
-        <div class="press-quote-item">
-          <span class="press-quote">"A philosophical triumph that bridges cutting-edge neuroscience and ancient wisdom."</span>
-          <span class="press-source">The New York Times</span>
+      <div class="trust-pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-icon-box">🚚</div>
+          <div>
+            <div class="pillar-title">දිවයින පුරා බෙදාහැරීම</div>
+            <div class="pillar-desc">භාණ්ඩ ලැබුණු පසු මුදල් ගෙවන්න (COD)</div>
+          </div>
         </div>
-        <div class="press-quote-item">
-          <span class="press-quote">"The defining guide to sovereign focus in an era of relentless algorithmic distraction."</span>
-          <span class="press-source">Forbes Magazine</span>
+
+        <div class="pillar-item">
+          <div class="pillar-icon-box">💳</div>
+          <div>
+            <div class="pillar-title">පහසු ගෙවීම් ක්‍රම</div>
+            <div class="pillar-desc">Visa, Master, Koko & Bank Transfer</div>
+          </div>
         </div>
-        <div class="press-quote-item">
-          <span class="press-quote">"Required reading for the next generation of visionary founders, scientists, and creators."</span>
-          <span class="press-source">Wall Street Journal</span>
+
+        <div class="pillar-item">
+          <div class="pillar-icon-box">🛡️</div>
+          <div>
+            <div class="pillar-title">100% මුල් මුද්‍රණ</div>
+            <div class="pillar-desc">කර්තෘ අයිතිය සහිත අව්‍යාජ උසස් මුද්‍රණ</div>
+          </div>
         </div>
-        <div class="press-quote-item">
-          <span class="press-quote">"A tour-de-force of intellectual clarity and pragmatic human transformation."</span>
-          <span class="press-source">The Guardian</span>
-        </div>
-        <div class="press-quote-item">
-          <span class="press-quote">"Julian Vance has written the modern successor to Marcus Aurelius and Carl Jung."</span>
-          <span class="press-source">Harvard Business Review</span>
-        </div>
-        <!-- Duplicate for continuous seamless marquee loop -->
-        <div class="press-quote-item">
-          <span class="press-quote">"A philosophical triumph that bridges cutting-edge neuroscience and ancient wisdom."</span>
-          <span class="press-source">The New York Times</span>
-        </div>
-        <div class="press-quote-item">
-          <span class="press-quote">"The defining guide to sovereign focus in an era of relentless algorithmic distraction."</span>
-          <span class="press-source">Forbes Magazine</span>
-        </div>
-        <div class="press-quote-item">
-          <span class="press-quote">"Required reading for the next generation of visionary founders, scientists, and creators."</span>
-          <span class="press-source">Wall Street Journal</span>
+
+        <div class="pillar-item">
+          <div class="pillar-icon-box">📞</div>
+          <div>
+            <div class="pillar-title">ක්ෂණික පාරිභෝගික සහය</div>
+            <div class="pillar-desc">011 258 4400 / WhatsApp සේවාව</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======================================================================
-       5. CORE DISCOVERIES / THE 6 CELESTIAL LAWS
+       5. POPULAR BESTSELLERS CATALOG (Real Bookstore Catalog)
        ====================================================================== -->
-  <section class="section" id="discoveries">
+  <section class="section" id="catalog">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Core Principles</span>
-        <h2 class="section-title">The 6 Celestial Laws You Will Master</h2>
+        <span class="section-tag">නැණපහන නිර්දේශ</span>
+        <h2 class="section-title">මෙම සතියේ වැඩිපුරම අලෙවි වූ පොත්</h2>
         <p class="section-desc">
-          Structured over 15 years of empirical neuroscience and timeless philosophical inquiries, these principles provide the blueprint for unbreakable mental clarity.
+          ශ්‍රී ලාංකික පාඨකයින් අතර මහත් ආන්දෝලනයක් ඇති කළ, ජීවිතයට නව ආලෝකයක් එක්කරන ජනප්‍රියම කෘති පෙළගැස්ම.
+        </p>
+      </div>
+
+      <div class="catalog-books-grid">
+        <!-- Book 1: Featured -->
+        <div class="book-item-card">
+          <div class="book-thumb-wrap">
+            <span class="book-badge-ribbon">#1 Bestseller</span>
+            <img src="assets/images/book-cover.jpg" alt="විශ්වීය ඇල්ගොරිතමය">
+          </div>
+          <h3 class="book-item-title">විශ්වීය ඇල්ගොරිතමය (The Celestial Algorithm)</h3>
+          <span class="book-item-author">ආචාර්ය ජූලියන් වැන්ස්</span>
+          <div class="book-item-price-row">
+            <span class="book-lkr-price">රු. 2,650/=</span>
+            <button class="btn-add-cart-mini trigger-add-cart-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය" data-product-price="2650">
+              + කරත්තයට
+            </button>
+          </div>
+        </div>
+
+        <!-- Book 2: Lifestyle Reading -->
+        <div class="book-item-card">
+          <div class="book-thumb-wrap">
+            <span class="book-badge-ribbon" style="background:#10b981; color:#ffffff;">නව මුද්‍රණය</span>
+            <img src="assets/images/reading-lifestyle.jpg" alt="අභ්‍යන්තර නිහඬතාවයේ බලය">
+          </div>
+          <h3 class="book-item-title">අභ්‍යන්තර නිහඬතාවයේ බලය (The Art of Stillness)</h3>
+          <span class="book-item-author">චන්දන ගුණසේකර</span>
+          <div class="book-item-price-row">
+            <span class="book-lkr-price">රු. 1,850/=</span>
+            <button class="btn-add-cart-mini trigger-add-cart-btn" data-product-title="අභ්‍යන්තර නිහඬතාවයේ බලය" data-product-price="1850">
+              + කරත්තයට
+            </button>
+          </div>
+        </div>
+
+        <!-- Book 3: Bundle -->
+        <div class="book-item-card">
+          <div class="book-thumb-wrap">
+            <span class="book-badge-ribbon" style="background:#8b5cf6; color:#ffffff;">Audio + Print</span>
+            <img src="assets/images/formats-bundle.jpg" alt="මනෝවිද්‍යාත්මක සාර්ථකත්වය">
+          </div>
+          <h3 class="book-item-title">මනෝවිද්‍යාත්මක සාර්ථකත්වය (Mastery Psychology)</h3>
+          <span class="book-item-author">සුනිල් ආරියරත්න</span>
+          <div class="book-item-price-row">
+            <span class="book-lkr-price">රු. 2,100/=</span>
+            <button class="btn-add-cart-mini trigger-add-cart-btn" data-product-title="මනෝවිද්‍යාත්මක සාර්ථකත්වය" data-product-price="2100">
+              + කරත්තයට
+            </button>
+          </div>
+        </div>
+
+        <!-- Book 4: Author Work -->
+        <div class="book-item-card">
+          <div class="book-thumb-wrap">
+            <span class="book-badge-ribbon" style="background:#f59e0b; color:#0b0f19;">සම්මානනීය</span>
+            <img src="assets/images/author.jpg" alt="චින්තන විප්ලවය">
+          </div>
+          <h3 class="book-item-title">චින්තන විප්ලවය සහ නූතන නායකත්වය</h3>
+          <span class="book-item-author">ආචාර්ය ජූලියන් වැන්ස්</span>
+          <div class="book-item-price-row">
+            <span class="book-lkr-price">රු. 1,650/=</span>
+            <button class="btn-add-cart-mini trigger-add-cart-btn" data-product-title="චින්තන විප්ලවය" data-product-price="1650">
+              + කරත්තයට
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. CORE PRINCIPLES (The 6 Celestial Laws)
+       ====================================================================== -->
+  <section class="section" id="featured" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">පොතේ අන්තර්ගතය</span>
+        <h2 class="section-title">මෙම කෘතියෙන් ඔබ ලබන ප්‍රධාන ජීවන පන්නරයන් 6</h2>
+        <p class="section-desc">
+          වසර 15 ක ස්නායු විද්‍යාත්මක පර්යේෂණ සහ පෙරදිග දර්ශනය පදනම් කරගනිමින්, ඔබේ සිතුවිලි නිවැරදි ඉලක්කයක් වෙත මෙහෙයවන ප්‍රායෝගික ක්‍රමවේද.
         </p>
       </div>
 
       <div class="discoveries-grid">
-        <!-- Card 1 -->
         <div class="discovery-card">
           <span class="card-num">01</span>
           <div class="card-icon-wrap">⚡</div>
-          <h3 class="card-title">The Zero-Point Mindset</h3>
+          <h3 class="card-title">ශුන්‍ය ලක්ෂ්‍ය මානසිකත්වය (The Zero-Point Mindset)</h3>
           <p class="card-text">
-            Learn how to reset cognitive overwhelm within seconds. Build a mental firewall that preserves intense creative focus despite chaos in your external environment.
+            දවස පුරා ඇතිවන මානසික ආතතිය සහ සිතුවිලි විසිරීම තත්පර කිහිපයකින් නිශ්චල කර, පිරිසිදු තීරණ ගැනීමේ හැකියාව ලබාගන්නා අයුරු.
           </p>
-          <div class="card-takeaway">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Eliminates decision fatigue & micro-distraction</span>
-          </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="discovery-card">
           <span class="card-num">02</span>
           <div class="card-icon-wrap">🧬</div>
-          <h3 class="card-title">The Neurobiology of Intuition</h3>
+          <h3 class="card-title">සහජ ඥානයේ ස්නායු විද්‍යාව (The Neurobiology of Intuition)</h3>
           <p class="card-text">
-            Intuition is not superstitious guesswork; it is deep unconscious computation. Discover the neural pathways that allow you to make high-stakes choices with surgical accuracy.
+            ඉව හෙවත් සහජ බුද්ධිය ක්‍රියාත්මක වන ස්නායු පරිපථ හඳුනාගෙන, ඕනෑම අවදානම් අවස්ථාවකදී නොවරදින තීන්දු ගැනීමට මනස හුරු කිරීම.
           </p>
-          <div class="card-takeaway">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Decodes fast-pattern recognition heuristics</span>
-          </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="discovery-card">
           <span class="card-num">03</span>
           <div class="card-icon-wrap">🏛️</div>
-          <h3 class="card-title">Architectural Silence</h3>
+          <h3 class="card-title">ගෘහනිර්මාණාත්මක නිහඬතාවය (Architectural Silence)</h3>
           <p class="card-text">
-            Why history's most prolific thinkers engineered deliberate solitude. Practical methods to structure sacred daily quiet that unlocks non-linear breakthroughs.
+            නූතන ඩිජිටල් උපාංගවල අවධානය පැහැරගැනීමෙන් මිදී, දවස තුළ ගැඹුරු නිර්මාණශීලී නිහඬ කාල පරිච්ඡේදයක් සැලසුම් කරන ආකාරය.
           </p>
-          <div class="card-takeaway">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Creates deep work intervals that produce 5x output</span>
-          </div>
         </div>
 
-        <!-- Card 4 -->
         <div class="discovery-card">
           <span class="card-num">04</span>
           <div class="card-icon-wrap">🛡️</div>
-          <h3 class="card-title">Harmonic Resilience</h3>
+          <h3 class="card-title">නොසැලෙන ඔරොත්තුදීම (Harmonic Resilience)</h3>
           <p class="card-text">
-            True toughness is not rigid resistance, but fluid recalibration. Learn how to turn setbacks, crises, and market volatility into immediate kinetic momentum.
+            ජීවිතයට හෝ ව්‍යාපාරයට එල්ල වන අනපේක්ෂිත පසුබෑම් හා අභියෝග, නැවත නැගී සිටීමේ ප්‍රබලතම චාලක ශක්තිය බවට පත්කරගැනීමේ කලාව.
           </p>
-          <div class="card-takeaway">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Transforms chronic stress into focused energy</span>
-          </div>
         </div>
 
-        <!-- Card 5 -->
         <div class="discovery-card">
           <span class="card-num">05</span>
           <div class="card-icon-wrap">🌐</div>
-          <h3 class="card-title">The Resonance Effect</h3>
+          <h3 class="card-title">අනුනාදයේ ආකර්ෂණය (The Resonance Effect)</h3>
           <p class="card-text">
-            Command rooms and inspire teams without raising your voice or playing political games. Presence is an electromagnetic byproduct of absolute internal alignment.
+            කෑගැසීම් හෝ බලහත්කාරකම්වලින් තොරව, ඔබේ නිහඬ පෞරුෂයෙන් සහ මානසික පැවැත්මෙන් අන්‍යයන්ව ස්වභාවිකවම දිරිමත් කිරීමේ නායකත්වය.
           </p>
-          <div class="card-takeaway">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Unlocks authentic leadership & charismatic influence</span>
-          </div>
         </div>
 
-        <!-- Card 6 -->
         <div class="discovery-card">
           <span class="card-num">06</span>
           <div class="card-icon-wrap">⏳</div>
-          <h3 class="card-title">The Temporal Horizon</h3>
+          <h3 class="card-title">දිගුකාලීන ක්ෂිතිජය (The Temporal Horizon)</h3>
           <p class="card-text">
-            How to escape the trap of reactive short-term thinking. Design your life on a multi-decade arc while executing each single day with surgical precision.
+            කෙටිකාලීන රැල්ලට හසු නොවී, ඉදිරි දශක ගණනාවක ජීවන ඉලක්කයක් වෙනුවෙන් සෑම දිනකම ක්‍රමානුකූලව කැපවීමේ සාර්ථකත්ව සූත්‍රය.
           </p>
-          <div class="card-takeaway">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Compounds legacy-defining long-term outcomes</span>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======================================================================
-       6. INTERACTIVE CHAPTER EXPLORER / LOOK INSIDE
+       7. CHAPTER SNEAK PEEK / LOOK INSIDE
        ====================================================================== -->
   <section class="section sneak-peek-section" id="sneakpeek">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Table of Contents</span>
-        <h2 class="section-title">An Interactive Journey Inside The Book</h2>
+        <span class="section-tag">පොත පෙරළා බලන්න</span>
+        <h2 class="section-title">පරිච්ඡේදයෙන් පරිච්ඡේදය ගවේෂණය කරන්න</h2>
         <p class="section-desc">
-          Click any chapter below to explore its core thesis and read excerpts directly from the manuscript.
+          පොත මිලදී ගැනීමට පෙර එහි අඩංගු ගැඹුරු අදහස් සහ උපුටා ගැනීම් මෙතැනින් විඳගන්න.
         </p>
       </div>
 
       <div class="chapters-layout">
         <!-- Left: Accordion -->
         <div class="chapter-accordion">
-          <!-- Chapter 1 (Active) -->
           <div class="chapter-item active" data-chapter="1">
             <div class="chapter-header">
               <div class="chapter-header-left">
-                <span class="chapter-badge">CH 01</span>
-                <span class="chapter-item-title">The Code of Inception</span>
+                <span class="chapter-badge">01 පරිච්ඡේදය</span>
+                <span class="chapter-item-title">මනසේ ප්‍රාථමික ඇල්ගොරිතමය (Code of Inception)</span>
               </div>
               <span class="chapter-toggle-icon">▼</span>
             </div>
             <div class="chapter-body">
-              <p class="chapter-desc">
-                An investigation into the primary operating system of the human mind. How perception is filtered before conscious awareness takes hold.
-              </p>
-              <div class="chapter-tags">
-                <span class="chapter-tag">28 Pages</span>
-                <span class="chapter-tag">Free Preview</span>
-                <span class="chapter-tag">Core Foundation</span>
-              </div>
+              <p class="chapter-desc">මිනිස් මනසේ ප්‍රාථමික මෙහෙයුම් පද්ධතිය සහ බාහිර තොරතුරු පෙරහන් වන ජීව විද්‍යාත්මක රහස්.</p>
             </div>
           </div>
 
-          <!-- Chapter 2 -->
           <div class="chapter-item" data-chapter="2">
             <div class="chapter-header">
               <div class="chapter-header-left">
-                <span class="chapter-badge">CH 02</span>
-                <span class="chapter-item-title">The Neural Blueprint</span>
+                <span class="chapter-badge">02 පරිච්ඡේදය</span>
+                <span class="chapter-item-title">සහජ ඥානයේ ස්නායු විද්‍යාව (Neural Blueprint)</span>
               </div>
               <span class="chapter-toggle-icon">▼</span>
             </div>
             <div class="chapter-body">
-              <p class="chapter-desc">
-                Understanding rapid subconscious calculation and pattern matching. Why gut feelings often outperform analytical deliberation under time pressure.
-              </p>
-              <div class="chapter-tags">
-                <span class="chapter-tag">34 Pages</span>
-                <span class="chapter-tag">Neuroscience Data</span>
-                <span class="chapter-tag">Audio Available</span>
-              </div>
+              <p class="chapter-desc">තත්පරයකින් තීන්දු ගන්නා මනසේ අධිවේගී ගණනය කිරීම් සහ සහජ බුද්ධිය ඔප්නැංවීම.</p>
             </div>
           </div>
 
-          <!-- Chapter 3 -->
           <div class="chapter-item" data-chapter="3">
             <div class="chapter-header">
               <div class="chapter-header-left">
-                <span class="chapter-badge">CH 03</span>
-                <span class="chapter-item-title">Mastering Inner Entropy</span>
+                <span class="chapter-badge">03 පරිච්ඡේදය</span>
+                <span class="chapter-item-title">අභ්‍යන්තර විසිරීම පාලනය (Inner Entropy)</span>
               </div>
               <span class="chapter-toggle-icon">▼</span>
             </div>
             <div class="chapter-body">
-              <p class="chapter-desc">
-                The physics of mental disorder. Deconstructing attention-stealing loops, dopamine dependency, and rebuilding clean cognitive reserves.
-              </p>
-              <div class="chapter-tags">
-                <span class="chapter-tag">42 Pages</span>
-                <span class="chapter-tag">Focus Protocols</span>
-              </div>
+              <p class="chapter-desc">අවධානය බිඳවැටෙන ඩිජිටල් යුගයේ ඔබේ මානසික ශක්තිය රැකගෙන අඛණ්ඩ අවධානයක් ගොඩනැගීම.</p>
             </div>
           </div>
 
-          <!-- Chapter 4 -->
           <div class="chapter-item" data-chapter="4">
             <div class="chapter-header">
               <div class="chapter-header-left">
-                <span class="chapter-badge">CH 04</span>
-                <span class="chapter-item-title">The Flow Equation</span>
+                <span class="chapter-badge">04 පරිච්ඡේදය</span>
+                <span class="chapter-item-title">උච්චතම කාර්යක්ෂමතාවය (Flow Equation)</span>
               </div>
               <span class="chapter-toggle-icon">▼</span>
             </div>
             <div class="chapter-body">
-              <p class="chapter-desc">
-                The exact biological triggers required to enter the zone of peak performance effortlessly. How top innovators compress months of output into days.
-              </p>
-              <div class="chapter-tags">
-                <span class="chapter-tag">38 Pages</span>
-                <span class="chapter-tag">Peak State Tactics</span>
-              </div>
+              <p class="chapter-desc">මනස සහ ක්‍රියාව එකම රිද්මයකට පත්වන Flow State එකට පහසුවෙන්ම පිවිසෙන උපක්‍රම.</p>
             </div>
           </div>
 
-          <!-- Chapter 5 -->
           <div class="chapter-item" data-chapter="5">
             <div class="chapter-header">
               <div class="chapter-header-left">
-                <span class="chapter-badge">CH 05</span>
-                <span class="chapter-item-title">Designing Destiny</span>
+                <span class="chapter-badge">05 පරිච්ඡේදය</span>
+                <span class="chapter-item-title">ඉරණම ප්‍රතිනිර්මාණය (Designing Destiny)</span>
               </div>
               <span class="chapter-toggle-icon">▼</span>
             </div>
             <div class="chapter-body">
-              <p class="chapter-desc">
-                Constructing antifragile systems for personal achievement, wealth generation, and enduring creative contributions in an unpredictable world.
-              </p>
-              <div class="chapter-tags">
-                <span class="chapter-tag">50 Pages</span>
-                <span class="chapter-tag">Frameworks & Tools</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Chapter 6 -->
-          <div class="chapter-item" data-chapter="6">
-            <div class="chapter-header">
-              <div class="chapter-header-left">
-                <span class="chapter-badge">CH 06</span>
-                <span class="chapter-item-title">The Eternal Return</span>
-              </div>
-              <span class="chapter-toggle-icon">▼</span>
-            </div>
-            <div class="chapter-body">
-              <p class="chapter-desc">
-                The synthesis of ambition and inner stillness. How to live at the peak of worldly capability while remaining grounded in profound serenity.
-              </p>
-              <div class="chapter-tags">
-                <span class="chapter-tag">32 Pages</span>
-                <span class="chapter-tag">Philosophical Epilogue</span>
-              </div>
+              <p class="chapter-desc">අස්ථාවර ලෝකයක කිසිදා කඩා නොවැටෙන මානසික හා ආර්ථික ශක්තියක් ගොඩනැගීමේ සැලැස්ම.</p>
             </div>
           </div>
         </div>
 
         <!-- Right: Excerpt Card -->
         <div class="chapter-preview-box">
-          <div class="preview-quote-symbol">“</div>
-          <h3 id="previewHeading" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary);">
-            From Chapter 1: The Code of Inception
+          <h3 id="previewHeading" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--primary-light);">
+            1 වන පරිච්ඡේදය: මනසේ ප්‍රාථමික ඇල්ගොරිතමය (The Code of Inception)
           </h3>
           <p class="preview-excerpt" id="previewExcerpt">
-            "The mind is not an accidental observer of reality; it is the silent architect. When you peel back the layers of subconscious conditioning, you encounter the primary algorithm that directs every instinct, intuition, and choice."
+            "මනස යනු ලෝකය දෙස බලා සිටින නිෂ්ක්‍රීය නිරීක්ෂකයෙකු නොවේ; එය අපගේ යථාර්ථය නිර්මාණය කරන නිහඬ ගෘහ නිර්මාණ ශිල්පියාය. අවිඥානික සිතුවිලි ස්ථර ඉවත් කළ විට, අපගේ සෑම තීරණයක්ම සහ සහජ බුද්ධියක්ම මෙහෙයවන මූලික ජීව විද්‍යාත්මක ඇල්ගොරිතමය හඳුනාගත හැක."
           </p>
-          <div class="preview-cta-row">
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <button class="btn-primary open-reader-btn">
-              <span>Read Full Chapter 1 Preview</span>
+              <span>නොමිලේ සාම්පල පිටපත කියවන්න</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <a href="#audiobook" class="btn-outline">Listen to Audio Clip</a>
+            <a href="#audiobook" class="btn-secondary-link">ශ්‍රව්‍ය සාම්පලයට සවන් දෙන්න</a>
           </div>
         </div>
       </div>
@@ -543,54 +479,52 @@
   </section>
 
   <!-- ======================================================================
-       7. TACTILE CRAFTSMANSHIP & LIFESTYLE EXPERIENCE
+       8. PHYSICAL CRAFTSMANSHIP & PRINTING
        ====================================================================== -->
   <section class="section" id="craftsmanship">
     <div class="container">
       <div class="lifestyle-grid">
-        <!-- Image Column -->
         <div class="lifestyle-media">
-          <img src="assets/images/reading-lifestyle.jpg" alt="The Celestial Algorithm Open on Walnut Desk with Coffee and Fountain Pen">
+          <img src="assets/images/reading-lifestyle.jpg" alt="නැණපහන මුද්‍රිත පොත සුවපහසු කියවීම් මේසය මත">
         </div>
 
-        <!-- Content Column -->
         <div class="lifestyle-content">
-          <span class="section-tag">Uncompromising Quality</span>
-          <h2 class="section-title">Designed To Be Cherished For Generations</h2>
+          <span class="section-tag">මුද්‍රණයේ උසස් ප්‍රමිතිය</span>
+          <h2 class="section-title">පරම්පරා ගණනාවක් සුරැකෙන පරිදි නිර්මාණය කළ කෘතියක්</h2>
           <p class="section-desc">
-            We believe that extraordinary ideas deserve extraordinary physical artifacts. The Collector's Hardcover edition is meticulously manufactured by master bookbinders in Florence, Italy.
+            නැණපහන පොත් මැඳුර වෙතින් නිකුත් කෙරෙන Hardcover සංස්කරණය ඉතාලි ලිනන් රෙදි කවරයකින් සහ ඇස්වලට වෙහෙසක් නොදැනෙන ආනයනික ක්‍රීම් පැහැති කඩදාසියෙන් නිමවා ඇත.
           </p>
 
           <div class="specs-list">
             <div class="spec-item">
               <div class="spec-check-icon">✓</div>
               <div>
-                <h4 class="spec-title">Italian Linen Spine & Gold Foil Stamping</h4>
-                <p class="spec-desc">Embossed with genuine 24-karat gold foil details and bound in custom midnight-blue woven linen.</p>
+                <h4 class="spec-title">ඝන කවරය සහ රන්වන් අකුරු එම්බෝස් මුද්‍රණය</h4>
+                <p class="spec-desc">කාලයත් සමග මැකී නොයන සැබෑ රන්වන් තීන්ත සහ ඝන ලිනන් බන්ධනය සහිතය.</p>
               </div>
             </div>
 
             <div class="spec-item">
               <div class="spec-check-icon">✓</div>
               <div>
-                <h4 class="spec-title">100 GSM Acid-Free Archival Paper</h4>
-                <p class="spec-desc">FSC-certified warm cream paper engineered to resist yellowing and provide maximum reading comfort for tired eyes.</p>
+                <h4 class="spec-title">100 GSM Archival Acid-Free ක්‍රීම් කඩදාසි</h4>
+                <p class="spec-desc">කහ පැහැ ගැන්වෙන්නේ නැති, දිගු වේලාවක් කියවීමේදී ඇස්වලට පහසුවක් ගෙනදෙන සුපිරිසිදු කඩදාසි.</p>
               </div>
             </div>
 
             <div class="spec-item">
               <div class="spec-check-icon">✓</div>
               <div>
-                <h4 class="spec-title">18 Hand-Drawn Celestial Plates & Diagrams</h4>
-                <p class="spec-desc">Original full-page illustrations depicting mental models, decision trees, and timeless cosmological maps.</p>
+                <h4 class="spec-title">අත් අකුරින් අඳින ලද සිතුවම් හා ප්‍රස්ථාර 18 ක්</h4>
+                <p class="spec-desc">සංකීර්ණ මනෝවිද්‍යාත්මක සංකල්ප පහසුවෙන් තේරුම් ගත හැකි අලංකාර රූප සටහන් පෙළක්.</p>
               </div>
             </div>
 
             <div class="spec-item">
               <div class="spec-check-icon">✓</div>
               <div>
-                <h4 class="spec-title">Dual Satin Ribbon Markers & Smyth-Sewn Binding</h4>
-                <p class="spec-desc">Lays completely flat on your desk from page one to page four hundred without damaging the structural integrity.</p>
+                <h4 class="spec-title">Smyth-Sewn මැහුම් බන්ධනය හා පීත්ත පටිය (Bookmark Ribbon)</h4>
+                <p class="spec-desc">පොත මේසය මත තැබූ විට පහසුවෙන් දිගහැර තබාගත හැකි පැතලි මැහුම් ක්‍රමය.</p>
               </div>
             </div>
           </div>
@@ -600,65 +534,51 @@
   </section>
 
   <!-- ======================================================================
-       8. IMMERSIVE AUDIOBOOK PLAYER SECTION
+       9. AUDIOBOOK SECTION
        ====================================================================== -->
   <section class="section audiobook-section" id="audiobook">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Audio Experience</span>
-        <h2 class="section-title">Immerse Your Mind On The Go</h2>
+        <span class="section-tag">ශ්‍රව්‍ය පොත (Audiobook)</span>
+        <h2 class="section-title">කාර්යබහුල ඔබේ දවසේදීත් පොතට සවන් දෙන්න</h2>
         <p class="section-desc">
-          Narrated personally by Dr. Julian Vance with an original ambient musical score designed to induce alpha brainwave states for effortless retention.
+          වාහනයේ ගමන් කරන විට හෝ ව්‍යායාම කරන විට සවන් දිය හැකි, සම්පූර්ණ සිංහල ශ්‍රව්‍ය පිටපතට මෙතැනින් සවන් දෙන්න.
         </p>
       </div>
 
       <div class="audiobook-grid">
-        <!-- Audiobook Device Image -->
         <div class="audiobook-image-wrap">
-          <img src="assets/images/formats-bundle.jpg" alt="Hardcover book, tablet e-reader, and audiophile headphones displaying audiobook app">
+          <img src="assets/images/formats-bundle.jpg" alt="ටැබ්ලට් හා හෙඩ්ෆෝන් සමග ශ්‍රව්‍ය පොත">
         </div>
 
-        <!-- Interactive Audio Player Card -->
         <div class="audiobook-player-card">
           <div class="player-header">
-            <div class="player-track-info">
-              <h3>Prologue: The Awakening Mind</h3>
-              <p>The Celestial Algorithm • Unabridged Edition</p>
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800;">ප්‍රවේශය: අවදිවන මනස (The Awakening Mind)</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">විශ්වීය ඇල්ගොරිතමය • සම්පූර්ණ ශ්‍රව්‍ය සංස්කරණය</p>
             </div>
-            <span class="narrator-tag">Narrated by Author</span>
+            <span class="narrator-tag">සිංහල හඬකැවීම</span>
           </div>
 
-          <!-- Dynamic HTML5 Visualizer -->
           <div class="visualizer-canvas-wrap">
             <canvas id="audioVisualizer"></canvas>
-            <span class="visualizer-overlay-text">Live Harmonic Audio Feed</span>
+            <span style="position: absolute; bottom: 6px; right: 12px; font-size: 0.68rem; color: var(--primary-light); font-weight: 700;">LIVE AUDIO VISUALIZER</span>
           </div>
 
-          <!-- Scrubber -->
-          <div class="player-scrubber-wrap">
+          <div style="display: flex; flex-direction: column; gap: 0.4rem;">
             <input type="range" class="scrubber-slider" id="playerScrubber" value="0" min="0" max="100">
-            <div class="scrubber-times">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
               <span id="audioCurrentTime">0:00</span>
               <span id="audioDurationTime">3:04</span>
             </div>
           </div>
 
-          <!-- Controls Row -->
           <div class="player-controls-row">
-            <button class="speed-btn" id="speedToggleBtn">1.0x</button>
-
-            <div class="main-controls">
-              <button class="ctrl-btn" title="Previous Chapter">⏮</button>
-              <button class="play-toggle-btn" id="audioPlayToggle" title="Play / Pause Audio Sample">
-                <span id="playIcon">▶</span>
-              </button>
-              <button class="ctrl-btn" title="Next Chapter">⏭</button>
-            </div>
-
-            <div class="volume-wrap">
-              <span style="font-size: 0.9rem;">🔊</span>
-              <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.7">
-            </div>
+            <button style="font-size: 0.82rem; font-weight: 700; padding: 0.35rem 0.75rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-main);" id="speedToggleBtn">1.0x</button>
+            <button class="play-toggle-btn" id="audioPlayToggle" title="Play Audio Sample">
+              <span id="playIcon">▶</span>
+            </button>
+            <span style="font-size: 0.85rem; color: var(--primary-light); font-weight: 700;">නොමිලේ ශ්‍රව්‍ය සාම්පලය</span>
           </div>
         </div>
       </div>
@@ -666,149 +586,131 @@
   </section>
 
   <!-- ======================================================================
-       9. FORMATS & PRICING TIERS
+       10. EDITIONS & PRICING (Real Sri Lankan Rupees)
        ====================================================================== -->
-  <section class="section" id="pricing">
+  <section class="section" id="pricing" style="background: var(--bg-surface);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Choose Your Edition</span>
-        <h2 class="section-title">Available in Every Format You Love</h2>
+        <span class="section-tag">ඇණවුම් විකල්ප</span>
+        <h2 class="section-title">ඔබට වඩාත් ගැළපෙන මුද්‍රණය තෝරාගන්න</h2>
         <p class="section-desc">
-          Whether you prefer the weight of physical paper, the convenience of digital tablets, or the voice in your ears, we have an edition tailored for you.
+          Cash on Delivery මගින් හෝ Koko මාසික වාරික මගින් පොත අදම ඔබේ නිවසටම ගෙන්වා ගන්න.
         </p>
       </div>
 
       <div class="pricing-grid">
-        <!-- Tier 1: eBook -->
+        <!-- Tier 1: Digital PDF -->
         <div class="pricing-card">
-          <span class="pricing-badge">Instant Access</span>
-          <h3 class="pricing-name">Kindle & eBook</h3>
-          <p class="pricing-desc">Delivered instantly to your Kindle, iPad, Android, or desktop reading device.</p>
-          <div class="pricing-cost-row">
-            <span class="price-main">$14.99</span>
-            <span class="price-original">$24.99</span>
-            <span class="price-save">Save 40%</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-light); text-transform: uppercase;">ක්ෂණික ඩිජිටල් පිටපත</span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0.4rem 0;">ඩිජිටල් eBook (PDF / ePub)</h3>
+          <p style="font-size: 0.86rem; color: var(--text-muted); min-height: 40px;">දුරකථනය, ටැබ්ලටය හෝ පරිගණකය මගින් ක්ෂණිකව කියවිය හැක.</p>
+          <div style="margin: 1rem 0;">
+            <span class="price-main">රු. 950/=</span>
           </div>
           <ul class="pricing-features-list">
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Kindle, ePub & PDF formats</span>
+              <span>PDF & ePub ආකෘති ද්විත්වයම</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>All 18 high-res diagrams</span>
+              <span>සියලුම රූපසටහන් සහිතයි</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Lifetime digital updates</span>
-            </li>
-            <li class="pricing-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>DRM-free download</span>
+              <span>Email මගින් ක්ෂණික Download Link</span>
             </li>
           </ul>
-          <button class="btn-outline trigger-order-btn" data-product-title="Kindle & eBook Edition" data-product-price="$14.99">
-            Download Instantly
+          <button class="btn-secondary-link trigger-order-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Digital eBook)" data-product-price="950" style="justify-content: center; width: 100%;">
+            මිලදී ගන්න (Download)
           </button>
         </div>
 
         <!-- Tier 2: Hardcover (FEATURED) -->
         <div class="pricing-card featured">
-          <span class="featured-ribbon">Most Popular • Best Value</span>
-          <span class="pricing-badge">Deluxe Physical</span>
-          <h3 class="pricing-name">Collector's Hardcover</h3>
-          <p class="pricing-desc">The flagship heirloom physical book with gold embossed cover and Italian linen spine.</p>
-          <div class="pricing-cost-row">
-            <span class="price-main">$29.99</span>
-            <span class="price-original">$49.99</span>
-            <span class="price-save">Save 40%</span>
+          <span class="featured-ribbon">වැඩිම ඉල්ලුම • Best Value</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-light); text-transform: uppercase;">විශේෂ මුද්‍රිත පිටපත</span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0.4rem 0;">Collector's Hardcover Edition</h3>
+          <p style="font-size: 0.86rem; color: var(--text-muted); min-height: 40px;">ඝන රන්වන් කවරය, Smyth-Sewn බන්ධනය සහ පීත්ත පටිය සහිත උසස්ම මුද්‍රණය.</p>
+          <div style="margin: 1rem 0; display: flex; align-items: baseline; gap: 0.5rem;">
+            <span class="price-main">රු. 2,650/=</span>
+            <span class="price-original">රු. 3,500/=</span>
           </div>
           <ul class="pricing-features-list">
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Embossed gold foil & linen spine</span>
+              <span>ඝන රන්වන් ලිනන් කවරය</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Hand-signed author bookplate</span>
+              <span>නොමිලේ ඩිජිටල් PDF පිටපතක්ද හිමිවේ</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Bonus: Immediate eBook included</span>
+              <span>දිවයින පුරා Cash on Delivery පහසුකම</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Free worldwide tracked shipping</span>
+              <span>Koko මගින් මසකට රු. 883.33 බැගින් ගෙවිය හැක</span>
             </li>
           </ul>
-          <button class="btn-primary trigger-order-btn" data-product-title="Collector's Hardcover Edition" data-product-price="$29.99">
-            Order Hardcover
+          <button class="btn-primary trigger-order-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)" data-product-price="2650" style="width: 100%;">
+            දැන්ම ඇණවුම් කරන්න (COD)
           </button>
         </div>
 
         <!-- Tier 3: Audiobook -->
         <div class="pricing-card">
-          <span class="pricing-badge">Audio Edition</span>
-          <h3 class="pricing-name">Unabridged Audiobook</h3>
-          <p class="pricing-desc">11 hours 42 minutes of immersive audio narration by Dr. Julian Vance with ambient soundtrack.</p>
-          <div class="pricing-cost-row">
-            <span class="price-main">$24.99</span>
-            <span class="price-original">$39.99</span>
-            <span class="price-save">Save 38%</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-light); text-transform: uppercase;">ශ්‍රව්‍ය සංස්කරණය</span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0.4rem 0;">සම්පූර්ණ ශ්‍රව්‍ය පොත (Audio)</h3>
+          <p style="font-size: 0.86rem; color: var(--text-muted); min-height: 40px;">පැය 11 ක සම්පූර්ණ හඬකැවීම් සහිත උසස් ශබ්ද විකාශනය.</p>
+          <div style="margin: 1rem 0;">
+            <span class="price-main">රු. 1,850/=</span>
           </div>
           <ul class="pricing-features-list">
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>11h 42m studio mastered sound</span>
+              <span>පැය 11 මිනිත්තු 40 ක සම්පූර්ණ හඬකැවීම</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Audible, Apple Books & MP3 files</span>
+              <span>ඕනෑම දුරකථනයක MP3 මගින් වාදනය වේ</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>PDF companion workbook included</span>
-            </li>
-            <li class="pricing-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Bonus: 30-min Author Q&A episode</span>
+              <span>පරිච්ඡේද සාරාංශ අත්පොත සහිතයි</span>
             </li>
           </ul>
-          <button class="btn-outline trigger-order-btn" data-product-title="Unabridged Audiobook Edition" data-product-price="$24.99">
-            Get Audiobook
+          <button class="btn-secondary-link trigger-order-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Audiobook)" data-product-price="1850" style="justify-content: center; width: 100%;">
+            ශ්‍රව්‍ය පොත ලබාගන්න
           </button>
         </div>
 
-        <!-- Tier 4: Masterclass Bundle -->
+        <!-- Tier 4: Master Bundle -->
         <div class="pricing-card">
-          <span class="pricing-badge">The Complete Experience</span>
-          <h3 class="pricing-name">Ultimate Bundle</h3>
-          <p class="pricing-desc">Everything above plus 4-week video masterclass and guided leather-bound journal.</p>
-          <div class="pricing-cost-row">
-            <span class="price-main">$49.99</span>
-            <span class="price-original">$99.00</span>
-            <span class="price-save">Save 50%</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-light); text-transform: uppercase;">සම්පූර්ණ කට්ටලය</span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0.4rem 0;">Ultimate Master Combo</h3>
+          <p style="font-size: 0.86rem; color: var(--text-muted); min-height: 40px;">Hardcover පොත + ශ්‍රව්‍ය පොත + eBook + ප්‍රායෝගික දිනපොත (Journal).</p>
+          <div style="margin: 1rem 0; display: flex; align-items: baseline; gap: 0.5rem;">
+            <span class="price-main">රු. 3,850/=</span>
+            <span class="price-original">රු. 5,200/=</span>
           </div>
           <ul class="pricing-features-list">
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Collector's Hardcover + eBook + Audio</span>
+              <span>Hardcover පොත + Audiobook + eBook</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>4-Week Video Masterclass access</span>
+              <span>ලෙදර් බන්ධිත දෛනික සැලසුම් සටහන් පොත</span>
             </li>
             <li class="pricing-feature-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Guided Daily Action Journal (Physical)</span>
-            </li>
-            <li class="pricing-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Private community & monthly live Q&A</span>
+              <span>දිවයින පුරා නොමිලේ බෙදාහැරීම (Free Delivery)</span>
             </li>
           </ul>
-          <button class="btn-outline trigger-order-btn" data-product-title="Ultimate Masterclass Bundle" data-product-price="$49.99">
-            Get All Formats
+          <button class="btn-secondary-link trigger-order-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Ultimate Master Combo)" data-product-price="3850" style="justify-content: center; width: 100%;">
+            Combo කට්ටලය ඇණවුම් කරන්න
           </button>
         </div>
       </div>
@@ -816,53 +718,42 @@
   </section>
 
   <!-- ======================================================================
-       10. MEET THE AUTHOR
+       11. MEET THE AUTHOR & TRANSLATOR
        ====================================================================== -->
   <section class="section" id="author">
     <div class="container">
       <div class="author-grid">
-        <!-- Portrait -->
         <div class="author-portrait-wrap">
-          <img src="assets/images/author.jpg" alt="Portrait of Dr. Julian Vance, Author of The Celestial Algorithm">
-          <div class="author-verified-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            <span>Verified Author & Neuroscientist</span>
-          </div>
+          <img src="assets/images/author.jpg" alt="ආචාර්ය ජූලියන් වැන්ස්">
         </div>
 
-        <!-- Bio & Credentials -->
-        <div class="author-content">
-          <span class="section-tag">About The Author</span>
-          <h2 class="section-title">Dr. Julian Vance</h2>
+        <div>
+          <span class="section-tag">කර්තෘ හා පරිවර්තක සටහන</span>
+          <h2 class="section-title">ආචාර්ය ජූලියන් වැන්ස් (Dr. Julian Vance)</h2>
           <p class="section-desc">
-            Dr. Julian Vance is a cognitive neuroscientist, philosopher, and bestselling author whose research focuses on high-order decision architecture and human resilience. Trained at Cambridge and Oxford, he has served as an advisor to world-class athletes, Fortune 100 executives, and research institutions.
+            කේම්බ්‍රිජ් සහ ඔක්ස්ෆර්ඩ් විශ්වවිද්‍යාලවලින් ස්නායු මනෝවිද්‍යාව පිළිබඳ පර්යේෂණ කළ ආචාර්ය වැන්ස්, ලොව ප්‍රමුඛතම ව්‍යවසායකයින් සහ නායකයින් රැසකගේ චින්තන උපදේශකයෙකු ලෙස කටයුතු කරයි.
+          </p>
+          <p class="section-desc" style="margin-top: 0.8rem;">
+            <strong>සිංහල පරිවර්තනය:</strong> ප්‍රවීණ ලේඛක හා කථිකාචාර්ය <strong>ආචාර්ය චන්දන ගුණසේකර</strong> විසින් මුල් කෘතියේ ගැඹුරු දාර්ශනික හරය සුරකිමින් අතිශය චතුර හා මනරම් සිංහල බසකට නගා ඇත.
           </p>
 
           <div class="author-stats-row">
             <div class="author-stat-item">
               <span class="stat-num">15+</span>
-              <span class="stat-label">Years Research</span>
+              <span class="stat-label">වසරක පර්යේෂණ</span>
             </div>
             <div class="author-stat-item">
               <span class="stat-num">250k+</span>
-              <span class="stat-label">Books Sold</span>
+              <span class="stat-label">අලෙවි වූ පිටපත්</span>
             </div>
             <div class="author-stat-item">
               <span class="stat-num">1.4M+</span>
-              <span class="stat-label">TEDx Views</span>
+              <span class="stat-label">TEDx නරඹන්නන්</span>
             </div>
             <div class="author-stat-item">
-              <span class="stat-num">42</span>
-              <span class="stat-label">Global Keynotes</span>
+              <span class="stat-num">4.9★</span>
+              <span class="stat-label">සාමාන්‍ය ඇගයීම</span>
             </div>
-          </div>
-
-          <div class="author-quote-card">
-            "We spend trillions building artificial intelligence, yet overlook the infinite computational elegance of our own conscious biology. My life’s work is teaching individuals to master their internal code."
-          </div>
-
-          <div>
-            <button class="btn-outline open-reader-btn">Read Author’s Introduction</button>
           </div>
         </div>
       </div>
@@ -870,114 +761,57 @@
   </section>
 
   <!-- ======================================================================
-       11. READER REVIEWS & SOCIAL TESTIMONIALS
+       12. REAL SRI LANKAN READER REVIEWS
        ====================================================================== -->
-  <section class="section" id="reviews">
+  <section class="section" id="reviews" style="background: var(--bg-surface);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Reader Feedback</span>
-        <h2 class="section-title">What 18,400+ Readers Are Saying</h2>
+        <span class="section-tag">පාඨක ඇගයීම්</span>
+        <h2 class="section-title">අපගේ පාඨකයින් පවසන දෑ</h2>
         <p class="section-desc">
-          Real reviews from thinkers, entrepreneurs, students, and leaders across the globe.
+          දිවයින පුරා විසිරී සිටින පොත් ලෝලීන් නැණපහන පොත් මැඳුර වෙත ලබාදුන් සැබෑ ප්‍රතිචාර.
         </p>
       </div>
 
-      <!-- Filter Bar -->
-      <div class="reviews-filter-bar">
-        <button class="review-filter-btn active" data-filter="all">All Reviews (4.9/5)</button>
-        <button class="review-filter-btn" data-filter="verified">Verified Buyers</button>
-        <button class="review-filter-btn" data-filter="critics">Authors & Critics</button>
-        <button class="review-filter-btn" id="writeReviewBtn" style="border-color: var(--primary); color: var(--primary);">+ Write a Review</button>
-      </div>
-
-      <!-- Reviews Grid -->
       <div class="reviews-grid">
-        <!-- Review 1 -->
-        <div class="review-card" data-category="verified">
+        <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "This book altered how I run my technology company. The chapters on 'Architectural Silence' and 'The Flow Equation' provided an immediate 300% boost in our executive productivity. Truly profound."
+            "කොළඹ 07 වෙත ඇණවුම් කළ පසුදාම පාර්සලය ලැබුණා. Hardcover එකේ quality එක සහ ඇසුරුම් කර තිබූ ආකාරය ඉතාම විශිෂ්ටයි. පොතේ අන්තර්ගතය ගැන කතා කරන්න වචන නෑ!"
           </p>
           <div class="review-user-info">
-            <div class="review-avatar">AM</div>
-            <div class="review-meta">
-              <span class="review-author-name">Alexander Moore</span>
-              <span class="review-author-role">Tech Founder • Verified Hardcover Buyer</span>
+            <div class="review-avatar">චවි</div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">චතුරංග වික්‍රමසිංහ</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">කොළඹ 07 • තහවුරු කළ මිලදී ගැනීමක්</div>
             </div>
           </div>
         </div>
 
-        <!-- Review 2 -->
-        <div class="review-card" data-category="critics">
+        <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "Rarely does a book synthesize hard neurological science with deep spiritual clarity so effortlessly. Dr. Julian Vance has authored what will undoubtedly be regarded as a timeless modern classic."
+            "Kandy වලට Cash on Delivery එකෙන් ගෙන්න ගත්තේ. දවස් 2 කින් ගෙදරටම ලැබුණා. පරිවර්තනය ඉතාම සුමටයි, කියවන්න පටන් ගත්තම තියන්න හිතෙන්නේ නෑ."
           </p>
           <div class="review-user-info">
-            <div class="review-avatar">SR</div>
-            <div class="review-meta">
-              <span class="review-author-name">Sarah Robinson, PhD</span>
-              <span class="review-author-role">Professor of Cognitive Science • Reviewer</span>
+            <div class="review-avatar">සර</div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">සඳුනි රත්නායක</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">මහනුවර • Verified Buyer</div>
             </div>
           </div>
         </div>
 
-        <!-- Review 3 -->
-        <div class="review-card" data-category="verified">
+        <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "The physical quality of the Collector's edition is unmatched. The paper feels incredible in the hands, and the gold foil detailing makes it the crown jewel of my personal library."
+            "Koko installments මගින් කිසිම පොලියක් නැතුව කොටස් 3 කින් ගෙවන්න ලැබීම ලොකු පහසුවක්. මගේ කාර්යාලයේ මිතුරන් 4 දෙනෙකුටම මේ පොත නිර්දේශ කළා."
           </p>
           <div class="review-user-info">
-            <div class="review-avatar">DK</div>
-            <div class="review-meta">
-              <span class="review-author-name">David Kalu</span>
-              <span class="review-author-role">Architect & Designer • Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 4 -->
-        <div class="review-card" data-category="verified">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "I listen to the audiobook on my daily morning walks. The narration tempo and ambient score are hypnotic. It helps me face high-stress decisions with complete calm."
-          </p>
-          <div class="review-user-info">
-            <div class="review-avatar">NC</div>
-            <div class="review-meta">
-              <span class="review-author-name">Natasha Chen</span>
-              <span class="review-author-role">Venture Partner • Audiobook Listener</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 5 -->
-        <div class="review-card" data-category="critics">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "An intellectual triumph. Julian doesn't give you cliché productivity hacks; he gives you the fundamental mental operating system required for the next hundred years."
-          </p>
-          <div class="review-user-info">
-            <div class="review-avatar">TH</div>
-            <div class="review-meta">
-              <span class="review-author-name">Thomas Holloway</span>
-              <span class="review-author-role">Literary Critic & Essayist</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 6 -->
-        <div class="review-card" data-category="verified">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Bought copies for my entire executive leadership team. Chapter 5 on 'Designing Destiny' became our corporate retreat guiding framework. Worth ten times the price."
-          </p>
-          <div class="review-user-info">
-            <div class="review-avatar">RW</div>
-            <div class="review-meta">
-              <span class="review-author-name">Rohan Wickramasinghe</span>
-              <span class="review-author-role">Managing Director • Bulk Order Buyer</span>
+            <div class="review-avatar">දිප්‍ර</div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">දිනේෂ් ප්‍රනාන්දු</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">ගාල්ල • Koko Customer</div>
             </div>
           </div>
         </div>
@@ -986,364 +820,281 @@
   </section>
 
   <!-- ======================================================================
-       12. FREQUENTLY ASKED QUESTIONS (FAQ)
+       13. BOOKSHOP BRANCHES & CONTACT
        ====================================================================== -->
-  <section class="section" id="faq">
+  <section class="section" id="branches">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Got Questions?</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <span class="section-tag">අපගේ ශාඛා ජාලය</span>
+        <h2 class="section-title">නැණපහන පොත් මැඳුර ශාඛා වෙත පිවිසෙන්න</h2>
         <p class="section-desc">
-          Everything you need to know about ordering, physical shipping, audio delivery, and our 100% money-back guarantee.
+          ඔබට සෘජුවම පැමිණ පොත් පත් පරිශීලනය කර මිලදී ගත හැකි අපගේ ප්‍රධාන ප්‍රදර්ශනාගාර.
         </p>
       </div>
 
-      <div class="faq-wrap">
-        <div class="faq-item active">
-          <div class="faq-question">
-            <span>How long does physical shipping take?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Physical orders are dispatched within 24 hours. Domestic express shipping takes 2-3 business days. International tracked delivery takes 5-8 business days with DHL Express. You will receive an immediate tracking number via email.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>In which digital formats will I receive the eBook?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>You receive all 3 universally compatible formats: .EPUB (Apple Books, Kobo, Nook), .MOBI / .AZW3 (Amazon Kindle devices and apps), and a beautiful high-resolution .PDF with all original celestial diagrams.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Is the audiobook compatible with Apple Books & Audible?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Yes! You can load the audiobook with a single click into Apple Books, Google Play Books, or any standard MP3 audiobook player. You also receive direct streaming access on any desktop or mobile browser.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What is your 30-Day Money-Back Guarantee?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>If you read the book and do not feel it delivered at least ten times its value to your clarity and thinking, simply email us within 30 days and we will issue a full 100% refund, no questions asked.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Can I place bulk orders for my university or company?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, we offer special corporate and educational volume discounts (starting from 15 copies) including custom embossed company covers and virtual author keynote sessions. Contact our bulk sales team through the order modal.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       13. FREE CHAPTER LEAD MAGNET / NEWSLETTER
-       ====================================================================== -->
-  <section class="section" id="newsletter">
-    <div class="container">
-      <div class="leadmagnet-card">
-        <div class="leadmagnet-content">
-          <span class="section-tag">Read Before You Buy</span>
-          <h2 class="section-title">Get The First 3 Chapters Delivered Free</h2>
-          <p class="section-desc">
-            Enter your email to receive an instant 54-page PDF sample including Chapter 1, Chapter 2, and the exclusive companion audio meditation.
+      <div class="branches-grid">
+        <div class="branch-card">
+          <span class="branch-tag">ප්‍රධාන ශාඛාව (Head Office)</span>
+          <h3 class="branch-name">කොළඹ බම්බලපිටිය</h3>
+          <p class="branch-detail">
+            නො. 142, ගාලු පාර, බම්බලපිටිය, කොළඹ 04.<br>
+            දුරකථන: 011 258 4400 / 077 987 6543<br>
+            විවෘත වේලාවන්: සඳුදා - සෙනසුරාදා (පෙ.ව. 8.30 - ප.ව. 7.30)
           </p>
+        </div>
 
-          <form class="leadmagnet-form" id="leadMagnetForm">
-            <input type="email" class="leadmagnet-input" id="leadEmail" placeholder="Enter your best email address..." required>
-            <button type="submit" class="btn-primary">
-              <span>Send Me Free Chapters</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </form>
-          <span style="display: block; margin-top: 0.8rem; font-size: 0.78rem; color: var(--text-subtle);">No spam. Instant download link sent immediately to your inbox.</span>
+        <div class="branch-card">
+          <span class="branch-tag">මධ්‍යම පළාත් ශාඛාව</span>
+          <h3 class="branch-name">මහනුවර දළදා වීදිය</h3>
+          <p class="branch-detail">
+            නො. 28, දළදා වීදිය, මහනුවර (Queens හෝටලය ඉදිරිපිට).<br>
+            දුරකථන: 081 223 9988<br>
+            විවෘත වේලාවන්: සඳුදා - ඉරිදා (පෙ.ව. 9.00 - ප.ව. 7.00)
+          </p>
+        </div>
+
+        <div class="branch-card">
+          <span class="branch-tag">වයඹ පළාත් ශාඛාව</span>
+          <h3 class="branch-name">කුරුණෑගල නගරය</h3>
+          <p class="branch-detail">
+            නො. 15, මීගමු පාර, කුරුණෑගල.<br>
+            දුරකථන: 037 222 4110<br>
+            විවෘත වේලාවන්: සඳුදා - සෙනසුරාදා (පෙ.ව. 8.30 - ප.ව. 6.30)
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======================================================================
-       14. FOOTER & AGENCY SIGNATURE
+       14. FREE PDF CHAPTER LEAD MAGNET
+       ====================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, var(--bg-surface), var(--bg-card)); border: 1px solid var(--border-focus); border-radius: var(--radius-lg); padding: 3.5rem 2rem; text-align: center; box-shadow: var(--shadow-lg);">
+        <span class="section-tag">නොමිලේ සාම්පලයක්</span>
+        <h2 class="section-title">පොතේ මුල් පරිච්ඡේද 2 නොමිලේ ඔබේ Email එකටම ලබාගන්න</h2>
+        <p class="section-desc" style="max-width: 650px; margin: 0 auto;">
+          ඔබගේ විද්‍යුත් තැපැල් (Email) ලිපිනය ඇතුළත් කර පිටු 45 ක නොමිලේ PDF සාම්පලය ක්ෂණිකව බාගත කරගන්න.
+        </p>
+
+        <form id="leadMagnetForm" style="display: flex; gap: 0.8rem; justify-content: center; max-width: 580px; margin: 2rem auto 0; flex-wrap: wrap;">
+          <input type="email" id="leadEmail" placeholder="ඔබගේ Email ලිපිනය..." required class="form-input-control" style="flex: 1; min-width: 260px; border-radius: var(--radius-full);">
+          <button type="submit" class="btn-primary">නොමිලේ PDF එක එවන්න</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       15. STORE FOOTER
        ====================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Brand Col -->
-        <div class="footer-brand-col">
-          <div class="brand-logo">
-            <div class="logo-symbol">Ω</div>
-            <div class="logo-text-wrap">
-              <span class="logo-title">THE CELESTIAL ALGORITHM</span>
-              <span class="logo-subtitle">BY DR. JULIAN VANCE</span>
+        <!-- Col 1 -->
+        <div>
+          <div class="brand-identity" style="margin-bottom: 1rem;">
+            <div class="brand-emblem">🪔</div>
+            <div class="brand-titles">
+              <span class="brand-name-sinhala" style="font-size: 1.15rem;">නැණපහන පොත් මැඳුර</span>
+              <span class="brand-name-en">NENAPAHANA BOOKS (PVT) LTD</span>
             </div>
           </div>
-          <p class="footer-desc">
-            The international bestselling exploration of consciousness, neuroscience, and quantum clarity. Published by Horizon Press International.
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.8rem;">
+            ශ්‍රී ලංකාවේ ප්‍රමුඛතම ග්‍රන්ථ ප්‍රකාශන හා බෙදාහැරීමේ ජාලය. ගුණාත්මක පොත්පත් දිවයිනේ සෑම ගමකටම විශ්වාසනීයව බෙදාහරින්නෙමු.
           </p>
-          <p style="font-size: 0.8rem; color: var(--text-subtle);">
-            ISBN: 978-0-14-312774-1 • Library of Congress #202690412
-          </p>
+          <div style="font-size: 0.8rem; color: var(--text-subtle);">
+            සමාගම් ලියාපදිංචි අංකය: PV 00248911 • කොළඹ 04
+          </div>
         </div>
 
-        <!-- Navigation Col -->
-        <div class="footer-links-col">
-          <h4>Navigation</h4>
-          <ul class="footer-links">
-            <li><a href="#hero" class="footer-link">Home Overview</a></li>
-            <li><a href="#discoveries" class="footer-link">The 6 Laws</a></li>
-            <li><a href="#sneakpeek" class="footer-link">Look Inside</a></li>
-            <li><a href="#craftsmanship" class="footer-link">Craftsmanship</a></li>
-            <li><a href="#audiobook" class="footer-link">Audiobook Player</a></li>
+        <!-- Col 2 -->
+        <div>
+          <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">පොත් කාණ්ඩ</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.88rem; color: var(--text-muted);">
+            <li><a href="#catalog">පරිවර්තන නවකතා</a></li>
+            <li><a href="#catalog">ස්වයං සංවර්ධන හා මනෝවිද්‍යා</a></li>
+            <li><a href="#catalog">ඉතිහාසය හා දර්ශනය</a></li>
+            <li><a href="#catalog">ළමා හා යොවුන් ග්‍රන්ථ</a></li>
+            <li><a href="#audiobook">සිංහල ශ්‍රව්‍ය පොත්</a></li>
           </ul>
         </div>
 
-        <!-- Editions Col -->
-        <div class="footer-links-col">
-          <h4>Editions</h4>
-          <ul class="footer-links">
-            <li><a href="#pricing" class="footer-link">Collector's Hardcover</a></li>
-            <li><a href="#pricing" class="footer-link">Kindle & eBook</a></li>
-            <li><a href="#pricing" class="footer-link">Unabridged Audio</a></li>
-            <li><a href="#pricing" class="footer-link">Masterclass Bundle</a></li>
-            <li><a href="#pricing" class="footer-link">Bulk Corporate Orders</a></li>
+        <!-- Col 3 -->
+        <div>
+          <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">පාරිභෝගික සේවා</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.88rem; color: var(--text-muted);">
+            <li><a href="#branches">දිවයින පුරා බෙදාහැරීම් තොරතුරු</a></li>
+            <li><a href="#pricing">Cash on Delivery (COD) විස්තර</a></li>
+            <li><a href="#branches">ශාඛා සහ සම්බන්ධීකරණය</a></li>
+            <li><a href="https://wa.me/94779876543">WhatsApp සහය (077 987 6543)</a></li>
           </ul>
         </div>
 
-        <!-- Agency Promotion Card (SL Developer) -->
-        <div class="footer-links-col">
-          <div class="footer-agency-badge-card">
-            <div class="footer-agency-title">
-              <span>🚀 Developed by SL Developer</span>
-            </div>
-            <p class="footer-agency-text">
-              Looking for a high-converting, world-class modern website like this for your book, business, or brand?
+        <!-- Col 4: Subtle Agency Credit -->
+        <div>
+          <div class="footer-developer-card">
+            <span style="font-size: 0.82rem; font-weight: 800; color: var(--primary-light);">🚀 Crafted by SL Developer</span>
+            <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4;">
+              ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා ලෝක මට්ටමේ Modern Websites & eCommerce Solutions නිර්මාණය කරගැනීමට අමතන්න.
             </p>
-            <button class="btn-primary agency-order-trigger" style="font-size: 0.78rem; padding: 0.45rem 0.9rem; margin-top: 0.4rem;">
-              Contact SL Developer
-            </button>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-main);">
+              Hotline: +94 77 123 4567
+            </div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 The Celestial Algorithm. All rights reserved. Dr. Julian Vance.</div>
-        <div>Designed with precision & passion by <strong>SL Developer</strong>.</div>
+        <div>© 2026 නැණපහන පොත් මැඳුර (Nenapahana Books Pvt Ltd). සියලුම හිමිකම් ඇවිරිණි.</div>
+        <div>ආරක්ෂිත ගෙවීම්: Visa • MasterCard • Koko • Mintpay • PromptX Delivery</div>
       </div>
     </div>
   </footer>
 
   <!-- ======================================================================
-       15. INTERACTIVE MODALS
+       16. REAL SRI LANKAN CHECKOUT MODAL
        ====================================================================== -->
-
-  <!-- Modal 1: Free Sample Reader Modal -->
-  <div class="modal-backdrop" id="readerModal">
-    <div class="modal-dialog reader-modal-dialog">
-      <button class="modal-close-btn" aria-label="Close Reader">✕</button>
-
-      <div class="reader-toolbar">
-        <div>
-          <h3 style="font-size: 1.2rem; font-weight: 800;">Chapter 1: The Code of Inception</h3>
-          <span style="font-size: 0.8rem; color: var(--text-muted);">The Celestial Algorithm — Free Sample Excerpt</span>
-        </div>
-        <div style="display: flex; gap: 0.5rem; align-items: center;">
-          <button id="readerFontSmaller" class="btn-outline" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">A-</button>
-          <button id="readerFontBigger" class="btn-outline" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">A+</button>
-        </div>
-      </div>
-
-      <div class="reader-book-page">
-        <p>
-          Before there was language, there was geometry. Before human consciousness categorized the universe into past, present, and future, the neural machinery within our skulls was running an ancient, silent algorithm designed to harmonize survival with meaning.
-        </p>
-        <p>
-          We live in an epoch defined not by the scarcity of information, but by its catastrophic abundance. Every second, millions of sensory stimuli compete for the sovereign currency of your attention. Yet, those who leave permanent marks on human history do not possess more hours in the solar day; they possess an unshakeable cognitive architecture.
-        </p>
-        <p>
-          Consider the zero-point mindset. In physics, zero-point energy is the lowest possible energy that a quantum mechanical physical system may have. In neuroscience, it represents the undisturbed state of profound stillness—the quiet spring from which all decisive intuition flows.
-        </p>
-        <p>
-          When you learn to silence the peripheral static of the ego, intuition ceases to be an elusive ghost and becomes an empirical instrument. You begin to anticipate movements before they materialize; you identify non-obvious correlations across disparate disciplines; you execute without hesitation.
-        </p>
-        <p>
-          Turn this page not as a student seeking instruction, but as an architect preparing to renovate the foundations of your own mind.
-        </p>
-      </div>
-
-      <div style="margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-        <span style="font-size: 0.88rem; color: var(--text-muted);">Enjoying this excerpt? Continue reading in the full edition.</span>
-        <a href="#pricing" class="btn-primary modal-close-btn-action" onclick="document.getElementById('readerModal').classList.remove('active')">
-          Order Full Hardcover ($29.99)
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2: Simulated Checkout Modal -->
   <div class="modal-backdrop" id="checkoutModal">
     <div class="modal-dialog">
       <button class="modal-close-btn" aria-label="Close Checkout">✕</button>
 
-      <div style="margin-bottom: 1.5rem;">
-        <span class="pill-badge" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Secure 256-Bit SSL Checkout</span>
-        <h3 style="font-size: 1.45rem; font-weight: 800; margin-top: 0.3rem;" id="checkoutItemTitle">Collector's Hardcover Edition</h3>
-        <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.4rem;">
-          <span style="font-size: 1.8rem; font-weight: 900; color: var(--primary);" id="checkoutItemPrice">$29.99</span>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">(Includes Free Worldwide Shipping)</span>
+      <div style="margin-bottom: 1.25rem;">
+        <span class="pill-badge" style="font-size: 0.72rem; margin-bottom: 0.4rem;">නැණපහන සෘජු ඇණවුම් පියවර</span>
+        <h3 style="font-size: 1.4rem; font-weight: 800;" id="checkoutItemTitle">විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)</h3>
+        <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.2rem;">
+          <span style="font-size: 1.7rem; font-weight: 900; color: var(--primary-light);" id="checkoutItemPrice">රු. 2,650/=</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">(Cash on Delivery පහසුකම සහිතයි)</span>
         </div>
       </div>
 
       <form id="checkoutForm" style="display: flex; flex-direction: column; gap: 1rem;">
         <div>
-          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Full Name</label>
-          <input type="text" required placeholder="e.g. Kasun Fernando" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">ඔබගේ සම්පූර්ණ නම (Full Name) *</label>
+          <input type="text" id="custName" required placeholder="උදා: කසුන් බණ්ඩාර" class="form-input-control">
         </div>
 
         <div>
-          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Email Address</label>
-          <input type="email" required placeholder="kasun@example.com" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">දුරකථන අංකය (Phone / WhatsApp) *</label>
+          <input type="tel" id="custPhone" required placeholder="උදා: 077 123 4567" class="form-input-control">
         </div>
 
         <div>
-          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Delivery Address / Country</label>
-          <input type="text" required placeholder="No. 42, Lotus Grove, Colombo, Sri Lanka" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">පොත එවීමට අවශ්‍ය ලිපිනය (Delivery Address) *</label>
+          <input type="text" id="custAddress" required placeholder="නො. 12, විහාර මාවත, නගරය..." class="form-input-control">
         </div>
 
         <div>
-          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Payment Method</label>
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">දිස්ත්‍රික්කය (District) *</label>
+          <select id="customerDistrict" class="form-select-control">
+            <option value="Colombo">කොළඹ (Colombo - Delivery රු. 250)</option>
+            <option value="Gampaha">ගම්පහ (Gampaha - Delivery රු. 250)</option>
+            <option value="Kalutara">කළුතර (Kalutara - Delivery රු. 350)</option>
+            <option value="Kandy">මහනුවර (Kandy - Delivery රු. 350)</option>
+            <option value="Galle">ගාල්ල (Galle - Delivery රු. 350)</option>
+            <option value="Matara">මාතර (Matara - Delivery රු. 350)</option>
+            <option value="Kurunegala">කුරුණෑගල (Kurunegala - Delivery රු. 350)</option>
+            <option value="Ratnapura">රත්නපුර (Ratnapura - Delivery රු. 350)</option>
+            <option value="Anuradhapura">අනුරාධපුරය (Anuradhapura - Delivery රු. 350)</option>
+            <option value="Badulla">බදුල්ල (Badulla - Delivery රු. 350)</option>
+            <option value="Jaffna">යාපනය (Jaffna - Delivery රු. 350)</option>
+            <option value="Other">අනෙකුත් දිස්ත්‍රික්ක (Other - Delivery රු. 350)</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">ගෙවීම් ක්‍රමය (Payment Method)</label>
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
             <label style="border: 1px solid var(--border-focus); padding: 0.6rem; border-radius: var(--radius-sm); font-size: 0.78rem; text-align: center; cursor: pointer; background: var(--badge-bg);">
-              <input type="radio" name="paymethod" checked style="margin-right: 4px;"> Credit Card
+              <input type="radio" name="paymentMethod" value="Cash on Delivery" checked> Cash on Delivery
             </label>
             <label style="border: 1px solid var(--border-subtle); padding: 0.6rem; border-radius: var(--radius-sm); font-size: 0.78rem; text-align: center; cursor: pointer;">
-              <input type="radio" name="paymethod" style="margin-right: 4px;"> Apple Pay
+              <input type="radio" name="paymentMethod" value="Card Payment"> Card / Koko
             </label>
             <label style="border: 1px solid var(--border-subtle); padding: 0.6rem; border-radius: var(--radius-sm); font-size: 0.78rem; text-align: center; cursor: pointer;">
-              <input type="radio" name="paymethod" style="margin-right: 4px;"> Cash on Del.
+              <input type="radio" name="paymentMethod" value="Bank Deposit"> බැංකු තැන්පතු
             </label>
           </div>
         </div>
 
-        <button type="submit" class="btn-primary" style="margin-top: 0.5rem; padding: 0.85rem; font-size: 1rem; width: 100%;">
-          Complete Purchase ($29.99)
+        <!-- Total Calculation Breakdown -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.3rem;">
+          <div style="display: flex; justify-content: space-between; color: var(--text-muted);">
+            <span>බෙදාහැරීමේ ගාස්තුව (Delivery Fee):</span>
+            <span id="checkoutDeliveryFee">රු. 250/=</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.15rem; color: var(--primary-light); padding-top: 0.4rem; border-top: 1px solid var(--border-subtle);">
+            <span>මුළු මුදල (Grand Total):</span>
+            <span id="checkoutGrandTotal">රු. 2,900/=</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="padding: 0.85rem; width: 100%; font-size: 1rem;">
+          ඇණවුම තහවුරු කරන්න (Confirm Order)
         </button>
-      </form>
-    </div>
-  </div>
 
-  <!-- Modal 3: Write a Review Modal -->
-  <div class="modal-backdrop" id="reviewModal">
-    <div class="modal-dialog">
-      <button class="modal-close-btn" aria-label="Close Review Form">✕</button>
-      <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.4rem;">Submit Your Reader Review</h3>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">Share your thoughts with our global reading community.</p>
-
-      <form id="reviewForm" style="display: flex; flex-direction: column; gap: 1rem;">
-        <div>
-          <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Your Name</label>
-          <input type="text" id="revName" required placeholder="e.g. Dilan Perera" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;">
-        </div>
-        <div>
-          <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Profession / Location</label>
-          <input type="text" id="revRole" placeholder="e.g. Software Engineer, Kandy" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;">
-        </div>
-        <div>
-          <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Rating</label>
-          <select class="select-control" style="width: 100%; padding: 0.6rem 1rem; border-radius: var(--radius-sm);">
-            <option>★★★★★ (5 Stars - Exceptional)</option>
-            <option>★★★★☆ (4 Stars - Great)</option>
-          </select>
-        </div>
-        <div>
-          <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Your Review</label>
-          <textarea id="revComment" required rows="4" placeholder="How did this book impact your thinking or daily life?" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;"></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="padding: 0.8rem;">Submit Review</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal 4: SL Developer Agency Pitch Modal (Empowers user to sell websites!) -->
-  <div class="modal-backdrop" id="agencyModal">
-    <div class="modal-dialog">
-      <button class="modal-close-btn" aria-label="Close Agency Modal">✕</button>
-
-      <div style="text-align: center; margin-bottom: 1.5rem;">
-        <span class="agency-badge" style="font-size: 0.75rem; padding: 0.25rem 0.8rem;">SL Developer Agency</span>
-        <h3 style="font-size: 1.5rem; font-weight: 800; margin-top: 0.6rem;">Want A Website Like This?</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">
-          Get a modern, mobile-responsive, animated website built for your book, business, or personal brand.
-        </p>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.2rem; margin-bottom: 1.5rem;">
-        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 0.6rem;">What's Included:</h4>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted);">
-          <li>✨ Custom modern UI tailored to your brand</li>
-          <li>🌓 Dark & Light mode toggle</li>
-          <li>📱 100% Mobile & tablet responsive layout</li>
-          <li>⚡ Interactive 3D animations and audio player</li>
-          <li>🛒 Lead capture & online ordering checkout integration</li>
-        </ul>
-      </div>
-
-      <form id="agencyInquiryForm" style="display: flex; flex-direction: column; gap: 1rem;">
-        <div>
-          <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Your Name</label>
-          <input type="text" id="clientName" required placeholder="Enter your name" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;">
-        </div>
-
-        <div>
-          <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Phone / WhatsApp Number</label>
-          <input type="text" id="clientPhone" required placeholder="e.g. +94 77 123 4567" class="leadmagnet-input" style="width: 100%; border-radius: var(--radius-sm); padding: 0.7rem 1rem;">
-        </div>
-
-        <div>
-          <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">What type of website do you need?</label>
-          <select id="clientProjectType" class="select-control" style="width: 100%; padding: 0.7rem 1rem; border-radius: var(--radius-sm);">
-            <option value="Book / Author Showcase Website">Book / Author Showcase Website</option>
-            <option value="E-Commerce / Online Store">E-Commerce / Online Store</option>
-            <option value="Corporate / Company Business Website">Corporate / Company Business Website</option>
-            <option value="Personal Portfolio & Agency Page">Personal Portfolio & Agency Page</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn-primary" style="padding: 0.9rem; font-size: 0.95rem; width: 100%; display: flex; justify-content: center; gap: 0.5rem;">
-          <span>💬 Inquire on WhatsApp via SL Developer</span>
+        <button type="button" id="directWhatsAppOrderBtn" class="btn-whatsapp-quick" style="width: 100%; justify-content: center; padding: 0.75rem;">
+          💬 WhatsApp මගින් ක්ෂණිකව ඇණවුම එවන්න
         </button>
       </form>
     </div>
   </div>
 
   <!-- ======================================================================
-       16. LIVE SOCIAL PROOF PURCHASE TOAST
+       17. FREE SAMPLE READER MODAL
        ====================================================================== -->
-  <div class="live-toast-alert" id="livePurchaseToast">
-    <img src="assets/images/book-cover.jpg" alt="Mini Book Cover" class="toast-img">
-    <div class="toast-info">
-      <span class="toast-buyer" id="toastBuyer">Kasun B. from Kandy</span>
-      <span class="toast-edition" id="toastEdition">Purchased Collector's Hardcover</span>
-      <span class="toast-time" id="toastTime">Just now</span>
+  <div class="modal-backdrop" id="readerModal">
+    <div class="modal-dialog" style="max-width: 820px;">
+      <button class="modal-close-btn" aria-label="Close Reader">✕</button>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); margin-bottom: 1.25rem;">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800;">විශ්වීය ඇල්ගොරිතමය — 1 වන පරිච්ඡේදය</h3>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">නැණපහන පොත් මැඳුර නිදහස් කියවීම් සාම්පලය</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="readerFontSmaller" class="btn-secondary-link" style="padding: 0.3rem 0.65rem; font-size: 0.8rem;">A-</button>
+          <button id="readerFontBigger" class="btn-secondary-link" style="padding: 0.3rem 0.65rem; font-size: 0.8rem;">A+</button>
+        </div>
+      </div>
+
+      <div class="reader-book-page" style="font-family: var(--font-sinhala-serif); font-size: 1.05rem; line-height: 1.9; max-height: 48vh; overflow-y: auto; padding-right: 0.5rem;">
+        <p>
+          භාෂාවක් බිහිවීමටත් පෙර, විශ්වය තුළ ජ්‍යාමිතිය පැවතුණි. මිනිස් මනස අතීතය, වර්තමානය සහ අනාගතය ලෙස කාලය බෙදා වෙන් කිරීමටත් පෙර, අපගේ හිස්කබල තුළ ක්‍රියාත්මක වූ ස්නායු පද්ධතිය නිහඬ ජීව විද්‍යාත්මක ඇල්ගොරිතමයක් ක්‍රියාත්මක කරමින් සිටියේය.
+        </p>
+        <p>
+          අප ජීවත්වන්නේ තොරතුරු හිඟ යුගයක නොවේ; තොරතුරුවල අධික පීඩනයෙන් මනස සිරවී ඇති යුගයකය. සෑම තත්පරයකම අපගේ අවධානය උදුරාගැනීමට දහස් ගණන් උත්තේජක තරග වදිති. එහෙත්, ඉතිහාසයේ නොමැකෙන සලකුණු තැබූ විශිෂ්ටයින්ට අපට වඩා වැඩි පැය ගණනක් නොතිබුණි; ඔවුන් සතුව තිබුණේ අතිශය විනයගත මානසික ගෘහනිර්මාණ ශිල්පයකි.
+        </p>
+        <p>
+          ශුන්‍ය ලක්ෂ්‍ය මානසිකත්වය (The Zero-Point Mindset) සලකා බලන්න. භෞතික විද්‍යාවේ ශුන්‍ය ලක්ෂ්‍ය ශක්තිය යනු පද්ධතියක පැවතිය හැකි අවම, වඩාත්ම නිශ්චල ශක්ති තත්ත්වයයි. ස්නායු විද්‍යාවේදී එය හඳුන්වන්නේ අපගේ සවිඥානක මනස සම්පූර්ණ සන්සුන් බවකට පත්වන මොහොතයි. අපගේ සෑම තීරණාත්මක ඉවක්ම (Intuition) උල්පතක් මෙන් ගලා එන්නේ එම නොසැලෙන නිහඬතාවයෙනි.
+        </p>
+        <p>
+          ඔබ මේ පොත කියවිය යුත්තේ හුදු උපදෙස් සොයන ශිෂ්‍යයෙකු ලෙස නොව, තමාගේම මනසේ අත්තිවාරම අලුතින් ප්‍රතිසංස්කරණය කිරීමට සූදානම් වන ගෘහ නිර්මාණ ශිල්පියෙකු ලෙසය.
+        </p>
+      </div>
+
+      <div style="margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <span style="font-size: 0.88rem; color: var(--text-muted);">සම්පූර්ණ පිටු 340 ක මුද්‍රිත පොත Cash on Delivery මගින් ගෙන්වා ගන්න.</span>
+        <button class="btn-primary trigger-order-btn" data-product-title="විශ්වීය ඇල්ගොරිතමය (Hardcover Edition)" data-product-price="2650" onclick="document.getElementById('readerModal').classList.remove('active')">
+          පොත ඇණවුම් කරන්න (රු. 2,650/=)
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- ======================================================================
+       18. LIVE SRI LANKAN BUYER TOAST
+       ====================================================================== -->
+  <div class="live-toast-alert" id="livePurchaseToast">
+    <img src="assets/images/book-cover.jpg" alt="Mini Book Cover" class="toast-img">
+    <div>
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main);" id="toastBuyer">චතුරංග වික්‍රමසිංහ - කොළඹ 07</div>
+      <div style="font-size: 0.75rem; color: var(--primary-light);" id="toastEdition">Hardcover පිටපතක් ඇණවුම් කළා</div>
+      <div style="font-size: 0.68rem; color: var(--text-subtle);" id="toastTime">මීට මොහොතකට පෙර</div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
