@@ -211,8 +211,8 @@ function initQrModal() {
   const heroQrImg = document.getElementById('heroQrImg');
   const modalQrImg = document.getElementById('modalQrImg');
 
-  // Default target URL (Official live domain: nenapahanabooks.com)
-  let targetUrl = 'https://nenapahanabooks.com';
+  // Default target URL (100% Free Live Public HTTPS URL on GitHub Pages)
+  let targetUrl = 'https://kawyadissanayaka.github.io/book-shop/';
 
   // If already hosted on a real custom domain (e.g. .lk or .com), use that domain by default
   if (!window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
