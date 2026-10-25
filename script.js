@@ -264,8 +264,14 @@ function initQrModal() {
     });
   }
 
-  // Open QR Modal
-  const openTriggers = [openQrBtn, openHeroQrModalBtn].filter(Boolean);
+  // Open QR Modal Triggers
+  const openTriggers = [
+    openQrBtn,
+    openHeroQrModalBtn,
+    document.getElementById('openTopQrModalBtn'),
+    document.getElementById('footerOpenQrModalBtn')
+  ].filter(Boolean);
+
   openTriggers.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -281,19 +287,18 @@ function initQrModal() {
     window.open(waUrl, '_blank');
   }
 
-  if (modalShareWhatsappBtn) {
-    modalShareWhatsappBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      triggerWhatsAppShare();
-    });
-  }
+  const whatsappTriggers = [
+    modalShareWhatsappBtn,
+    heroShareWhatsappBtn,
+    document.getElementById('headerShareWhatsappBtn')
+  ].filter(Boolean);
 
-  if (heroShareWhatsappBtn) {
-    heroShareWhatsappBtn.addEventListener('click', (e) => {
+  whatsappTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
       triggerWhatsAppShare();
     });
-  }
+  });
 
   // Print Counter Stand
   if (modalPrintStandBtn) {
