@@ -317,7 +317,7 @@ function initQrModal() {
     });
   }
 
-  // Download QR Code as PNG (Direct instant canvas export - ZERO network, ZERO popup blockage)
+  // Download QR Code as PNG (Direct instant canvas export - Guaranteed .png extension)
   if (modalDownloadQrBtn) {
     modalDownloadQrBtn.addEventListener('click', () => {
       showToast('⏳ QR Code PNG ගොනුව බාගත වෙමින් පවතී...');
@@ -330,11 +330,48 @@ function initQrModal() {
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, 800, 800);
 
-      const tempDiv = document.createElement('div');
-      tempDiv.style.display = 'none';
-      document.body.appendChild(tempDiv);
+      function executeDownload(canvas) {
+        if (canvas.toBlob) {
+          canvas.toBlob((blob) => {
+            if (blob) {
+              const blobUrl = URL.createObjectURL(blob);
+              const link = document.createElement('a');
+              link.href = blobUrl;
+              link.download = 'nenapahana-qr-code.png';
+              document.body.appendChild(link);
+              link.click();
+              setTimeout(() => {
+                document.body.removeChild(link);
+                URL.revokeObjectURL(blobUrl);
+              }, 1500);
+              showToast('💾 QR Image (nenapahana-qr-code.png) සාර්ථකව බාගත විය!');
+              return;
+            }
+            fallbackDataUrl(canvas);
+          }, 'image/png');
+        } else {
+          fallbackDataUrl(canvas);
+        }
+      }
 
-      if (typeof QRCode !== 'undefined') {
+      function fallbackDataUrl(canvas) {
+        const link = document.createElement('a');
+        link.download = 'nenapahana-qr-code.png';
+        link.href = canvas.toDataURL('image/png');
+        document.body.appendChild(link);
+        link.click();
+        setTimeout(() => document.body.removeChild(link), 500);
+        showToast('💾 QR Image (nenapahana-qr-code.png) සාර්ථකව බාගත විය!');
+      }
+
+      const screenCanvas = document.querySelector('#modalQrCanvasWrap canvas');
+      if (screenCanvas) {
+        ctx.drawImage(screenCanvas, 50, 50, 700, 700);
+        executeDownload(downloadCanvas);
+      } else {
+        const tempDiv = document.createElement('div');
+        tempDiv.style.display = 'none';
+        document.body.appendChild(tempDiv);
         new QRCode(tempDiv, {
           text: targetUrl,
           width: 700,
@@ -343,43 +380,14 @@ function initQrModal() {
           colorLight: '#ffffff',
           correctLevel: QRCode.CorrectLevel.H
         });
-
         setTimeout(() => {
-          const qrCanvas = tempDiv.querySelector('canvas');
-          if (qrCanvas) {
-            ctx.drawImage(qrCanvas, 50, 50, 700, 700);
-            const dataUrl = downloadCanvas.toDataURL('image/png');
-            const link = document.createElement('a');
-            link.download = 'nenapahana-digital-menu-qr.png';
-            link.href = dataUrl;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            document.body.removeChild(tempDiv);
-            showToast('💾 QR Image (PNG) සාර්ථකව බාගත විය!');
-            return;
+          const genCanvas = tempDiv.querySelector('canvas');
+          if (genCanvas) {
+            ctx.drawImage(genCanvas, 50, 50, 700, 700);
           }
-
-          fallbackDownload(tempDiv);
-        }, 60);
-      } else {
-        fallbackDownload(tempDiv);
-      }
-
-      function fallbackDownload(elem) {
-        if (elem && elem.parentNode) elem.parentNode.removeChild(elem);
-        const screenCanvas = document.querySelector('#modalQrCanvasWrap canvas');
-        if (screenCanvas) {
-          const link = document.createElement('a');
-          link.download = 'nenapahana-digital-menu-qr.png';
-          link.href = screenCanvas.toDataURL('image/png');
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          showToast('💾 QR Image (PNG) සාර්ථකව බාගත විය!');
-        } else {
-          window.open(`https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=${encodeURIComponent(targetUrl)}`, '_blank');
-        }
+          if (tempDiv.parentNode) tempDiv.parentNode.removeChild(tempDiv);
+          executeDownload(downloadCanvas);
+        }, 100);
       }
     });
   }
