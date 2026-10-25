@@ -1358,37 +1358,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stand-qr-box {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   background: #ffffff;
-  border-radius: 14px;
-  padding: 10px;
+  border-radius: 16px;
+  padding: 12px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
-  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  margin: 0 auto;
 }
 
-.stand-qr-img {
+#modalQrCanvasWrap {
+  width: 176px;
+  height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+#modalQrCanvasWrap canvas,
+#modalQrCanvasWrap img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 8px;
 }
 
-.stand-qr-badge {
-  position: absolute;
-  bottom: -10px;
+.stand-qr-badge-flow {
   background: #0f172a;
   color: #38bdf8;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 800;
-  padding: 0.2rem 0.6rem;
+  padding: 0.3rem 0.85rem;
   border-radius: var(--radius-full);
   letter-spacing: 0.08em;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 0.4rem;
+  display: inline-block;
+  border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
 .stand-instructions {

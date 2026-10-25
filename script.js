@@ -208,27 +208,45 @@ function initQrModal() {
   const presetWifiBtn = document.getElementById('presetWifiBtn');
   const presetLiveBtn = document.getElementById('presetLiveBtn');
   const customQrUrlInput = document.getElementById('customQrUrlInput');
-  const heroQrImg = document.getElementById('heroQrImg');
-  const modalQrImg = document.getElementById('modalQrImg');
+  const modalQrWrap = document.getElementById('modalQrCanvasWrap');
 
   // Default target URL (100% Free Live Public HTTPS URL on GitHub Pages)
   let targetUrl = 'https://kawyadissanayaka.github.io/book-shop/';
 
-  // If already hosted on a real custom domain (e.g. .lk or .com), use that domain by default
+  // If already hosted on a real custom domain, use that domain by default
   if (!window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
     targetUrl = window.location.href.split('#')[0];
     if (customQrUrlInput) customQrUrlInput.value = targetUrl;
   }
 
-  function updateQrDisplay(url) {
+  let qrCodeInstance = null;
+
+  function renderQrCode(url) {
     targetUrl = url;
-    const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=8&data=${encodeURIComponent(url)}`;
-    if (heroQrImg) heroQrImg.src = qrApiUrl;
-    if (modalQrImg) modalQrImg.src = qrApiUrl;
+    if (modalQrWrap) {
+      modalQrWrap.innerHTML = '';
+      if (typeof QRCode !== 'undefined') {
+        qrCodeInstance = new QRCode(modalQrWrap, {
+          text: url,
+          width: 176,
+          height: 176,
+          colorDark: '#000000',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      } else {
+        const img = document.createElement('img');
+        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=8&data=${encodeURIComponent(url)}`;
+        img.alt = 'QR Code';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        modalQrWrap.appendChild(img);
+      }
+    }
   }
 
   // Initial QR setup
-  updateQrDisplay(targetUrl);
+  renderQrCode(targetUrl);
 
   // Preset Buttons (Dynamic handler for any preset pill)
   document.querySelectorAll('.qr-preset-pill').forEach(pill => {
@@ -238,7 +256,7 @@ function initQrModal() {
       const url = pill.getAttribute('data-url');
       if (url) {
         if (customQrUrlInput) customQrUrlInput.value = url;
-        updateQrDisplay(url);
+        renderQrCode(url);
         showToast(`🌐 QR Link එක යාවත්කාලීන විය: ${url}`);
       }
     });
@@ -250,7 +268,7 @@ function initQrModal() {
       const url = e.target.value.trim();
       if (url) {
         document.querySelectorAll('.qr-preset-pill').forEach(b => b.classList.remove('active'));
-        updateQrDisplay(url);
+        renderQrCode(url);
       }
     });
   }
@@ -267,6 +285,7 @@ function initQrModal() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       if (qrModal) qrModal.classList.add('active');
+      renderQrCode(targetUrl);
     });
   });
 
@@ -298,28 +317,70 @@ function initQrModal() {
     });
   }
 
-  // Download QR Code as PNG
+  // Download QR Code as PNG (Direct instant canvas export - ZERO network, ZERO popup blockage)
   if (modalDownloadQrBtn) {
     modalDownloadQrBtn.addEventListener('click', () => {
-      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=${encodeURIComponent(targetUrl)}`;
-      showToast('⏳ QR Code PNG ගොනුව සකසමින් පවතී...');
+      showToast('⏳ QR Code PNG ගොනුව බාගත වෙමින් පවතී...');
 
-      fetch(qrApiUrl)
-        .then(res => res.blob())
-        .then(blob => {
-          const blobUrl = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = blobUrl;
-          a.download = 'nenapahana-digital-menu-qr.png';
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          window.URL.revokeObjectURL(blobUrl);
-          showToast('💾 QR Image (PNG) සාර්ථකව බාගත (Download) විය!');
-        })
-        .catch(() => {
-          window.open(qrApiUrl, '_blank');
+      const downloadCanvas = document.createElement('canvas');
+      downloadCanvas.width = 800;
+      downloadCanvas.height = 800;
+      const ctx = downloadCanvas.getContext('2d');
+
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, 800, 800);
+
+      const tempDiv = document.createElement('div');
+      tempDiv.style.display = 'none';
+      document.body.appendChild(tempDiv);
+
+      if (typeof QRCode !== 'undefined') {
+        new QRCode(tempDiv, {
+          text: targetUrl,
+          width: 700,
+          height: 700,
+          colorDark: '#000000',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.H
         });
+
+        setTimeout(() => {
+          const qrCanvas = tempDiv.querySelector('canvas');
+          if (qrCanvas) {
+            ctx.drawImage(qrCanvas, 50, 50, 700, 700);
+            const dataUrl = downloadCanvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.download = 'nenapahana-digital-menu-qr.png';
+            link.href = dataUrl;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            document.body.removeChild(tempDiv);
+            showToast('💾 QR Image (PNG) සාර්ථකව බාගත විය!');
+            return;
+          }
+
+          fallbackDownload(tempDiv);
+        }, 60);
+      } else {
+        fallbackDownload(tempDiv);
+      }
+
+      function fallbackDownload(elem) {
+        if (elem && elem.parentNode) elem.parentNode.removeChild(elem);
+        const screenCanvas = document.querySelector('#modalQrCanvasWrap canvas');
+        if (screenCanvas) {
+          const link = document.createElement('a');
+          link.download = 'nenapahana-digital-menu-qr.png';
+          link.href = screenCanvas.toDataURL('image/png');
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          showToast('💾 QR Image (PNG) සාර්ථකව බාගත විය!');
+        } else {
+          window.open(`https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=${encodeURIComponent(targetUrl)}`, '_blank');
+        }
+      }
     });
   }
 

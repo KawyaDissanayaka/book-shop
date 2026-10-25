@@ -1943,11 +1943,11 @@
           📱 ඩිජිටල් නාමාවලිය සහ මිල දර්ශකය • DIGITAL STORE MENU
         </div>
 
-        <!-- Real Scannable QR Graphic Container -->
+        <!-- Real Scannable QR Graphic Container (100% Unobstructed High-Contrast Frame) -->
         <div class="stand-qr-box">
-          <img id="modalQrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=8&data=https%3A%2F%2Fkawyadissanayaka.github.io%2Fbook-shop%2F" alt="නැණපහන QR Menu Scan Code" class="stand-qr-img">
-          <div class="stand-qr-badge">SCAN WITH PHONE CAMERA</div>
+          <div id="modalQrCanvasWrap"></div>
         </div>
+        <div class="stand-qr-badge-flow">📸 SCAN WITH PHONE CAMERA</div>
 
         <div class="stand-instructions">
           <div class="instruction-lead">
@@ -2047,6 +2047,7 @@
     </div>
   </div>
 
+  <script src="assets/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
